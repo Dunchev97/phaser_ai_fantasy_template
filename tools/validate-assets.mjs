@@ -215,6 +215,11 @@ async function main() {
     'assets/source/tiny-swords/units/black-units/archer/archer-idle.png',
     'assets/source/tiny-swords/units/black-units/archer/archer-run.png',
     'assets/source/tiny-swords/units/black-units/archer/archer-shoot.png',
+    'assets/source/tiny-swords/units/black-units/lancer/lancer-down-defence.png',
+    'assets/source/tiny-swords/units/black-units/lancer/lancer-downright-defence.png',
+    'assets/source/tiny-swords/units/black-units/lancer/lancer-right-defence.png',
+    'assets/source/tiny-swords/units/black-units/lancer/lancer-upright-defence.png',
+    'assets/source/tiny-swords/units/black-units/lancer/lancer-up-defence.png',
     'assets/source/tiny-swords/units/black-units/pawn/pawn-idle.png',
     'assets/source/tiny-swords/units/black-units/pawn/pawn-run.png',
     'assets/source/tiny-swords/units/purple-units/warrior/warrior-idle.png',
@@ -223,6 +228,11 @@ async function main() {
     'assets/source/tiny-swords/units/purple-units/archer/archer-idle.png',
     'assets/source/tiny-swords/units/purple-units/archer/archer-run.png',
     'assets/source/tiny-swords/units/purple-units/archer/archer-shoot.png',
+    'assets/source/tiny-swords/units/purple-units/lancer/lancer-down-defence.png',
+    'assets/source/tiny-swords/units/purple-units/lancer/lancer-downright-defence.png',
+    'assets/source/tiny-swords/units/purple-units/lancer/lancer-right-defence.png',
+    'assets/source/tiny-swords/units/purple-units/lancer/lancer-upright-defence.png',
+    'assets/source/tiny-swords/units/purple-units/lancer/lancer-up-defence.png',
     'assets/source/tiny-swords/units/purple-units/pawn/pawn-idle.png',
     'assets/source/tiny-swords/units/purple-units/pawn/pawn-run.png',
     'assets/source/tiny-swords/units/yellow-units/warrior/warrior-idle.png',
@@ -231,6 +241,11 @@ async function main() {
     'assets/source/tiny-swords/units/yellow-units/archer/archer-idle.png',
     'assets/source/tiny-swords/units/yellow-units/archer/archer-run.png',
     'assets/source/tiny-swords/units/yellow-units/archer/archer-shoot.png',
+    'assets/source/tiny-swords/units/yellow-units/lancer/lancer-down-defence.png',
+    'assets/source/tiny-swords/units/yellow-units/lancer/lancer-downright-defence.png',
+    'assets/source/tiny-swords/units/yellow-units/lancer/lancer-right-defence.png',
+    'assets/source/tiny-swords/units/yellow-units/lancer/lancer-upright-defence.png',
+    'assets/source/tiny-swords/units/yellow-units/lancer/lancer-up-defence.png',
     'assets/source/tiny-swords/units/yellow-units/pawn/pawn-idle.png',
     'assets/source/tiny-swords/units/yellow-units/pawn/pawn-run.png',
     'assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-axe.png',
@@ -247,6 +262,11 @@ async function main() {
     'assets/source/tiny-swords/units/blue-units/pawn/pawn-run-meat.png',
     'assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-knife.png',
     'assets/source/tiny-swords/units/blue-units/pawn/pawn-run-knife.png',
+    'assets/source/tiny-swords/units/blue-units/lancer/lancer-down-defence.png',
+    'assets/source/tiny-swords/units/blue-units/lancer/lancer-downright-defence.png',
+    'assets/source/tiny-swords/units/blue-units/lancer/lancer-right-defence.png',
+    'assets/source/tiny-swords/units/blue-units/lancer/lancer-upright-defence.png',
+    'assets/source/tiny-swords/units/blue-units/lancer/lancer-up-defence.png',
     'assets/source/tiny-swords/units/blue-units/pawn/pawn-interact-axe.png',
     'assets/source/tiny-swords/units/blue-units/pawn/pawn-interact-hammer.png',
     'assets/source/tiny-swords/units/blue-units/pawn/pawn-interact-pickaxe.png',
@@ -265,6 +285,11 @@ async function main() {
     'assets/source/tiny-swords/units/red-units/pawn/pawn-run-meat.png',
     'assets/source/tiny-swords/units/red-units/pawn/pawn-idle-knife.png',
     'assets/source/tiny-swords/units/red-units/pawn/pawn-run-knife.png',
+    'assets/source/tiny-swords/units/red-units/lancer/lancer-down-defence.png',
+    'assets/source/tiny-swords/units/red-units/lancer/lancer-downright-defence.png',
+    'assets/source/tiny-swords/units/red-units/lancer/lancer-right-defence.png',
+    'assets/source/tiny-swords/units/red-units/lancer/lancer-upright-defence.png',
+    'assets/source/tiny-swords/units/red-units/lancer/lancer-up-defence.png',
     'assets/source/tiny-swords/units/red-units/pawn/pawn-interact-axe.png',
     'assets/source/tiny-swords/units/red-units/pawn/pawn-interact-hammer.png',
     'assets/source/tiny-swords/units/red-units/pawn/pawn-interact-pickaxe.png',
@@ -358,9 +383,62 @@ async function main() {
     'assets/source/tiny-swords/terrain/decorations/clouds/clouds-04.png',
     'assets/source/tiny-swords/terrain/tileset/water-foam.png',
     'assets/source/tiny-swords/terrain/decorations/rocks-in-the-water/water-rocks-01.png',
+    'assets/source/tiny-swords/terrain/decorations/rocks-in-the-water/water-rocks-02.png',
+    'assets/source/tiny-swords/terrain/decorations/rocks-in-the-water/water-rocks-03.png',
+    'assets/source/tiny-swords/terrain/decorations/rocks-in-the-water/water-rocks-04.png',
+    'assets/source/tiny-swords/terrain/resources/meat/sheep/sheep-idle.png',
+    'assets/source/tiny-swords/terrain/resources/meat/sheep/sheep-grass.png',
+    'assets/source/tiny-swords/terrain/resources/meat/sheep/sheep-move.png',
   ];
   console.log('\n[Environment] Checking environment strip paths...');
   for (const p of envPaths) {
+    if (!existsRuntime(p)) fail(`Missing path: ${p}`);
+    else ok(`Path OK: ${p}`);
+    if (p.startsWith('public/')) fail(`Path must not start with public/: ${p}`);
+  }
+
+  const particlePaths = [
+    'assets/source/tiny-swords/particle-fx/fire-01.png',
+    'assets/source/tiny-swords/particle-fx/fire-02.png',
+    'assets/source/tiny-swords/particle-fx/fire-03.png',
+    'assets/source/tiny-swords/particle-fx/dust-01.png',
+    'assets/source/tiny-swords/particle-fx/dust-02.png',
+    'assets/source/tiny-swords/particle-fx/explosion-01.png',
+    'assets/source/tiny-swords/particle-fx/explosion-02.png',
+    'assets/source/tiny-swords/particle-fx/water-splash.png',
+  ];
+  console.log('\n[Particle FX] Checking particle spritesheet paths...');
+  for (const p of particlePaths) {
+    if (!existsRuntime(p)) fail(`Missing path: ${p}`);
+    else ok(`Path OK: ${p}`);
+    if (p.startsWith('public/')) fail(`Path must not start with public/: ${p}`);
+  }
+
+  const arrowPaths = [
+    'assets/source/tiny-swords/units/blue-units/archer/arrow.png',
+    'assets/source/tiny-swords/units/red-units/archer/arrow.png',
+    'assets/source/tiny-swords/units/black-units/archer/arrow.png',
+    'assets/source/tiny-swords/units/purple-units/archer/arrow.png',
+    'assets/source/tiny-swords/units/yellow-units/archer/arrow.png',
+  ];
+  console.log('\n[Archer Arrows] Checking arrow projectile paths...');
+  for (const p of arrowPaths) {
+    if (!existsRuntime(p)) fail(`Missing path: ${p}`);
+    else ok(`Path OK: ${p}`);
+    if (p.startsWith('public/')) fail(`Path must not start with public/: ${p}`);
+  }
+
+  const goldHighlightPaths = [
+    'assets/source/tiny-swords/terrain/resources/gold/gold-resource/gold-resource-highlight.png',
+    'assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-1-highlight.png',
+    'assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-2-highlight.png',
+    'assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-3-highlight.png',
+    'assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-4-highlight.png',
+    'assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-5-highlight.png',
+    'assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-6-highlight.png',
+  ];
+  console.log('\n[Gold Highlights] Checking gold highlight paths...');
+  for (const p of goldHighlightPaths) {
     if (!existsRuntime(p)) fail(`Missing path: ${p}`);
     else ok(`Path OK: ${p}`);
     if (p.startsWith('public/')) fail(`Path must not start with public/: ${p}`);

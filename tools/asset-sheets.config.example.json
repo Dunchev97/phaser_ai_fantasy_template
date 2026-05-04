@@ -1,0 +1,24 @@
+{
+  "outputAssetKeys": "src/content/generatedAssetKeys.ts",
+  "sheets": [
+    {
+      "id": "fantasy_icons",
+      "source": "public/assets/source/spritesheets/fantasy-icons.png",
+      "outputImage": "public/assets/atlases/fantasy_icons.png",
+      "outputJson": "public/assets/atlases/fantasy_icons.atlas.json",
+      "outputManifest": "public/assets/catalog/fantasy_icons.manifest.json",
+      "columns": 8,
+      "rows": 8,
+      "frames": [
+        { "name": "currency/gold_coin.png", "category": "currency", "description": "Gold coin icon." },
+        { "name": "currency/silver_coin.png", "category": "currency", "description": "Silver coin icon." },
+        { "name": "currency/bronze_coin.png", "category": "currency", "description": "Bronze coin icon." },
+        { "name": "resource/wood_log.png", "category": "resource", "description": "Wood resource icon." },
+        { "name": "resource/stone.png", "category": "resource", "description": "Stone resource icon." },
+        { "name": "weapon/sword.png", "category": "weapon", "description": "Sword weapon icon." },
+        { "name": "consumable/health_potion.png", "category": "consumable", "description": "Health potion icon." },
+        { "name": "container/treasure_chest.png", "category": "container", "description": "Treasure chest icon." }
+      ]
+    }
+  ]
+}

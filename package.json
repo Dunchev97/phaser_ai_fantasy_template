@@ -10,12 +10,14 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "build:atlas": "node tools/build-grid-atlas.mjs",
+    "build:packed": "node tools/build-packed-atlas.mjs",
     "validate:assets": "node tools/validate-assets.mjs"
   },
   "dependencies": {
     "phaser": "^3.90.0"
   },
   "devDependencies": {
+    "sharp": "^0.34.1",
     "typescript": "^5.6.3",
     "vite": "^5.4.11"
   }

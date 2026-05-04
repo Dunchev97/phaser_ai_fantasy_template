@@ -1,0 +1,85 @@
+{
+  "packId": "tiny-swords",
+  "version": "2.0",
+  "atlases": [
+    {
+      "id": "tiny-swords-buildings",
+      "image": "assets/atlases/tiny-swords-buildings.png",
+      "json": "assets/atlases/tiny-swords-buildings.atlas.json",
+      "frameCount": 40,
+      "atlasWidth": 2048,
+      "atlasHeight": 2048
+    },
+    {
+      "id": "tiny-swords-ui-core",
+      "image": "assets/atlases/tiny-swords-ui-core.png",
+      "json": "assets/atlases/tiny-swords-ui-core.atlas.json",
+      "frameCount": 44,
+      "atlasWidth": 2048,
+      "atlasHeight": 2048
+    },
+    {
+      "id": "tiny-swords-resources",
+      "image": "assets/atlases/tiny-swords-resources.png",
+      "json": "assets/atlases/tiny-swords-resources.atlas.json",
+      "frameCount": 21,
+      "atlasWidth": 1024,
+      "atlasHeight": 512
+    },
+    {
+      "id": "tiny-swords-portraits",
+      "image": "assets/atlases/tiny-swords-portraits.png",
+      "json": "assets/atlases/tiny-swords-portraits.atlas.json",
+      "frameCount": 25,
+      "atlasWidth": 2048,
+      "atlasHeight": 2048
+    },
+    {
+      "id": "tiny-swords-ui-panels",
+      "image": "assets/atlases/tiny-swords-ui-panels.png",
+      "json": "assets/atlases/tiny-swords-ui-panels.atlas.json",
+      "frameCount": 8,
+      "atlasWidth": 2048,
+      "atlasHeight": 4096
+    }
+  ],
+  "spritesheets": [
+    { "key": "unit-blue-warrior-idle", "path": "assets/source/tiny-swords/units/blue-units/warrior/warrior-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-blue-warrior-run", "path": "assets/source/tiny-swords/units/blue-units/warrior/warrior-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-blue-warrior-attack1", "path": "assets/source/tiny-swords/units/blue-units/warrior/warrior-attack1.png", "frameWidth": 192, "frameHeight": 192, "frames": 4 },
+    { "key": "unit-blue-archer-idle", "path": "assets/source/tiny-swords/units/blue-units/archer/archer-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-blue-archer-run", "path": "assets/source/tiny-swords/units/blue-units/archer/archer-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 4 },
+    { "key": "unit-blue-archer-shoot", "path": "assets/source/tiny-swords/units/blue-units/archer/archer-shoot.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-blue-pawn-idle", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-blue-pawn-run", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-red-warrior-idle", "path": "assets/source/tiny-swords/units/red-units/warrior/warrior-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-red-warrior-run", "path": "assets/source/tiny-swords/units/red-units/warrior/warrior-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-red-warrior-attack1", "path": "assets/source/tiny-swords/units/red-units/warrior/warrior-attack1.png", "frameWidth": 192, "frameHeight": 192, "frames": 4 },
+    { "key": "unit-red-archer-idle", "path": "assets/source/tiny-swords/units/red-units/archer/archer-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-red-archer-run", "path": "assets/source/tiny-swords/units/red-units/archer/archer-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 4 },
+    { "key": "unit-red-archer-shoot", "path": "assets/source/tiny-swords/units/red-units/archer/archer-shoot.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-red-pawn-idle", "path": "assets/source/tiny-swords/units/red-units/pawn/pawn-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-red-pawn-run", "path": "assets/source/tiny-swords/units/red-units/pawn/pawn-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "particle-fire-01", "path": "assets/source/tiny-swords/particle-fx/fire-01.png", "frameWidth": 64, "frameHeight": 64, "frames": 8 },
+    { "key": "particle-dust-01", "path": "assets/source/tiny-swords/particle-fx/dust-01.png", "frameWidth": 64, "frameHeight": 64, "frames": 8 },
+    { "key": "particle-explosion-01", "path": "assets/source/tiny-swords/particle-fx/explosion-01.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 }
+  ],
+  "tilesets": [
+    { "key": "terrain-tilemap-color1", "path": "assets/source/tiny-swords/terrain/tileset/tilemap-color1.png", "tileWidth": 16, "tileHeight": 16 },
+    { "key": "terrain-tilemap-color2", "path": "assets/source/tiny-swords/terrain/tileset/tilemap-color2.png", "tileWidth": 16, "tileHeight": 16 },
+    { "key": "terrain-shadow", "path": "assets/source/tiny-swords/terrain/tileset/shadow.png", "tileWidth": 16, "tileHeight": 16 },
+    { "key": "terrain-water-background", "path": "assets/source/tiny-swords/terrain/tileset/water-background-color.png", "tileWidth": 16, "tileHeight": 16 }
+  ],
+  "skippedAssets": [
+    { "path": "ui-elements/ui-elements/human-avatars/", "reason": "Packed into separate tiny-swords-portraits atlas" },
+    { "path": "ui-elements/ui-banners-from-the-store-page/banner/banner.png", "reason": "960x576, fits in ui-panels atlas only as scaled; included in ui-panels since max-atlas 2048x4096 allows it" },
+    { "path": "ui-elements/ui-elements/ribbons/bigribbons.png", "reason": "448x640, included in ui-panels since it passes atlas quality rules" },
+    { "path": "ui-elements/ui-elements/swords/swords.png", "reason": "448x640; moved to ui-core atlas instead of ui-panels to balance size" },
+    { "path": "terrain/resources/wood/trees/tree1.png", "reason": "Long spritesheet strip (1536x256), not a static icon — load as Phaser spritesheet animation instead" },
+    { "path": "terrain/resources/wood/trees/tree2.png", "reason": "Long spritesheet strip (1536x256), not a static icon — load as Phaser spritesheet animation instead" },
+    { "path": "terrain/decorations/bushes", "reason": "Long strips (1024x128), likely spritesheet animations — verify frame size before atlas inclusion" },
+    { "path": "terrain/decorations/clouds", "reason": "Long strips (576x256), likely spritesheet animations — verify frame size before atlas inclusion" },
+    { "path": "terrain/decorations/rocks-in-the-water", "reason": "Tileset-like strips (1024x64 at 16x16), better loaded as Phaser tileset or spritesheet instead of static atlas" },
+    { "path": "terrain/tileset/water-foam.png", "reason": "3072x192, animation strip — not a static atlas candidate" }
+  ]
+}

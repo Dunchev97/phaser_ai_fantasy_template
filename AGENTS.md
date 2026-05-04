@@ -63,11 +63,17 @@ npm run preview
 
 Build grid-based atlases:
 
-```bash
-npm run build:atlas
-```
+  ```bash
+  npm run build:atlas
+  ```
 
-Validate generated atlas files:
+  Build packed atlases:
+
+  ```bash
+  npm run build:packed
+  ```
+
+  Validate generated atlas files:
 
 ```bash
 npm run validate:assets
@@ -77,39 +83,46 @@ If a command fails because dependencies are not installed, ask the user to run `
 
 ## Project structure
 
-```text
-src/
-  main.ts
-  content/
-    assetKeys.ts
-    generatedAssetKeys.ts
-    items.ts
-    prototypeState.ts
-    resources.ts
-  game/
-    config.ts
-    scenes/
-      BootScene.ts
-      PreloadScene.ts
-      MainMenuScene.ts
-      GameScene.ts
-    systems/
-    ui/
+  ```text
+  src/
+    main.ts
+    content/
+      assetKeys.ts
+      generatedAssetKeys.ts
+      tinySwordsAssetKeys.ts
+      tinySwordsAnimations.ts
+      tinySwordsTilesets.ts
+      items.ts
+      prototypeState.ts
+      resources.ts
+    game/
+      config.ts
+      scenes/
+        BootScene.ts
+        PreloadScene.ts
+        MainMenuScene.ts
+        GameScene.ts
+        AssetGalleryScene.ts
+      systems/
+      ui/
 
-public/
-  assets/
-    source/
-      spritesheets/
-      icons/
-    atlases/
-    catalog/
+  public/
+    assets/
+      source/
+        spritesheets/
+        icons/
+        tiny-swords/
+      atlases/
+      catalog/
 
-tools/
-  asset-sheets.config.json
-  build-grid-atlas.mjs
-  validate-assets.mjs
-  ASSET_PIPELINE.md
-```
+  tools/
+    asset-sheets.config.json
+    packed-atlases.config.json
+    build-grid-atlas.mjs
+    build-packed-atlas.mjs
+    validate-assets.mjs
+    ASSET_PIPELINE.md
+  ```
 
 ## Scene flow
 
@@ -192,6 +205,62 @@ this.add.image(x, y, 'fantasy_icons', 'weapon/sword.png');
 ```
 
 If the required icon does not exist, choose the closest existing icon and mention the substitution.
+
+## Tiny Swords asset usage
+
+The project includes a fully imported Tiny Swords asset pack with several runtime layers.
+
+When building a fantasy prototype, reuse existing Tiny Swords assets before inventing new ones:
+
+- **Blue units = player / allies**
+  - `TinySwordsSpritesheets.UnitBlueWarriorIdle`
+  - `TinySwordsSpritesheets.UnitBlueArcherIdle`
+  - `TinySwordsSpritesheets.UnitBluePawnIdle`
+  - Use `blue-warrior-idle`, `blue-archer-run`, `blue-archer-shoot` animation keys.
+
+- **Red units = enemies**
+  - `TinySwordsSpritesheets.UnitRedWarriorIdle`
+  - `TinySwordsSpritesheets.UnitRedArcherIdle`
+  - `TinySwordsSpritesheets.UnitRedPawnIdle`
+  - Use `red-warrior-idle`, `red-archer-run`, `red-archer-shoot` animation keys.
+
+- **Buildings** — `TinySwordsBuildingFrames` from `tiny-swords-buildings` atlas.
+
+- **Resources** — `TinySwordsResourceFrames` from `tiny-swords-resources` atlas.
+  - Gold, wood, meat, tools, rocks, stumps.
+
+- **UI core** — `TinySwordsUIFrames` from `tiny-swords-ui-core` atlas.
+  - Buttons, bars, icons, cursors, papers.
+
+- **Portraits** — `TinySwordsPortraitFrames` from `tiny-swords-portraits` atlas.
+  - Use for dialogue, events, or character selection prototypes.
+
+- **UI panels** — `TinySwordsUIPanelFrames` from `tiny-swords-ui-panels` atlas.
+  - Big ribbons, store banners, decorative panels.
+
+- **Tilesets** — `TinySwordsTilesets` from `src/content/tinySwordsTilesets.ts`.
+  - `terrain-tilemap-color1`, `terrain-tilemap-color2`, `terrain-shadow`, `terrain-water-background`.
+
+Do not invent frame names. Use constants from `src/content/tinySwordsAssetKeys.ts`.
+
+If an asset you need does not exist in the runtime layer, check `public/assets/catalog/tiny-swords.runtime-manifest.json` first for what is already wired, then check `public/assets/catalog/tiny-swords.source-manifest.json` for what is available but not yet connected. If you add new assets:
+
+1. Update `tools/packed-atlases.config.json` or the relevant builder config.
+2. Run `npm run build:packed`.
+3. Update `src/content/tinySwordsAssetKeys.ts` with new frame names.
+4. Update `src/game/scenes/AssetGalleryScene.ts` if the new assets should be visible.
+5. Run `npm run validate:assets` and `npm run build`.
+
+### Asset gallery scene
+
+`AssetGalleryScene` is available for debug / asset previews. It shows:
+
+- Buildings, resources, UI core, UI panels
+- Blue idle units, red idle units
+- Fire / dust / explosion particles
+- Portraits, terrain sample
+
+When you change or extend the asset layer, keep the gallery in sync so the new assets are visible.
 
 ## Data rules
 
@@ -280,8 +349,9 @@ After implementation:
 
 1. Run `npm run typecheck` when possible.
 2. Run `npm run build` when possible.
-3. Fix obvious issues.
-4. Summarize changes and test results.
+3. Run `npm run validate:assets` when assets changed.
+4. Fix obvious issues.
+5. Summarize changes and test results.
 
 ## Definition of Done
 
@@ -293,6 +363,7 @@ A task is done when:
 4. Asset frame names are valid.
 5. The game has a clear playable loop.
 6. No unrelated files were changed.
+7. **If assets changed**: `AssetGalleryScene` still works or was updated, `validate:assets` passes, and `build` passes.
 
 ## Optional MCP usage
 

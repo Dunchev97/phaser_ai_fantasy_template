@@ -41,11 +41,25 @@ export class MainMenuScene extends Phaser.Scene {
     start.on('pointerout', () => start.setStyle({ backgroundColor: '#6b2fbf' }));
     start.on('pointerdown', () => this.scene.start('GameScene'));
 
+    const gallery = this.add
+      .text(GAME_WIDTH / 2, GAME_HEIGHT / 2 + 70, 'Asset Gallery', {
+        fontSize: '24px',
+        color: '#ffffff',
+        backgroundColor: '#2f5fbf',
+        padding: { x: 24, y: 12 },
+      })
+      .setOrigin(0.5)
+      .setInteractive({ useHandCursor: true });
+
+    gallery.on('pointerover', () => gallery.setStyle({ backgroundColor: '#3f7fe0' }));
+    gallery.on('pointerout', () => gallery.setStyle({ backgroundColor: '#2f5fbf' }));
+    gallery.on('pointerdown', () => this.scene.start('AssetGalleryScene'));
+
     this.add
       .text(
         GAME_WIDTH / 2,
         GAME_HEIGHT - 90,
-        'Add sprite sheets to public/assets/source/spritesheets, run npm run build:atlas, then ask an agent to build an MVP.',
+        'Tiny Swords pack imported. Add sprite sheets, run npm run build:atlas, or open Asset Gallery.',
         {
           fontSize: '18px',
           color: '#9b86b8',

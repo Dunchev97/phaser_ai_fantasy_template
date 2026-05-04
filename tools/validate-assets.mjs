@@ -1,8 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import sharp from 'sharp';
 
 const ROOT = process.cwd();
-const CONFIG_PATH = path.join(ROOT, 'tools', 'asset-sheets.config.json');
+const GRID_CONFIG_PATH = path.join(ROOT, 'tools', 'asset-sheets.config.json');
+const PACKED_CONFIG_PATH = path.join(ROOT, 'tools', 'packed-atlases.config.json');
+const RUNTIME_MANIFEST = path.join(ROOT, 'public', 'assets', 'catalog', 'tiny-swords.runtime-manifest.json');
+
+let exitCode = 0;
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -12,60 +17,216 @@ function exists(relPath) {
   return fs.existsSync(path.join(ROOT, relPath));
 }
 
+function existsRuntime(relPath) {
+  // Runtime paths omit the 'public/' prefix; files live under public/
+  const physical = relPath.startsWith('assets/') || relPath.startsWith('assets\\')
+    ? path.join('public', relPath)
+    : relPath;
+  return fs.existsSync(path.join(ROOT, physical));
+}
+
 function fail(message) {
   console.error(`✗ ${message}`);
-  process.exitCode = 1;
+  exitCode = 1;
 }
 
 function ok(message) {
   console.log(`✓ ${message}`);
 }
 
-function main() {
-  if (!fs.existsSync(CONFIG_PATH)) {
-    fail('tools/asset-sheets.config.json is missing.');
-    return;
+function assertSize(w, h, label) {
+  if (w < 1024) {
+    fail(`${label}: width ${w} < 1024`);
+    return false;
   }
-
-  const config = readJson(CONFIG_PATH);
-  const sheets = Array.isArray(config.sheets) ? config.sheets : [];
-
-  if (sheets.length === 0) {
-    ok('No sheets configured yet. This is fine for a fresh template.');
-    return;
+  if (h > 4096) {
+    fail(`${label}: height ${h} > 4096`);
+    return false;
   }
+  if (w > 4096) {
+    fail(`${label}: width ${w} > 4096`);
+    return false;
+  }
+  const ratio = Math.max(w / h, h / w);
+  if (ratio > 3) {
+    fail(`${label}: aspect ratio ${ratio.toFixed(2)} worse than 3:1`);
+    return false;
+  }
+  return true;
+}
 
-  for (const sheet of sheets) {
-    console.log(`\nChecking ${sheet.id}...`);
+async function checkAtlasImage(filePath, label) {
+  if (!exists(filePath)) {
+    fail(`Missing atlas image: ${filePath}`);
+    return false;
+  }
+  try {
+    const meta = await sharp(path.join(ROOT, filePath)).metadata();
+    if (!assertSize(meta.width, meta.height, label)) return false;
+  } catch (e) {
+    fail(`Cannot read atlas image ${filePath}: ${e.message}`);
+    return false;
+  }
+  return true;
+}
 
-    if (!exists(sheet.source)) fail(`Missing source: ${sheet.source}`);
-    else ok(`Source exists: ${sheet.source}`);
+function checkAtlasJson(filePath, expectedFrames) {
+  if (!exists(filePath)) {
+    fail(`Missing atlas JSON: ${filePath}`);
+    return false;
+  }
+  const atlas = readJson(path.join(ROOT, filePath));
+  const frameCount = atlas.frames ? Object.keys(atlas.frames).length : 0;
+  if (frameCount !== expectedFrames) {
+    fail(`${filePath}: expected ${expectedFrames} frames, got ${frameCount}`);
+    return false;
+  }
+  // Check bounds
+  const size = atlas.meta?.size;
+  if (!size) {
+    fail(`${filePath}: missing meta.size`);
+    return false;
+  }
+  if (atlas.frames) {
+    for (const [name, rawFrame] of Object.entries(atlas.frames)) {
+      const f = rawFrame;
+      const fr = f.frame;
+      if (!fr) continue;
+      if (fr.x + fr.w > size.w) {
+        fail(`${filePath} frame ${name} exceeds atlas width: ${fr.x + fr.w} > ${size.w}`);
+        return false;
+      }
+      if (fr.y + fr.h > size.h) {
+        fail(`${filePath} frame ${name} exceeds atlas height: ${fr.y + fr.h} > ${size.h}`);
+        return false;
+      }
+    }
+  }
+  ok(`${filePath}: ${frameCount} frames, size ${size.w}x${size.h}`);
+  return true;
+}
 
-    if (!exists(sheet.outputImage)) fail(`Missing generated atlas image: ${sheet.outputImage}`);
-    else ok(`Atlas image exists: ${sheet.outputImage}`);
+async function main() {
+  // Grid atlases
+  if (fs.existsSync(GRID_CONFIG_PATH)) {
+    const config = readJson(GRID_CONFIG_PATH);
+    const sheets = Array.isArray(config.sheets) ? config.sheets : [];
 
-    if (!exists(sheet.outputJson)) {
-      fail(`Missing generated atlas JSON: ${sheet.outputJson}`);
+    if (sheets.length === 0) {
+      ok('No grid sheets configured yet.');
     } else {
-      const atlas = readJson(path.join(ROOT, sheet.outputJson));
-      const frameCount = atlas.frames ? Object.keys(atlas.frames).length : 0;
-      const expected = Number(sheet.columns) * Number(sheet.rows);
-      if (frameCount !== expected) {
-        fail(`Atlas frame count mismatch for ${sheet.id}: expected ${expected}, got ${frameCount}`);
-      } else {
-        ok(`Atlas JSON has ${frameCount} frames.`);
+      for (const sheet of sheets) {
+        console.log(`\n[Grid] Checking ${sheet.id}...`);
+        if (!exists(sheet.source)) fail(`Missing source: ${sheet.source}`);
+        else ok(`Source exists: ${sheet.source}`);
+
+        if (!exists(sheet.outputImage)) fail(`Missing generated atlas image: ${sheet.outputImage}`);
+        else ok(`Atlas image exists: ${sheet.outputImage}`);
+
+        if (!exists(sheet.outputJson)) {
+          fail(`Missing generated atlas JSON: ${sheet.outputJson}`);
+        } else {
+          const atlas = readJson(path.join(ROOT, sheet.outputJson));
+          const frameCount = atlas.frames ? Object.keys(atlas.frames).length : 0;
+          const expected = Number(sheet.columns) * Number(sheet.rows);
+          if (frameCount !== expected) {
+            fail(`Atlas frame count mismatch for ${sheet.id}: expected ${expected}, got ${frameCount}`);
+          } else {
+            ok(`Atlas JSON has ${frameCount} frames.`);
+          }
+        }
+
+        if (!exists(sheet.outputManifest)) fail(`Missing manifest: ${sheet.outputManifest}`);
+        else ok(`Manifest exists: ${sheet.outputManifest}`);
+      }
+    }
+  }
+
+  // Packed atlases
+  if (fs.existsSync(PACKED_CONFIG_PATH)) {
+    const packedConfig = readJson(PACKED_CONFIG_PATH);
+    const atlases = Array.isArray(packedConfig.atlases) ? packedConfig.atlases : [];
+
+    if (atlases.length === 0) {
+      ok('No packed atlases configured yet.');
+    } else {
+      for (const atlasEntry of atlases) {
+        console.log(`\n[Packed] Checking ${atlasEntry.id}...`);
+        if (!exists(atlasEntry.outputImage)) {
+          fail(`Missing packed atlas image: ${atlasEntry.outputImage}`);
+          continue;
+        }
+        if (!exists(atlasEntry.outputJson)) {
+          fail(`Missing packed atlas JSON: ${atlasEntry.outputJson}`);
+          continue;
+        }
+        const imgOK = await checkAtlasImage(atlasEntry.outputImage, atlasEntry.id);
+        const jsonOK = checkAtlasJson(atlasEntry.outputJson, atlasEntry.frames.length);
+        if (imgOK && jsonOK) ok(`Atlas quality passed for ${atlasEntry.id}`);
+
+        if (exists(atlasEntry.outputImage)) {
+          const meta = await sharp(path.join(ROOT, atlasEntry.outputImage)).metadata();
+          if (meta.width) assertSize(meta.width, meta.height, `${atlasEntry.id} dimensions`);
+        }
+      }
+    }
+  }
+
+  // Runtime manifest
+  if (fs.existsSync(RUNTIME_MANIFEST)) {
+    console.log('\n[Runtime] Checking tiny-swords.runtime-manifest.json...');
+    const runtime = readJson(RUNTIME_MANIFEST);
+
+    for (const atlas of runtime.atlases || []) {
+      if (!existsRuntime(atlas.image)) fail(`Missing runtime atlas image: ${atlas.image}`);
+      else ok(`Atlas image exists: ${atlas.image}`);
+      if (!existsRuntime(atlas.json)) fail(`Missing runtime atlas JSON: ${atlas.json}`);
+      else ok(`Atlas JSON exists: ${atlas.json}`);
+      if (atlas.image.startsWith('public/')) {
+        fail(`Runtime atlas image path must not start with public/: ${atlas.image}`);
+      }
+      if (atlas.json.startsWith('public/')) {
+        fail(`Runtime atlas JSON path must not start with public/: ${atlas.json}`);
       }
     }
 
-    if (!exists(sheet.outputManifest)) fail(`Missing manifest: ${sheet.outputManifest}`);
-    else ok(`Manifest exists: ${sheet.outputManifest}`);
+    for (const sheet of runtime.spritesheets || []) {
+      if (!existsRuntime(sheet.path)) fail(`Missing spritesheet: ${sheet.path}`);
+      else ok(`Spritesheet exists: ${sheet.key}`);
+      if (sheet.path.startsWith('public/')) {
+        fail(`Spritesheet path must not start with public/: ${sheet.path}`);
+      }
+    }
+
+    for (const tileset of runtime.tilesets || []) {
+      if (!existsRuntime(tileset.path)) fail(`Missing tileset: ${tileset.path}`);
+      else ok(`Tileset exists: ${tileset.key}`);
+      if (tileset.path.startsWith('public/')) {
+        fail(`Tileset path must not start with public/: ${tileset.path}`);
+      }
+    }
   }
 
-  if (exists(config.outputAssetKeys ?? 'src/content/generatedAssetKeys.ts')) {
-    ok(`Generated asset keys exist: ${config.outputAssetKeys ?? 'src/content/generatedAssetKeys.ts'}`);
+  // Key files
+  const keyFiles = [
+    'src/content/tinySwordsAssetKeys.ts',
+    'src/content/tinySwordsAnimations.ts',
+    'src/content/tinySwordsTilesets.ts',
+  ];
+  for (const keyFile of keyFiles) {
+    if (exists(keyFile)) ok(`Key file exists: ${keyFile}`);
+    else fail(`Missing key file: ${keyFile}`);
+  }
+
+  if (exitCode) {
+    console.log('\nValidation completed with errors.');
+    process.exit(1);
   } else {
-    fail(`Generated asset keys missing: ${config.outputAssetKeys ?? 'src/content/generatedAssetKeys.ts'}`);
+    console.log('\nAll assets validated successfully.');
   }
 }
 
-main();
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});

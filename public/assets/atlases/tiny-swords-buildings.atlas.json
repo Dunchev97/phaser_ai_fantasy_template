@@ -1,0 +1,815 @@
+{
+  "frames": {
+    "building/black/monastery.png": {
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 192,
+        "h": 320
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 320
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      }
+    },
+    "building/blue/monastery.png": {
+      "frame": {
+        "x": 200,
+        "y": 4,
+        "w": 192,
+        "h": 320
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 320
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      }
+    },
+    "building/purple/monastery.png": {
+      "frame": {
+        "x": 396,
+        "y": 4,
+        "w": 192,
+        "h": 320
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 320
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      }
+    },
+    "building/red/monastery.png": {
+      "frame": {
+        "x": 592,
+        "y": 4,
+        "w": 192,
+        "h": 320
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 320
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      }
+    },
+    "building/yellow/monastery.png": {
+      "frame": {
+        "x": 788,
+        "y": 4,
+        "w": 192,
+        "h": 320
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 320
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      }
+    },
+    "building/black/archery.png": {
+      "frame": {
+        "x": 984,
+        "y": 4,
+        "w": 192,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 256
+      }
+    },
+    "building/black/barracks.png": {
+      "frame": {
+        "x": 1180,
+        "y": 4,
+        "w": 192,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 256
+      }
+    },
+    "building/black/castle.png": {
+      "frame": {
+        "x": 1376,
+        "y": 4,
+        "w": 320,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 320,
+        "h": 256
+      }
+    },
+    "building/black/tower.png": {
+      "frame": {
+        "x": 1700,
+        "y": 4,
+        "w": 128,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 256
+      }
+    },
+    "building/blue/archery.png": {
+      "frame": {
+        "x": 1832,
+        "y": 4,
+        "w": 192,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 256
+      }
+    },
+    "building/blue/barracks.png": {
+      "frame": {
+        "x": 4,
+        "y": 332,
+        "w": 192,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 256
+      }
+    },
+    "building/blue/castle.png": {
+      "frame": {
+        "x": 200,
+        "y": 332,
+        "w": 320,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 320,
+        "h": 256
+      }
+    },
+    "building/blue/tower.png": {
+      "frame": {
+        "x": 524,
+        "y": 332,
+        "w": 128,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 256
+      }
+    },
+    "building/purple/archery.png": {
+      "frame": {
+        "x": 656,
+        "y": 332,
+        "w": 192,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 256
+      }
+    },
+    "building/purple/barracks.png": {
+      "frame": {
+        "x": 852,
+        "y": 332,
+        "w": 192,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 256
+      }
+    },
+    "building/purple/castle.png": {
+      "frame": {
+        "x": 1048,
+        "y": 332,
+        "w": 320,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 320,
+        "h": 256
+      }
+    },
+    "building/purple/tower.png": {
+      "frame": {
+        "x": 1372,
+        "y": 332,
+        "w": 128,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 256
+      }
+    },
+    "building/red/archery.png": {
+      "frame": {
+        "x": 1504,
+        "y": 332,
+        "w": 192,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 256
+      }
+    },
+    "building/red/barracks.png": {
+      "frame": {
+        "x": 1700,
+        "y": 332,
+        "w": 192,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 256
+      }
+    },
+    "building/red/castle.png": {
+      "frame": {
+        "x": 4,
+        "y": 596,
+        "w": 320,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 320,
+        "h": 256
+      }
+    },
+    "building/red/tower.png": {
+      "frame": {
+        "x": 1896,
+        "y": 332,
+        "w": 128,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 256
+      }
+    },
+    "building/yellow/archery.png": {
+      "frame": {
+        "x": 328,
+        "y": 596,
+        "w": 192,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 256
+      }
+    },
+    "building/yellow/barracks.png": {
+      "frame": {
+        "x": 524,
+        "y": 596,
+        "w": 192,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 256
+      }
+    },
+    "building/yellow/castle.png": {
+      "frame": {
+        "x": 720,
+        "y": 596,
+        "w": 320,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 320,
+        "h": 256
+      }
+    },
+    "building/yellow/tower.png": {
+      "frame": {
+        "x": 1044,
+        "y": 596,
+        "w": 128,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 256
+      }
+    },
+    "building/black/house1.png": {
+      "frame": {
+        "x": 1176,
+        "y": 596,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/black/house2.png": {
+      "frame": {
+        "x": 1308,
+        "y": 596,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/black/house3.png": {
+      "frame": {
+        "x": 1440,
+        "y": 596,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/blue/house1.png": {
+      "frame": {
+        "x": 1572,
+        "y": 596,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/blue/house2.png": {
+      "frame": {
+        "x": 1704,
+        "y": 596,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/blue/house3.png": {
+      "frame": {
+        "x": 1836,
+        "y": 596,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/purple/house1.png": {
+      "frame": {
+        "x": 4,
+        "y": 860,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/purple/house2.png": {
+      "frame": {
+        "x": 136,
+        "y": 860,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/purple/house3.png": {
+      "frame": {
+        "x": 268,
+        "y": 860,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/red/house1.png": {
+      "frame": {
+        "x": 400,
+        "y": 860,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/red/house2.png": {
+      "frame": {
+        "x": 532,
+        "y": 860,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/red/house3.png": {
+      "frame": {
+        "x": 664,
+        "y": 860,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/yellow/house1.png": {
+      "frame": {
+        "x": 796,
+        "y": 860,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/yellow/house2.png": {
+      "frame": {
+        "x": 928,
+        "y": 860,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    },
+    "building/yellow/house3.png": {
+      "frame": {
+        "x": 1060,
+        "y": 860,
+        "w": 128,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 192
+      }
+    }
+  },
+  "meta": {
+    "app": "tiny-swords-packed-atlas",
+    "version": "1.0",
+    "image": "tiny-swords-buildings.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": 1
+  }
+}

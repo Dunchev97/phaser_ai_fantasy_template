@@ -1,0 +1,5560 @@
+{
+  "packId": "tiny-swords",
+  "sourceRoot": "public/assets/source/tiny-swords",
+  "pngCount": 410,
+  "asepriteCount": 18,
+  "files": [
+    {
+      "normalizedPath": "buildings/black-buildings/archery.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/black-buildings/barracks.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/black-buildings/castle.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/black-buildings/house1.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/black-buildings/house2.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/black-buildings/house3.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/black-buildings/monastery.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 320
+      }
+    },
+    {
+      "normalizedPath": "buildings/black-buildings/tower.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/blue-buildings/archery.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/blue-buildings/barracks.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/blue-buildings/castle.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/blue-buildings/house1.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/blue-buildings/house2.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/blue-buildings/house3.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/blue-buildings/monastery.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 320
+      }
+    },
+    {
+      "normalizedPath": "buildings/blue-buildings/tower.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/purple-buildings/archery.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/purple-buildings/barracks.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/purple-buildings/castle.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/purple-buildings/house1.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/purple-buildings/house2.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/purple-buildings/house3.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/purple-buildings/monastery.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 320
+      }
+    },
+    {
+      "normalizedPath": "buildings/purple-buildings/tower.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/red-buildings/archery.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/red-buildings/barracks.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/red-buildings/castle.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/red-buildings/house1.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/red-buildings/house2.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/red-buildings/house3.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/red-buildings/monastery.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 320
+      }
+    },
+    {
+      "normalizedPath": "buildings/red-buildings/tower.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/yellow-buildings/archery.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/yellow-buildings/barracks.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/yellow-buildings/castle.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "buildings/yellow-buildings/house1.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/yellow-buildings/house2.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/yellow-buildings/house3.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "buildings/yellow-buildings/monastery.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 320
+      }
+    },
+    {
+      "normalizedPath": "buildings/yellow-buildings/tower.png",
+      "category": "building",
+      "type": "building",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "particle-fx/dust-01.png",
+      "category": "particle-fx",
+      "type": "particle-fx",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 512,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "particle-fx/dust-02.png",
+      "category": "particle-fx",
+      "type": "particle-fx",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 640,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "particle-fx/explosion-01.png",
+      "category": "particle-fx",
+      "type": "particle-fx",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "particle-fx/explosion-02.png",
+      "category": "particle-fx",
+      "type": "particle-fx",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "particle-fx/fire-01.png",
+      "category": "particle-fx",
+      "type": "particle-fx",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 512,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "particle-fx/fire-02.png",
+      "category": "particle-fx",
+      "type": "particle-fx",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 640,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "particle-fx/fire-03.png",
+      "category": "particle-fx",
+      "type": "particle-fx",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "particle-fx/particle-fx.aseprite",
+      "category": "particle-fx",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Aseprite source file; export frames if needed."
+    },
+    {
+      "normalizedPath": "particle-fx/water-splash.png",
+      "category": "particle-fx",
+      "type": "particle-fx",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 1728,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/bushes/bushe1.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 1024,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/bushes/bushe2.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 1024,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/bushes/bushe3.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 1024,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/bushes/bushe4.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 1024,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/bushes/bushes.aseprite",
+      "category": "resource",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Decoration/resource object."
+    },
+    {
+      "normalizedPath": "terrain/decorations/clouds/clouds.aseprite",
+      "category": "resource",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Decoration/resource object."
+    },
+    {
+      "normalizedPath": "terrain/decorations/clouds/clouds-01.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 576,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/clouds/clouds-02.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 576,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/clouds/clouds-03.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 576,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/clouds/clouds-04.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 576,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/clouds/clouds-05.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 576,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/clouds/clouds-06.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 576,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/clouds/clouds-07.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 576,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/clouds/clouds-08.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 576,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/rocks/rock1.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/rocks/rock2.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/rocks/rock3.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/rocks/rock4.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/rocks-in-the-water/water-rocks-01.aseprite",
+      "category": "terrain",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Likely tileset sheet; verify frame size from dimensions."
+    },
+    {
+      "normalizedPath": "terrain/decorations/rocks-in-the-water/water-rocks-01.png",
+      "category": "terrain",
+      "type": "tileset",
+      "frameSize": {
+        "width": 16,
+        "height": 16
+      },
+      "notes": "Likely tileset sheet; verify frame size from dimensions.",
+      "dimensions": {
+        "width": 1024,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/rocks-in-the-water/water-rocks-02.aseprite",
+      "category": "terrain",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Likely tileset sheet; verify frame size from dimensions."
+    },
+    {
+      "normalizedPath": "terrain/decorations/rocks-in-the-water/water-rocks-02.png",
+      "category": "terrain",
+      "type": "tileset",
+      "frameSize": {
+        "width": 16,
+        "height": 16
+      },
+      "notes": "Likely tileset sheet; verify frame size from dimensions.",
+      "dimensions": {
+        "width": 1024,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/rocks-in-the-water/water-rocks-03.aseprite",
+      "category": "terrain",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Likely tileset sheet; verify frame size from dimensions."
+    },
+    {
+      "normalizedPath": "terrain/decorations/rocks-in-the-water/water-rocks-03.png",
+      "category": "terrain",
+      "type": "tileset",
+      "frameSize": {
+        "width": 16,
+        "height": 16
+      },
+      "notes": "Likely tileset sheet; verify frame size from dimensions.",
+      "dimensions": {
+        "width": 1024,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/rocks-in-the-water/water-rocks-04.aseprite",
+      "category": "terrain",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Likely tileset sheet; verify frame size from dimensions."
+    },
+    {
+      "normalizedPath": "terrain/decorations/rocks-in-the-water/water-rocks-04.png",
+      "category": "terrain",
+      "type": "tileset",
+      "frameSize": {
+        "width": 16,
+        "height": 16
+      },
+      "notes": "Likely tileset sheet; verify frame size from dimensions.",
+      "dimensions": {
+        "width": 1024,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/decorations/rubber-duck/rubber-duck.aseprite",
+      "category": "resource",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Aseprite source file; export frames if needed."
+    },
+    {
+      "normalizedPath": "terrain/decorations/rubber-duck/rubber-duck.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 96,
+        "height": 32
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-resource/gold-resource.aseprite",
+      "category": "resource",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Aseprite source file; export frames if needed."
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-resource/gold-resource.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-resource/gold-resource-highlight.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stone-1.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stone-1-highlight.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stone-2.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stone-2-highlight.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stone-3.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stone-3-highlight.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stone-4.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stone-4-highlight.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stone-5.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stone-5-highlight.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stone-6.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stone-6-highlight.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/gold/gold-stones/gold-stones.aseprite",
+      "category": "resource",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Aseprite source file; export frames if needed."
+    },
+    {
+      "normalizedPath": "terrain/resources/meat/meat-resource/meat-resource.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/meat/sheep/sheep.aseprite",
+      "category": "resource",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Aseprite source file; export frames if needed."
+    },
+    {
+      "normalizedPath": "terrain/resources/meat/sheep/sheep-grass.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 1536,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/meat/sheep/sheep-idle.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/meat/sheep/sheep-move.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 512,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/tools/tool-01.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/tools/tool-02.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/tools/tool-03.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/tools/tool-04.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/wood/trees/stump-1.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/wood/trees/stump-2.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/wood/trees/stump-3.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/wood/trees/stump-4.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 192,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/wood/trees/tree1.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 1536,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/wood/trees/tree2.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 1536,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/wood/trees/tree3.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/wood/trees/tree4.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "Decoration/resource object.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "terrain/resources/wood/trees/trees.aseprite",
+      "category": "resource",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Decoration/resource object."
+    },
+    {
+      "normalizedPath": "terrain/resources/wood/wood-resource/wood-resource.png",
+      "category": "resource",
+      "type": "static-image",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/tileset/shadow.png",
+      "category": "terrain",
+      "type": "tileset",
+      "frameSize": {
+        "width": 16,
+        "height": 16
+      },
+      "notes": "Likely tileset sheet; verify frame size from dimensions.",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "terrain/tileset/tilemap-color1.png",
+      "category": "terrain",
+      "type": "tileset",
+      "frameSize": {
+        "width": 16,
+        "height": 16
+      },
+      "notes": "Likely tileset sheet; verify frame size from dimensions.",
+      "dimensions": {
+        "width": 576,
+        "height": 384
+      }
+    },
+    {
+      "normalizedPath": "terrain/tileset/tilemap-color2.png",
+      "category": "terrain",
+      "type": "tileset",
+      "frameSize": {
+        "width": 16,
+        "height": 16
+      },
+      "notes": "Likely tileset sheet; verify frame size from dimensions.",
+      "dimensions": {
+        "width": 576,
+        "height": 384
+      }
+    },
+    {
+      "normalizedPath": "terrain/tileset/tilemap-color3.png",
+      "category": "terrain",
+      "type": "tileset",
+      "frameSize": {
+        "width": 16,
+        "height": 16
+      },
+      "notes": "Likely tileset sheet; verify frame size from dimensions.",
+      "dimensions": {
+        "width": 576,
+        "height": 384
+      }
+    },
+    {
+      "normalizedPath": "terrain/tileset/tilemap-color4.png",
+      "category": "terrain",
+      "type": "tileset",
+      "frameSize": {
+        "width": 16,
+        "height": 16
+      },
+      "notes": "Likely tileset sheet; verify frame size from dimensions.",
+      "dimensions": {
+        "width": 576,
+        "height": 384
+      }
+    },
+    {
+      "normalizedPath": "terrain/tileset/tilemap-color5.png",
+      "category": "terrain",
+      "type": "tileset",
+      "frameSize": {
+        "width": 16,
+        "height": 16
+      },
+      "notes": "Likely tileset sheet; verify frame size from dimensions.",
+      "dimensions": {
+        "width": 576,
+        "height": 384
+      }
+    },
+    {
+      "normalizedPath": "terrain/tileset/water-background-color.png",
+      "category": "terrain",
+      "type": "tileset",
+      "frameSize": {
+        "width": 16,
+        "height": 16
+      },
+      "notes": "Likely tileset sheet; verify frame size from dimensions.",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "terrain/tileset/water-foam.aseprite",
+      "category": "terrain",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Likely tileset sheet; verify frame size from dimensions."
+    },
+    {
+      "normalizedPath": "terrain/tileset/water-foam.png",
+      "category": "terrain",
+      "type": "tileset",
+      "frameSize": {
+        "width": 16,
+        "height": 16
+      },
+      "notes": "Likely tileset sheet; verify frame size from dimensions.",
+      "dimensions": {
+        "width": 3072,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-banners-from-the-store-page/banner/banner.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 704,
+        "height": 512
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-banners-from-the-store-page/banner/slots.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 320
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-black.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 960,
+        "height": 576
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-blue.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 960,
+        "height": 576
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-purple.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 960,
+        "height": 576
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-red.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 960,
+        "height": 576
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-yellow.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 960,
+        "height": 576
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/banners/banner.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 448,
+        "height": 448
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/banners/banner-slots.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/bars/bigbar-base.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/bars/bigbar-fill.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/bars/smallbar-base.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/bars/smallbar-fill.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/bigbluebutton-pressed.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 320
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/bigbluebutton-regular.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 320
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/bigredbutton-pressed.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 320
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/bigredbutton-regular.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 320
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/smallblueroundbutton-pressed.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/smallblueroundbutton-regular.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/smallbluesquarebutton-pressed.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/smallbluesquarebutton-regular.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/smallredroundbutton-pressed.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/smallredroundbutton-regular.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/smallredsquarebutton-pressed.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/smallredsquarebutton-regular.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/tinyroundbluebutton.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/tinyroundredbutton.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/tinysquarebluebutton.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/buttons/tinysquareredbutton.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/cursors/cursor-01.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/cursors/cursor-02.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/cursors/cursor-03.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/cursors/cursor-04.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-01.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-02.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-03.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-04.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-05.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-06.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-07.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-08.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-09.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-10.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-11.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-12.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-13.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-14.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-15.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-16.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-17.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-18.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-19.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-20.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-21.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-22.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-23.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-24.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/human-avatars/avatars-25.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/icons/icon-01.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/icons/icon-02.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/icons/icon-03.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/icons/icon-04.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/icons/icon-05.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/icons/icon-06.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/icons/icon-07.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/icons/icon-08.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/icons/icon-09.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/icons/icon-10.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/icons/icon-11.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/icons/icon-12.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/papers/regularpaper.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 320
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/papers/specialpaper.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 320
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/ribbons/bigribbons.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 448,
+        "height": 640
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/ribbons/smallribbons.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 320,
+        "height": 640
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/swords/swords.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 448,
+        "height": 640
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/wood-table/woodtable.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 448,
+        "height": 448
+      }
+    },
+    {
+      "normalizedPath": "ui-elements/ui-elements/wood-table/woodtable-slots.png",
+      "category": "ui",
+      "type": "ui",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 192,
+        "height": 192
+      }
+    },
+    {
+      "normalizedPath": "units/black-units/archer/archer-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/archer/archer-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/black-units/archer/archer-shoot.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/black-units/archer/arrow.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "units/black-units/lancer/lancer-downright-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/black-units/lancer/lancer-downright-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/lancer/lancer-down-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/black-units/lancer/lancer-down-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/lancer/lancer-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 3840,
+        "height": 320
+      },
+      "estimatedFrames": 12
+    },
+    {
+      "normalizedPath": "units/black-units/lancer/lancer-right-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/black-units/lancer/lancer-right-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/lancer/lancer-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/lancer/lancer-upright-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/black-units/lancer/lancer-upright-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/lancer/lancer-up-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/black-units/lancer/lancer-up-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/monk/heal.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 2112,
+        "height": 192
+      },
+      "estimatedFrames": 11
+    },
+    {
+      "normalizedPath": "units/black-units/monk/heal-effect.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 2112,
+        "height": 192
+      },
+      "estimatedFrames": 11
+    },
+    {
+      "normalizedPath": "units/black-units/monk/idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/monk/run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-idle-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-idle-gold.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-idle-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-idle-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-idle-meat.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-idle-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-idle-wood.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-interact-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-interact-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 576,
+        "height": 192
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-interact-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-interact-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-run-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-run-gold.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-run-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-run-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-run-meat.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-run-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-run-wood.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/pawn/pawn-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/warrior/warrior-attack1.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/black-units/warrior/warrior-attack2.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/black-units/warrior/warrior-guard.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/black-units/warrior/warrior-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/black-units/warrior/warrior-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/archer/archer-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/archer/archer-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/blue-units/archer/archer-shoot.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/blue-units/archer/arrow.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "units/blue-units/lancer/lancer-downright-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/blue-units/lancer/lancer-downright-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/lancer/lancer-down-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/blue-units/lancer/lancer-down-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/lancer/lancer-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 3840,
+        "height": 320
+      },
+      "estimatedFrames": 12
+    },
+    {
+      "normalizedPath": "units/blue-units/lancer/lancer-right-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/blue-units/lancer/lancer-right-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/lancer/lancer-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/lancer/lancer-upright-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/blue-units/lancer/lancer-upright-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/lancer/lancer-up-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/blue-units/lancer/lancer-up-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/monk/heal.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 2112,
+        "height": 192
+      },
+      "estimatedFrames": 11
+    },
+    {
+      "normalizedPath": "units/blue-units/monk/heal-effect.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 2112,
+        "height": 192
+      },
+      "estimatedFrames": 11
+    },
+    {
+      "normalizedPath": "units/blue-units/monk/idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/monk/run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-idle-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-idle-gold.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-idle-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-idle-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-idle-meat.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-idle-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-idle-wood.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-interact-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-interact-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 576,
+        "height": 192
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-interact-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-interact-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-run-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-run-gold.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-run-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-run-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-run-meat.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-run-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-run-wood.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/pawn/pawn-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/warrior/warrior-attack1.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/blue-units/warrior/warrior-attack2.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/blue-units/warrior/warrior-guard.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/blue-units/warrior/warrior-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/blue-units/warrior/warrior-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/archer/archer-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/archer/archer-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/purple-units/archer/archer-shoot.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/purple-units/archer/arrow.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "units/purple-units/lancer/lancer-downright-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/purple-units/lancer/lancer-downright-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/lancer/lancer-down-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/purple-units/lancer/lancer-down-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/lancer/lancer-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 3840,
+        "height": 320
+      },
+      "estimatedFrames": 12
+    },
+    {
+      "normalizedPath": "units/purple-units/lancer/lancer-right-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/purple-units/lancer/lancer-right-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/lancer/lancer-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/lancer/lancer-upright-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/purple-units/lancer/lancer-upright-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/lancer/lancer-up-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/purple-units/lancer/lancer-up-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/monk/heal.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 2112,
+        "height": 192
+      },
+      "estimatedFrames": 11
+    },
+    {
+      "normalizedPath": "units/purple-units/monk/heal-effect.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 2112,
+        "height": 192
+      },
+      "estimatedFrames": 11
+    },
+    {
+      "normalizedPath": "units/purple-units/monk/idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/monk/run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-idle-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-idle-gold.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-idle-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-idle-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-idle-meat.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-idle-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-idle-wood.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-interact-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-interact-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 576,
+        "height": 192
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-interact-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-interact-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-run-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-run-gold.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-run-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-run-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-run-meat.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-run-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-run-wood.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/pawn/pawn-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/warrior/warrior-attack1.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/purple-units/warrior/warrior-attack2.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/purple-units/warrior/warrior-guard.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/purple-units/warrior/warrior-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/purple-units/warrior/warrior-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/archer/archer-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/archer/archer-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/red-units/archer/archer-shoot.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/red-units/archer/arrow.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "units/red-units/lancer/lancer-downright-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/red-units/lancer/lancer-downright-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/lancer/lancer-down-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/red-units/lancer/lancer-down-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/lancer/lancer-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 3840,
+        "height": 320
+      },
+      "estimatedFrames": 12
+    },
+    {
+      "normalizedPath": "units/red-units/lancer/lancer-right-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/red-units/lancer/lancer-right-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/lancer/lancer-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/lancer/lancer-upright-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/red-units/lancer/lancer-upright-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/lancer/lancer-up-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/red-units/lancer/lancer-up-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/monk/heal.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 2112,
+        "height": 192
+      },
+      "estimatedFrames": 11
+    },
+    {
+      "normalizedPath": "units/red-units/monk/heal-effect.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 2112,
+        "height": 192
+      },
+      "estimatedFrames": 11
+    },
+    {
+      "normalizedPath": "units/red-units/monk/idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/monk/run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-idle-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-idle-gold.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-idle-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-idle-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-idle-meat.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-idle-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-idle-wood.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-interact-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-interact-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 576,
+        "height": 192
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-interact-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-interact-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-run-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-run-gold.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-run-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-run-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-run-meat.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-run-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-run-wood.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/pawn/pawn-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/warrior/warrior-attack1.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/red-units/warrior/warrior-attack2.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/red-units/warrior/warrior-guard.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/red-units/warrior/warrior-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/red-units/warrior/warrior-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/units-aseprite-in-blue-only/archer.aseprite",
+      "category": "unit",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Aseprite source file; export frames if needed."
+    },
+    {
+      "normalizedPath": "units/units-aseprite-in-blue-only/lancer.aseprite",
+      "category": "unit",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Aseprite source file; export frames if needed."
+    },
+    {
+      "normalizedPath": "units/units-aseprite-in-blue-only/monk.aseprite",
+      "category": "unit",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Aseprite source file; export frames if needed."
+    },
+    {
+      "normalizedPath": "units/units-aseprite-in-blue-only/pawn.aseprite",
+      "category": "unit",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Aseprite source file; export frames if needed."
+    },
+    {
+      "normalizedPath": "units/units-aseprite-in-blue-only/warrior.aseprite",
+      "category": "unit",
+      "type": "aseprite-source",
+      "frameSize": null,
+      "notes": "Aseprite source file; export frames if needed."
+    },
+    {
+      "normalizedPath": "units/yellow-units/archer/archer-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/archer/archer-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/yellow-units/archer/archer-shoot.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/yellow-units/archer/arrow.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": null,
+      "notes": "",
+      "dimensions": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "normalizedPath": "units/yellow-units/lancer/lancer-downright-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/yellow-units/lancer/lancer-downright-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/lancer/lancer-down-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/yellow-units/lancer/lancer-down-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/lancer/lancer-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 3840,
+        "height": 320
+      },
+      "estimatedFrames": 12
+    },
+    {
+      "normalizedPath": "units/yellow-units/lancer/lancer-right-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/yellow-units/lancer/lancer-right-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/lancer/lancer-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/lancer/lancer-upright-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/yellow-units/lancer/lancer-upright-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/lancer/lancer-up-attack.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 960,
+        "height": 320
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/yellow-units/lancer/lancer-up-defence.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 320,
+        "height": 320
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 1920,
+        "height": 320
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/monk/heal.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 2112,
+        "height": 192
+      },
+      "estimatedFrames": 11
+    },
+    {
+      "normalizedPath": "units/yellow-units/monk/heal-effect.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 2112,
+        "height": 192
+      },
+      "estimatedFrames": 11
+    },
+    {
+      "normalizedPath": "units/yellow-units/monk/idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/monk/run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-idle-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-idle-gold.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-idle-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-idle-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-idle-meat.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-idle-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-idle-wood.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-interact-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-interact-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 576,
+        "height": 192
+      },
+      "estimatedFrames": 3
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-interact-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-interact-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-run-axe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-run-gold.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-run-hammer.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-run-knife.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-run-meat.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-run-pickaxe.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-run-wood.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/pawn/pawn-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/warrior/warrior-attack1.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/yellow-units/warrior/warrior-attack2.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "",
+      "dimensions": {
+        "width": 768,
+        "height": 192
+      },
+      "estimatedFrames": 4
+    },
+    {
+      "normalizedPath": "units/yellow-units/warrior/warrior-guard.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    },
+    {
+      "normalizedPath": "units/yellow-units/warrior/warrior-idle.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1536,
+        "height": 192
+      },
+      "estimatedFrames": 8
+    },
+    {
+      "normalizedPath": "units/yellow-units/warrior/warrior-run.png",
+      "category": "unit",
+      "type": "animation-strip",
+      "frameSize": {
+        "width": 192,
+        "height": 192
+      },
+      "notes": "Sprite animation strip; likely uniform frame size.",
+      "dimensions": {
+        "width": 1152,
+        "height": 192
+      },
+      "estimatedFrames": 6
+    }
+  ]
+}

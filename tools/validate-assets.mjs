@@ -207,12 +207,99 @@ async function main() {
     }
   }
 
+  // Extended asset path checks
+  const extendedPaths = [
+    'assets/source/tiny-swords/units/black-units/warrior/warrior-idle.png',
+    'assets/source/tiny-swords/units/black-units/warrior/warrior-run.png',
+    'assets/source/tiny-swords/units/black-units/warrior/warrior-attack1.png',
+    'assets/source/tiny-swords/units/black-units/archer/archer-idle.png',
+    'assets/source/tiny-swords/units/black-units/archer/archer-run.png',
+    'assets/source/tiny-swords/units/black-units/archer/archer-shoot.png',
+    'assets/source/tiny-swords/units/black-units/pawn/pawn-idle.png',
+    'assets/source/tiny-swords/units/black-units/pawn/pawn-run.png',
+    'assets/source/tiny-swords/units/purple-units/warrior/warrior-idle.png',
+    'assets/source/tiny-swords/units/purple-units/warrior/warrior-run.png',
+    'assets/source/tiny-swords/units/purple-units/warrior/warrior-attack1.png',
+    'assets/source/tiny-swords/units/purple-units/archer/archer-idle.png',
+    'assets/source/tiny-swords/units/purple-units/archer/archer-run.png',
+    'assets/source/tiny-swords/units/purple-units/archer/archer-shoot.png',
+    'assets/source/tiny-swords/units/purple-units/pawn/pawn-idle.png',
+    'assets/source/tiny-swords/units/purple-units/pawn/pawn-run.png',
+    'assets/source/tiny-swords/units/yellow-units/warrior/warrior-idle.png',
+    'assets/source/tiny-swords/units/yellow-units/warrior/warrior-run.png',
+    'assets/source/tiny-swords/units/yellow-units/warrior/warrior-attack1.png',
+    'assets/source/tiny-swords/units/yellow-units/archer/archer-idle.png',
+    'assets/source/tiny-swords/units/yellow-units/archer/archer-run.png',
+    'assets/source/tiny-swords/units/yellow-units/archer/archer-shoot.png',
+    'assets/source/tiny-swords/units/yellow-units/pawn/pawn-idle.png',
+    'assets/source/tiny-swords/units/yellow-units/pawn/pawn-run.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-axe.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-run-axe.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-hammer.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-run-hammer.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-pickaxe.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-run-pickaxe.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-gold.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-run-gold.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-wood.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-run-wood.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-meat.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-run-meat.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-knife.png',
+    'assets/source/tiny-swords/units/blue-units/pawn/pawn-run-knife.png',
+  ];
+  console.log('\n[Extended] Checking faction + pawn tool paths...');
+  for (const p of extendedPaths) {
+    if (!existsRuntime(p)) fail(`Missing path: ${p}`);
+    else ok(`Path OK: ${p}`);
+    if (p.startsWith('public/')) fail(`Path must not start with public/: ${p}`);
+  }
+
+  const terrainPaths = [
+    'assets/source/tiny-swords/terrain/tileset/tilemap-color3.png',
+    'assets/source/tiny-swords/terrain/tileset/tilemap-color4.png',
+    'assets/source/tiny-swords/terrain/tileset/tilemap-color5.png',
+  ];
+  console.log('\n[Terrain] Checking extended tilesets...');
+  for (const p of terrainPaths) {
+    if (!existsRuntime(p)) fail(`Missing path: ${p}`);
+    else ok(`Path OK: ${p}`);
+    if (p.startsWith('public/')) fail(`Path must not start with public/: ${p}`);
+  }
+
+  const envPaths = [
+    'assets/source/tiny-swords/terrain/resources/wood/trees/tree1.png',
+    'assets/source/tiny-swords/terrain/resources/wood/trees/tree2.png',
+    'assets/source/tiny-swords/terrain/resources/wood/trees/tree3.png',
+    'assets/source/tiny-swords/terrain/resources/wood/trees/tree4.png',
+    'assets/source/tiny-swords/terrain/decorations/bushes/bushe1.png',
+    'assets/source/tiny-swords/terrain/decorations/bushes/bushe2.png',
+    'assets/source/tiny-swords/terrain/decorations/bushes/bushe3.png',
+    'assets/source/tiny-swords/terrain/decorations/bushes/bushe4.png',
+    'assets/source/tiny-swords/terrain/decorations/clouds/clouds-01.png',
+    'assets/source/tiny-swords/terrain/decorations/clouds/clouds-02.png',
+    'assets/source/tiny-swords/terrain/decorations/clouds/clouds-03.png',
+    'assets/source/tiny-swords/terrain/decorations/clouds/clouds-04.png',
+    'assets/source/tiny-swords/terrain/tileset/water-foam.png',
+    'assets/source/tiny-swords/terrain/decorations/rocks-in-the-water/water-rocks-01.png',
+  ];
+  console.log('\n[Environment] Checking environment strip paths...');
+  for (const p of envPaths) {
+    if (!existsRuntime(p)) fail(`Missing path: ${p}`);
+    else ok(`Path OK: ${p}`);
+    if (p.startsWith('public/')) fail(`Path must not start with public/: ${p}`);
+  }
+
   // Key files
   const keyFiles = [
     'src/content/tinySwordsAssetKeys.ts',
     'src/content/tinySwordsAnimations.ts',
     'src/content/tinySwordsTilesets.ts',
+    'src/content/tinySwordsEnvironment.ts',
+    'src/game/scenes/PreloadScene.ts',
+    'src/game/scenes/AssetGalleryScene.ts',
   ];
+  console.log('\n[Key files] Checking source references...');
   for (const keyFile of keyFiles) {
     if (exists(keyFile)) ok(`Key file exists: ${keyFile}`);
     else fail(`Missing key file: ${keyFile}`);

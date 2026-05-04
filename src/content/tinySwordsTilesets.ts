@@ -19,6 +19,24 @@ export const TinySwordsTilesets: TilesetConfig[] = [
     tileHeight: 16,
   },
   {
+    key: 'terrain-tilemap-color3',
+    imagePath: 'assets/source/tiny-swords/terrain/tileset/tilemap-color3.png',
+    tileWidth: 16,
+    tileHeight: 16,
+  },
+  {
+    key: 'terrain-tilemap-color4',
+    imagePath: 'assets/source/tiny-swords/terrain/tileset/tilemap-color4.png',
+    tileWidth: 16,
+    tileHeight: 16,
+  },
+  {
+    key: 'terrain-tilemap-color5',
+    imagePath: 'assets/source/tiny-swords/terrain/tileset/tilemap-color5.png',
+    tileWidth: 16,
+    tileHeight: 16,
+  },
+  {
     key: 'terrain-shadow',
     imagePath: 'assets/source/tiny-swords/terrain/tileset/shadow.png',
     tileWidth: 16,

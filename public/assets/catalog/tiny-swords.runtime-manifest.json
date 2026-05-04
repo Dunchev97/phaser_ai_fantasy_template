@@ -1,6 +1,6 @@
 {
   "packId": "tiny-swords",
-  "version": "2.0",
+  "version": "2.2",
   "atlases": [
     {
       "id": "tiny-swords-buildings",
@@ -60,6 +60,44 @@
     { "key": "unit-red-archer-shoot", "path": "assets/source/tiny-swords/units/red-units/archer/archer-shoot.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
     { "key": "unit-red-pawn-idle", "path": "assets/source/tiny-swords/units/red-units/pawn/pawn-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
     { "key": "unit-red-pawn-run", "path": "assets/source/tiny-swords/units/red-units/pawn/pawn-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-black-warrior-idle", "path": "assets/source/tiny-swords/units/black-units/warrior/warrior-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-black-warrior-run", "path": "assets/source/tiny-swords/units/black-units/warrior/warrior-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-black-warrior-attack1", "path": "assets/source/tiny-swords/units/black-units/warrior/warrior-attack1.png", "frameWidth": 192, "frameHeight": 192, "frames": 4 },
+    { "key": "unit-black-archer-idle", "path": "assets/source/tiny-swords/units/black-units/archer/archer-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-black-archer-run", "path": "assets/source/tiny-swords/units/black-units/archer/archer-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 4 },
+    { "key": "unit-black-archer-shoot", "path": "assets/source/tiny-swords/units/black-units/archer/archer-shoot.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-black-pawn-idle", "path": "assets/source/tiny-swords/units/black-units/pawn/pawn-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-black-pawn-run", "path": "assets/source/tiny-swords/units/black-units/pawn/pawn-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-purple-warrior-idle", "path": "assets/source/tiny-swords/units/purple-units/warrior/warrior-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-purple-warrior-run", "path": "assets/source/tiny-swords/units/purple-units/warrior/warrior-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-purple-warrior-attack1", "path": "assets/source/tiny-swords/units/purple-units/warrior/warrior-attack1.png", "frameWidth": 192, "frameHeight": 192, "frames": 4 },
+    { "key": "unit-purple-archer-idle", "path": "assets/source/tiny-swords/units/purple-units/archer/archer-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-purple-archer-run", "path": "assets/source/tiny-swords/units/purple-units/archer/archer-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 4 },
+    { "key": "unit-purple-archer-shoot", "path": "assets/source/tiny-swords/units/purple-units/archer/archer-shoot.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-purple-pawn-idle", "path": "assets/source/tiny-swords/units/purple-units/pawn/pawn-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-purple-pawn-run", "path": "assets/source/tiny-swords/units/purple-units/pawn/pawn-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-yellow-warrior-idle", "path": "assets/source/tiny-swords/units/yellow-units/warrior/warrior-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-yellow-warrior-run", "path": "assets/source/tiny-swords/units/yellow-units/warrior/warrior-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-yellow-warrior-attack1", "path": "assets/source/tiny-swords/units/yellow-units/warrior/warrior-attack1.png", "frameWidth": 192, "frameHeight": 192, "frames": 4 },
+    { "key": "unit-yellow-archer-idle", "path": "assets/source/tiny-swords/units/yellow-units/archer/archer-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-yellow-archer-run", "path": "assets/source/tiny-swords/units/yellow-units/archer/archer-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 4 },
+    { "key": "unit-yellow-archer-shoot", "path": "assets/source/tiny-swords/units/yellow-units/archer/archer-shoot.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-yellow-pawn-idle", "path": "assets/source/tiny-swords/units/yellow-units/pawn/pawn-idle.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-yellow-pawn-run", "path": "assets/source/tiny-swords/units/yellow-units/pawn/pawn-run.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-blue-pawn-idle-axe", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-axe.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-blue-pawn-run-axe", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-run-axe.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-blue-pawn-idle-hammer", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-hammer.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-blue-pawn-run-hammer", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-run-hammer.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-blue-pawn-idle-pickaxe", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-pickaxe.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-blue-pawn-run-pickaxe", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-run-pickaxe.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-blue-pawn-idle-gold", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-gold.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-blue-pawn-run-gold", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-run-gold.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-blue-pawn-idle-wood", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-wood.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-blue-pawn-run-wood", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-run-wood.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-blue-pawn-idle-meat", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-meat.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-blue-pawn-run-meat", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-run-meat.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
+    { "key": "unit-blue-pawn-idle-knife", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-idle-knife.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 },
+    { "key": "unit-blue-pawn-run-knife", "path": "assets/source/tiny-swords/units/blue-units/pawn/pawn-run-knife.png", "frameWidth": 192, "frameHeight": 192, "frames": 6 },
     { "key": "particle-fire-01", "path": "assets/source/tiny-swords/particle-fx/fire-01.png", "frameWidth": 64, "frameHeight": 64, "frames": 8 },
     { "key": "particle-dust-01", "path": "assets/source/tiny-swords/particle-fx/dust-01.png", "frameWidth": 64, "frameHeight": 64, "frames": 8 },
     { "key": "particle-explosion-01", "path": "assets/source/tiny-swords/particle-fx/explosion-01.png", "frameWidth": 192, "frameHeight": 192, "frames": 8 }
@@ -67,6 +105,9 @@
   "tilesets": [
     { "key": "terrain-tilemap-color1", "path": "assets/source/tiny-swords/terrain/tileset/tilemap-color1.png", "tileWidth": 16, "tileHeight": 16 },
     { "key": "terrain-tilemap-color2", "path": "assets/source/tiny-swords/terrain/tileset/tilemap-color2.png", "tileWidth": 16, "tileHeight": 16 },
+    { "key": "terrain-tilemap-color3", "path": "assets/source/tiny-swords/terrain/tileset/tilemap-color3.png", "tileWidth": 16, "tileHeight": 16 },
+    { "key": "terrain-tilemap-color4", "path": "assets/source/tiny-swords/terrain/tileset/tilemap-color4.png", "tileWidth": 16, "tileHeight": 16 },
+    { "key": "terrain-tilemap-color5", "path": "assets/source/tiny-swords/terrain/tileset/tilemap-color5.png", "tileWidth": 16, "tileHeight": 16 },
     { "key": "terrain-shadow", "path": "assets/source/tiny-swords/terrain/tileset/shadow.png", "tileWidth": 16, "tileHeight": 16 },
     { "key": "terrain-water-background", "path": "assets/source/tiny-swords/terrain/tileset/water-background-color.png", "tileWidth": 16, "tileHeight": 16 }
   ],
@@ -75,11 +116,60 @@
     { "path": "ui-elements/ui-banners-from-the-store-page/banner/banner.png", "reason": "960x576, fits in ui-panels atlas only as scaled; included in ui-panels since max-atlas 2048x4096 allows it" },
     { "path": "ui-elements/ui-elements/ribbons/bigribbons.png", "reason": "448x640, included in ui-panels since it passes atlas quality rules" },
     { "path": "ui-elements/ui-elements/swords/swords.png", "reason": "448x640; moved to ui-core atlas instead of ui-panels to balance size" },
-    { "path": "terrain/resources/wood/trees/tree1.png", "reason": "Long spritesheet strip (1536x256), not a static icon — load as Phaser spritesheet animation instead" },
-    { "path": "terrain/resources/wood/trees/tree2.png", "reason": "Long spritesheet strip (1536x256), not a static icon — load as Phaser spritesheet animation instead" },
-    { "path": "terrain/decorations/bushes", "reason": "Long strips (1024x128), likely spritesheet animations — verify frame size before atlas inclusion" },
-    { "path": "terrain/decorations/clouds", "reason": "Long strips (576x256), likely spritesheet animations — verify frame size before atlas inclusion" },
-    { "path": "terrain/decorations/rocks-in-the-water", "reason": "Tileset-like strips (1024x64 at 16x16), better loaded as Phaser tileset or spritesheet instead of static atlas" },
-    { "path": "terrain/tileset/water-foam.png", "reason": "3072x192, animation strip — not a static atlas candidate" }
-  ]
+    { "path": "terrain/resources/wood/trees/tree1.png", "reason": "Spritesheet strip (1536x256), loaded as Phaser spritesheet animation" },
+    { "path": "terrain/resources/wood/trees/tree2.png", "reason": "Spritesheet strip, loaded as Phaser spritesheet animation" },
+    { "path": "terrain/resources/wood/trees/tree3.png", "reason": "Spritesheet strip, loaded as Phaser spritesheet animation" },
+    { "path": "terrain/resources/wood/trees/tree4.png", "reason": "Spritesheet strip, loaded as Phaser spritesheet animation" },
+    { "path": "terrain/decorations/bushes", "reason": "Spritesheet strips (1024x128), loaded as Phaser spritesheet animations" },
+    { "path": "terrain/decorations/clouds", "reason": "576x256 strips; exact frame layout uncertain — skipped until verified" },
+    { "path": "terrain/decorations/rocks-in-the-water", "reason": "Tileset-like strips (1024x64 at 16x16), loaded as Phaser spritesheet instead of static atlas" },
+    { "path": "terrain/tileset/water-foam.png", "reason": "3072x192 animation strip, loaded as Phaser spritesheet" }
+  ],
+  "usageNotes": {
+    "factionCombat": {
+      "description": "Use faction-colored warriors and archers for AI enemies, bosses, and allies.",
+      "roles": {
+        "blue": "Player / allies",
+        "red": "Enemies",
+        "black": "Dark faction / undead / bandits / bosses",
+        "purple": "Magic faction / cult / cursed",
+        "yellow": "Neutral / merchants / royal / villagers"
+      },
+      "recommendedKeys": [
+        "blue-warrior-idle", "black-warrior-idle", "purple-warrior-idle", "yellow-warrior-idle",
+        "red-warrior-attack1", "black-warrior-attack1", "purple-warrior-attack1", "yellow-warrior-attack1"
+      ]
+    },
+    "workerResourceEconomy": {
+      "description": "Blue pawn tool variants are workers carrying resources or tools. Use them for gather, build, and crafting prototypes.",
+      "tools": ["axe", "hammer", "pickaxe", "gold", "wood", "meat", "knife"],
+      "recommendedKeys": [
+        "blue-pawn-idle-axe", "blue-pawn-idle-hammer", "blue-pawn-idle-pickaxe",
+        "blue-pawn-idle-gold", "blue-pawn-idle-wood", "blue-pawn-idle-meat", "blue-pawn-idle-knife"
+      ]
+    },
+    "villageBaseBuilding": {
+      "description": "Use building frames for bases, outposts, and villages. Every faction has matching buildings.",
+      "recommendedFrames": [
+        "building/blue/castle.png",
+        "building/red/barracks.png",
+        "building/yellow/house1.png"
+      ]
+    },
+    "dialogueEvents": {
+      "description": "Use portrait frames for dialogue UI, events, and character selection screens.",
+      "recommendedFrames": [
+        "portrait/human/avatar-01.png", "portrait/human/avatar-10.png", "portrait/human/avatar-25.png"
+      ]
+    },
+    "environmentTerrain": {
+      "description": "Use terrain tilesets and environment strips for maps, forests, water, and atmosphere.",
+      "recommendedKeys": [
+        "terrain-tilemap-color1", "terrain-tilemap-color2", "terrain-tilemap-color3",
+        "terrain-tilemap-color4", "terrain-tilemap-color5",
+        "env-tree-01", "env-bush-01", "env-water-foam", "env-water-rocks-01"
+      ],
+      "skipped": ["env-cloud-01..04: needsVerification (frame layout uncertain)"]
+    }
+  }
 }

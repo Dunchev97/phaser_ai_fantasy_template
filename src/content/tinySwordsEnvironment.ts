@@ -1,0 +1,138 @@
+export interface EnvironmentStripConfig {
+  key: string;
+  path: string;
+  frameWidth: number;
+  frameHeight: number;
+  frames: number | null;
+  usageNotes: string;
+  needsVerification: boolean;
+}
+
+export const TinySwordsEnvironmentStrips: EnvironmentStripConfig[] = [
+  {
+    key: 'env-tree-01',
+    path: 'assets/source/tiny-swords/terrain/resources/wood/trees/tree1.png',
+    frameWidth: 256,
+    frameHeight: 256,
+    frames: 6,
+    usageNotes: 'Verified: 1536x256, 6 frames of 256x256.',
+    needsVerification: false,
+  },
+  {
+    key: 'env-tree-02',
+    path: 'assets/source/tiny-swords/terrain/resources/wood/trees/tree2.png',
+    frameWidth: 256,
+    frameHeight: 256,
+    frames: 6,
+    usageNotes: 'Verified: 1536x256, 6 frames of 256x256.',
+    needsVerification: false,
+  },
+  {
+    key: 'env-tree-03',
+    path: 'assets/source/tiny-swords/terrain/resources/wood/trees/tree3.png',
+    frameWidth: 192,
+    frameHeight: 192,
+    frames: 8,
+    usageNotes: 'Verified: 1536x192, 8 frames of 192x192.',
+    needsVerification: false,
+  },
+  {
+    key: 'env-tree-04',
+    path: 'assets/source/tiny-swords/terrain/resources/wood/trees/tree4.png',
+    frameWidth: 192,
+    frameHeight: 192,
+    frames: 8,
+    usageNotes: 'Verified: 1536x192, 8 frames of 192x192.',
+    needsVerification: false,
+  },
+  {
+    key: 'env-bush-01',
+    path: 'assets/source/tiny-swords/terrain/decorations/bushes/bushe1.png',
+    frameWidth: 128,
+    frameHeight: 128,
+    frames: 8,
+    usageNotes: 'Verified: 1024x128, 8 frames of 128x128.',
+    needsVerification: false,
+  },
+  {
+    key: 'env-bush-02',
+    path: 'assets/source/tiny-swords/terrain/decorations/bushes/bushe2.png',
+    frameWidth: 128,
+    frameHeight: 128,
+    frames: 8,
+    usageNotes: 'Verified: 1024x128, 8 frames of 128x128.',
+    needsVerification: false,
+  },
+  {
+    key: 'env-bush-03',
+    path: 'assets/source/tiny-swords/terrain/decorations/bushes/bushe3.png',
+    frameWidth: 128,
+    frameHeight: 128,
+    frames: 8,
+    usageNotes: 'Verified: 1024x128, 8 frames of 128x128.',
+    needsVerification: false,
+  },
+  {
+    key: 'env-bush-04',
+    path: 'assets/source/tiny-swords/terrain/decorations/bushes/bushe4.png',
+    frameWidth: 128,
+    frameHeight: 128,
+    frames: 8,
+    usageNotes: 'Verified: 1024x128, 8 frames of 128x128.',
+    needsVerification: false,
+  },
+  {
+    key: 'env-cloud-01',
+    path: 'assets/source/tiny-swords/terrain/decorations/clouds/clouds-01.png',
+    frameWidth: 192,
+    frameHeight: 192,
+    frames: null,
+    usageNotes: 'Skipped: 576x256, frame layout uncertain (exact match not found).',
+    needsVerification: true,
+  },
+  {
+    key: 'env-cloud-02',
+    path: 'assets/source/tiny-swords/terrain/decorations/clouds/clouds-02.png',
+    frameWidth: 192,
+    frameHeight: 192,
+    frames: null,
+    usageNotes: 'Skipped: 576x256, frame layout uncertain.',
+    needsVerification: true,
+  },
+  {
+    key: 'env-cloud-03',
+    path: 'assets/source/tiny-swords/terrain/decorations/clouds/clouds-03.png',
+    frameWidth: 192,
+    frameHeight: 192,
+    frames: null,
+    usageNotes: 'Skipped: 576x256, frame layout uncertain.',
+    needsVerification: true,
+  },
+  {
+    key: 'env-cloud-04',
+    path: 'assets/source/tiny-swords/terrain/decorations/clouds/clouds-04.png',
+    frameWidth: 192,
+    frameHeight: 192,
+    frames: null,
+    usageNotes: 'Skipped: 576x256, frame layout uncertain.',
+    needsVerification: true,
+  },
+  {
+    key: 'env-water-foam',
+    path: 'assets/source/tiny-swords/terrain/tileset/water-foam.png',
+    frameWidth: 192,
+    frameHeight: 192,
+    frames: 16,
+    usageNotes: 'Verified: 3072x192, 16 frames of 192x192.',
+    needsVerification: false,
+  },
+  {
+    key: 'env-water-rocks-01',
+    path: 'assets/source/tiny-swords/terrain/decorations/rocks-in-the-water/water-rocks-01.png',
+    frameWidth: 16,
+    frameHeight: 16,
+    frames: 256,
+    usageNotes: 'Verified: 1024x64, 64 cols x 4 rows = 256 frames of 16x16.',
+    needsVerification: false,
+  },
+];

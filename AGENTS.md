@@ -92,6 +92,7 @@ If a command fails because dependencies are not installed, ask the user to run `
       tinySwordsAssetKeys.ts
       tinySwordsAnimations.ts
       tinySwordsTilesets.ts
+      tinySwordsEnvironment.ts
       items.ts
       prototypeState.ts
       resources.ts
@@ -224,6 +225,24 @@ When building a fantasy prototype, reuse existing Tiny Swords assets before inve
   - `TinySwordsSpritesheets.UnitRedPawnIdle`
   - Use `red-warrior-idle`, `red-archer-run`, `red-archer-shoot` animation keys.
 
+- **Black = dark faction / undead / bandits / bosses**
+  - `TinySwordsSpritesheets.UnitBlackWarriorIdle`
+  - `TinySwordsSpritesheets.UnitBlackArcherIdle`
+  - `TinySwordsSpritesheets.UnitBlackPawnIdle`
+  - Use `black-warrior-idle`, `black-archer-run`, `black-archer-shoot` animation keys.
+
+- **Purple = magic faction / cult / cursed**
+  - `TinySwordsSpritesheets.UnitPurpleWarriorIdle`
+  - `TinySwordsSpritesheets.UnitPurpleArcherIdle`
+  - `TinySwordsSpritesheets.UnitPurplePawnIdle`
+  - Use `purple-warrior-idle`, `purple-archer-run`, `purple-archer-shoot` animation keys.
+
+- **Yellow = neutral / merchants / royal / villagers**
+  - `TinySwordsSpritesheets.UnitYellowWarriorIdle`
+  - `TinySwordsSpritesheets.UnitYellowArcherIdle`
+  - `TinySwordsSpritesheets.UnitYellowPawnIdle`
+  - Use `yellow-warrior-idle`, `yellow-archer-run`, `yellow-archer-shoot` animation keys.
+
 - **Buildings** — `TinySwordsBuildingFrames` from `tiny-swords-buildings` atlas.
 
 - **Resources** — `TinySwordsResourceFrames` from `tiny-swords-resources` atlas.
@@ -239,7 +258,17 @@ When building a fantasy prototype, reuse existing Tiny Swords assets before inve
   - Big ribbons, store banners, decorative panels.
 
 - **Tilesets** — `TinySwordsTilesets` from `src/content/tinySwordsTilesets.ts`.
-  - `terrain-tilemap-color1`, `terrain-tilemap-color2`, `terrain-shadow`, `terrain-water-background`.
+  - `terrain-tilemap-color1`, `terrain-tilemap-color2`, `terrain-tilemap-color3`, `terrain-tilemap-color4`, `terrain-tilemap-color5`, `terrain-shadow`, `terrain-water-background`.
+
+- **Pawn tool variants** — Blue workers carrying tools or resources for gather/build/crafting prototypes.
+  - `TinySwordsSpritesheets.UnitBluePawnIdleAxe` / `UnitBluePawnRunAxe`
+  - `UnitBluePawnIdleHammer`, `UnitBluePawnIdlePickaxe`, `UnitBluePawnIdleGold`, `UnitBluePawnIdleWood`, `UnitBluePawnIdleMeat`, `UnitBluePawnIdleKnife`
+  - Use `blue-pawn-idle-axe`, `blue-pawn-run-axe`, etc. animation keys.
+
+- **Environment assets** — Trees, bushes, water foam, water rocks for maps/atmosphere.
+  - `TinySwordsEnvironmentStrips` from `src/content/tinySwordsEnvironment.ts`.
+  - Use `env-tree-01`, `env-bush-01`, `env-water-foam`, `env-water-rocks-01`.
+  - Clouds (`env-cloud-*`) are skipped because exact frame layout is uncertain.
 
 Do not invent frame names. Use constants from `src/content/tinySwordsAssetKeys.ts`.
 

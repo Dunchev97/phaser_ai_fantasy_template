@@ -29,6 +29,8 @@ This is not a production game architecture. Prefer simple working prototypes ove
 - Static assets in `public/assets`
 - Production output in `dist`
 
+Production build output goes to `dist/`. You can upload `dist/` to a static host such as Netlify Drop.
+
 ## Commands
 
 Install:
@@ -130,7 +132,7 @@ If a command fails because dependencies are not installed, ask the user to run `
 Default scene flow:
 
 ```text
-BootScene → PreloadScene → MainMenuScene → GameScene
+BootScene -> PreloadScene -> MainMenuScene -> GameScene
 ```
 
 Use this unless a task clearly requires a different flow.
@@ -183,6 +185,15 @@ public/assets/catalog/
 
 Do not manually edit generated atlas JSON unless specifically instructed.
 
+Do not manually put raw downloaded files into:
+
+```text
+public/assets/atlases/
+public/assets/catalog/
+```
+
+Those folders are for generated, game-ready atlas files and manifests.
+
 ## Using generated atlases
 
 Generated atlases are described in:
@@ -207,46 +218,152 @@ this.add.image(x, y, 'fantasy_icons', 'weapon/sword.png');
 
 If the required icon does not exist, choose the closest existing icon and mention the substitution.
 
-## Tiny Swords asset usage
+## Current Tiny Swords runtime coverage
 
-The project includes a fully imported Tiny Swords asset pack with several runtime layers.
+The Tiny Swords pack is almost fully connected in runtime. You do not need to manually wire source assets for normal prototype tasks.
+
+### Fully connected groups
+
+- **Buildings** — all 5 factions, 8 buildings each.
+- **UI Core** — buttons, bars, cursors, icons, papers, swords, tables.
+- **UI Panels** — ribbons, store banners, decorative panels.
+- **Portraits** — 25 human avatars.
+- **Resources** — gold, gold stones, meat, wood, tools, rocks, stumps.
+- **Gold Highlights** — animated highlight strips for gold resource and gold stones (7 spritesheets, 6 frames each).
+- **Terrain** — color1, color2, color3, color4, color5, shadow, water background.
+- **Environment** — trees, bushes, water foam, water rocks 01–04.
+- **Particles** — fire-01/02/03, dust-01/02, explosion-01/02, water-splash.
+- **Sheep** — idle, grass, move.
+- **Archer arrows** — static projectile images for all 5 factions.
+
+### Fully connected unit animation groups (all 5 factions)
+
+Factions: **Blue, Red, Black, Purple, Yellow**.
+
+- **Warrior** — idle, run, attack1, attack2, guard.
+- **Archer** — idle, run, shoot.
+- **Lancer** — idle, run, right attack, down attack, up attack, directional defence (down, down-right, right, up-right, up).
+- **Monk** — idle, run, heal, heal-effect.
+- **Pawn** — idle, run.
+- **Pawn tool variants** — idle, run, interact for axe, hammer, pickaxe, knife (all 5 factions).
+- **Pawn carrying variants** — idle, run for gold, wood, meat (all 5 factions).
+
+### Source-only groups
+
+These exist in source but are not connected in runtime:
+
+- **Clouds** — source-only because frame layout is uncertain.
+- **Rubber Duck** — source-only because it is an off-theme easter egg.
+- **Aseprite files** — source-only editing files, not runtime assets.
+
+## How to build prototypes from these pieces
+
+### Combat prototypes
+
+Use:
+- Blue units as player / allies.
+- Red units as basic enemies.
+- Black units as dark enemies, undead, bandits, bosses.
+- Purple units as magic / cursed faction.
+- Yellow units as neutral, royal, merchant, villager faction.
+- Warriors for melee combat.
+- Archers + arrow images for ranged combat.
+- Lancers for charge / defence units.
+- Monks for healing / support.
+- Particles for impact, death, fire, dust, water effects.
+
+Good loops:
+- Survive waves.
+- Defend a village.
+- Escort workers.
+- Capture a point.
+- Defeat a boss.
+
+### Worker / resource prototypes
+
+Use:
+- Pawns and pawn tool variants (all factions).
+- Resources atlas.
+- Buildings atlas.
+- Gold highlights.
+- Trees, bushes, rocks, stumps.
+- Sheep for food / farm / economy prototypes.
+
+Good loops:
+- Gather resource.
+- Bring resource to building.
+- Spend resource on upgrade.
+- Build or repair structure.
+- Produce food / gold / wood over time.
+
+### Dialogue / event prototypes
+
+Use:
+- Portraits.
+- UI Panels.
+- UI Core buttons.
+- Resources for costs and rewards.
+- Faction colors for character roles.
+
+Good loops:
+- Random event appears.
+- Player chooses one of 2–3 options.
+- Choice gives resources, removes resources, buffs, debuffs, or changes future events.
+
+### Map / terrain prototypes
+
+Use:
+- Terrain color1–color5.
+- Trees and bushes.
+- Water foam and water rocks.
+- Buildings.
+- Units.
+
+Good loops:
+- Move units across a small map.
+- Defend a base.
+- Gather from nodes.
+- Control zones.
+- Explore a small area.
+
+### Shop / upgrade prototypes
+
+Use:
+- UI Panels.
+- UI Core buttons.
+- Resources.
+- Buildings.
+- Portraits if there is a merchant.
+- Gold highlights for feedback.
+
+Good loops:
+- Earn resource.
+- Open shop.
+- Buy unit / building / upgrade.
+- See immediate effect.
+
+## Tiny Swords asset usage
 
 When building a fantasy prototype, reuse existing Tiny Swords assets before inventing new ones:
 
-- **Blue units = player / allies**
-  - `TinySwordsSpritesheets.UnitBlueWarriorIdle`
-  - `TinySwordsSpritesheets.UnitBlueArcherIdle`
-  - `TinySwordsSpritesheets.UnitBluePawnIdle`
-  - Use `blue-warrior-idle`, `blue-archer-run`, `blue-archer-shoot` animation keys.
-
-- **Red units = enemies**
-  - `TinySwordsSpritesheets.UnitRedWarriorIdle`
-  - `TinySwordsSpritesheets.UnitRedArcherIdle`
-  - `TinySwordsSpritesheets.UnitRedPawnIdle`
-  - Use `red-warrior-idle`, `red-archer-run`, `red-archer-shoot` animation keys.
-
-- **Black = dark faction / undead / bandits / bosses**
-  - `TinySwordsSpritesheets.UnitBlackWarriorIdle`
-  - `TinySwordsSpritesheets.UnitBlackArcherIdle`
-  - `TinySwordsSpritesheets.UnitBlackPawnIdle`
-  - Use `black-warrior-idle`, `black-archer-run`, `black-archer-shoot` animation keys.
-
-- **Purple = magic faction / cult / cursed**
-  - `TinySwordsSpritesheets.UnitPurpleWarriorIdle`
-  - `TinySwordsSpritesheets.UnitPurpleArcherIdle`
-  - `TinySwordsSpritesheets.UnitPurplePawnIdle`
-  - Use `purple-warrior-idle`, `purple-archer-run`, `purple-archer-shoot` animation keys.
-
-- **Yellow = neutral / merchants / royal / villagers**
-  - `TinySwordsSpritesheets.UnitYellowWarriorIdle`
-  - `TinySwordsSpritesheets.UnitYellowArcherIdle`
-  - `TinySwordsSpritesheets.UnitYellowPawnIdle`
-  - Use `yellow-warrior-idle`, `yellow-archer-run`, `yellow-archer-shoot` animation keys.
+- **Faction roles** — All 5 factions have warrior, archer, lancer, monk, and pawn.
+  - Blue = player / allies.
+  - Red = basic enemies.
+  - Black = dark faction / undead / bandits / bosses.
+  - Purple = magic faction / cult / cursed.
+  - Yellow = neutral / merchants / royal / villagers.
+  - Naming pattern: `<faction>-<role>-<action>`.
+  - Examples:
+    - `blue-warrior-idle`
+    - `red-archer-shoot`
+    - `black-lancer-right-attack`
+    - `purple-monk-heal`
+    - `yellow-pawn-run`
 
 - **Buildings** — `TinySwordsBuildingFrames` from `tiny-swords-buildings` atlas.
 
 - **Resources** — `TinySwordsResourceFrames` from `tiny-swords-resources` atlas.
-  - Gold, wood, meat, tools, rocks, stumps.
+  - Gold, gold stones, wood, meat, tools, rocks, stumps.
 
 - **UI core** — `TinySwordsUIFrames` from `tiny-swords-ui-core` atlas.
   - Buttons, bars, icons, cursors, papers.
@@ -260,15 +377,44 @@ When building a fantasy prototype, reuse existing Tiny Swords assets before inve
 - **Tilesets** — `TinySwordsTilesets` from `src/content/tinySwordsTilesets.ts`.
   - `terrain-tilemap-color1`, `terrain-tilemap-color2`, `terrain-tilemap-color3`, `terrain-tilemap-color4`, `terrain-tilemap-color5`, `terrain-shadow`, `terrain-water-background`.
 
-- **Pawn tool variants** — Blue workers carrying tools or resources for gather/build/crafting prototypes.
+- **Pawn tool variants** — workers carrying tools for gather / build / crafting prototypes (all 5 factions).
   - `TinySwordsSpritesheets.UnitBluePawnIdleAxe` / `UnitBluePawnRunAxe`
-  - `UnitBluePawnIdleHammer`, `UnitBluePawnIdlePickaxe`, `UnitBluePawnIdleGold`, `UnitBluePawnIdleWood`, `UnitBluePawnIdleMeat`, `UnitBluePawnIdleKnife`
-  - Use `blue-pawn-idle-axe`, `blue-pawn-run-axe`, etc. animation keys.
+  - `UnitBluePawnIdleHammer`, `UnitBluePawnIdlePickaxe`, `UnitBluePawnIdleKnife`
+  - `UnitRedPawnIdleAxe`, `UnitBlackPawnIdleAxe`, `UnitPurplePawnIdleAxe`, `UnitYellowPawnIdleAxe`, etc.
+  - Use `blue-pawn-idle-axe`, `blue-pawn-run-axe`, `red-pawn-idle-hammer`, etc. animation keys.
 
-- **Environment assets** — Trees, bushes, water foam, water rocks for maps/atmosphere.
+- **Pawn carrying variants** — workers carrying resources (all 5 factions).
+  - `TinySwordsSpritesheets.UnitBluePawnIdleGold` / `UnitBluePawnRunGold`
+  - `UnitBluePawnIdleWood`, `UnitBluePawnIdleMeat`, etc.
+  - All 5 factions have gold, wood, meat carrying animations.
+
+- **Lancer** — directional attack and defence animations (all 5 factions).
+  - `TinySwordsSpritesheets.UnitBlueLancerDefendDown`, `UnitBlueLancerDefendDownright`, etc.
+  - Use `blue-lancer-defend-down`, `blue-lancer-defend-right`, etc. animation keys.
+
+- **Monk** — idle, run, heal, heal-effect (all 5 factions).
+  - `TinySwordsSpritesheets.UnitBlueMonkIdle`, `UnitBlueMonkHeal`, etc.
+  - Use `blue-monk-idle`, `blue-monk-heal`, `blue-monk-heal-effect` animation keys.
+
+- **Environment assets** — Trees, bushes, water foam, water rocks for maps / atmosphere.
   - `TinySwordsEnvironmentStrips` from `src/content/tinySwordsEnvironment.ts`.
-  - Use `env-tree-01`, `env-bush-01`, `env-water-foam`, `env-water-rocks-01`.
-  - Clouds (`env-cloud-*`) are skipped because exact frame layout is uncertain.
+  - Use `env-tree-01`, `env-bush-01`, `env-water-foam`, `env-water-rocks-01`, `env-water-rocks-02`, `env-water-rocks-03`, `env-water-rocks-04`.
+  - Clouds (`env-cloud-*`) are source-only because exact frame layout is uncertain.
+
+- **Particles** — fire, dust, explosion, water splash.
+  - `TinySwordsSpritesheets.ParticleFire01`, `ParticleFire02`, `ParticleFire03`
+  - `ParticleDust01`, `ParticleDust02`
+  - `ParticleExplosion01`, `ParticleExplosion02`
+  - `ParticleWaterSplash`
+  - Use `fire-01`, `dust-02`, `explosion-01`, `water-splash` animation keys.
+
+- **Sheep** — idle, grass, move.
+  - `TinySwordsSpritesheets.SheepIdle`, `SheepGrass`, `SheepMove`.
+  - Use `sheep-idle`, `sheep-grass`, `sheep-move` animation keys.
+
+- **Archer arrows** — static projectile images for all 5 factions.
+  - `TinySwordsArcherArrows.UnitBlueArcherArrow`, `UnitRedArcherArrow`, etc.
+  - Loaded as single images, not spritesheets.
 
 Do not invent frame names. Use constants from `src/content/tinySwordsAssetKeys.ts`.
 
@@ -282,12 +428,23 @@ If an asset you need does not exist in the runtime layer, check `public/assets/c
 
 ### Asset gallery scene
 
-`AssetGalleryScene` is available for debug / asset previews. It shows:
+`AssetGalleryScene` is a debugging and asset preview scene. It may show:
 
-- Buildings, resources, UI core, UI panels
-- Blue idle units, red idle units
-- Fire / dust / explosion particles
-- Portraits, terrain sample
+- Buildings
+- Units and factions
+- Worker variants
+- Resources
+- UI Core
+- Portraits
+- UI Panels
+- Terrain
+- Environment
+- Particles
+- Projectiles
+- Sheep
+- Gold highlights
+
+Do not spend excessive time polishing `AssetGalleryScene` unless the user asks. Gameplay prototypes are more important than gallery polish.
 
 When you change or extend the asset layer, keep the gallery in sync so the new assets are visible.
 
@@ -317,6 +474,17 @@ Use reusable UI helpers from `src/game/ui` where practical:
 
 Use simple, readable UI before visual polish.
 
+## Asset selection rules
+
+- Use the smallest asset set that supports the prototype.
+- Do not load or display every asset just because it exists.
+- Do not rebuild the asset pipeline during normal gameplay prototype tasks.
+- Do not edit source assets during gameplay tasks.
+- Do not rename asset files.
+- Do not change manifests unless the task is explicitly about assets.
+- Use existing runtime constants and animation keys.
+- Use `AssetGalleryScene` for debugging and inspection, not gameplay.
+
 ## Prototype rules
 
 For a new prototype, aim for:
@@ -340,6 +508,21 @@ Make a complete RPG with inventory, quests, story, combat, crafting, world map, 
 ```
 
 If the user gives a large request, reduce it to a small MVP and state the simplification.
+
+## Prototype creation workflow
+
+When the user asks for a new prototype:
+
+1. Reduce the idea to one core loop.
+2. Choose the smallest useful asset groups.
+3. Propose an MVP before building if the request is broad.
+4. Implement only the MVP.
+5. Use existing Tiny Swords keys and animation names.
+6. Keep the first version in one main playable scene when possible.
+7. Add reusable data to `src/content` only when useful.
+8. Add reusable UI to `src/game/ui` only when it reduces duplication.
+9. Run `validate:assets`, `typecheck`, and `build`.
+10. Report what was built, how to play, and which assets were used.
 
 ## Planning mode output
 

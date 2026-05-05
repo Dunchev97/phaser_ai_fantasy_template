@@ -148,6 +148,34 @@ export const TinySwordsPortraitFrames = {
   Avatar25: 'portrait/human/avatar-25.png',
 } as const;
 
+export const TinySwordsFactionPortraits = {
+  BlueKnight: 'portrait/human/blue-knight.png',
+  BlueLancer: 'portrait/human/blue-lancer.png',
+  BlueArcher: 'portrait/human/blue-archer.png',
+  BlueMonk: 'portrait/human/blue-monk.png',
+  BluePawn: 'portrait/human/blue-pawn.png',
+  RedKnight: 'portrait/human/red-knight.png',
+  RedLancer: 'portrait/human/red-lancer.png',
+  RedArcher: 'portrait/human/red-archer.png',
+  RedMonk: 'portrait/human/red-monk.png',
+  RedPawn: 'portrait/human/red-pawn.png',
+  YellowKnight: 'portrait/human/yellow-knight.png',
+  YellowLancer: 'portrait/human/yellow-lancer.png',
+  YellowArcher: 'portrait/human/yellow-archer.png',
+  YellowMonk: 'portrait/human/yellow-monk.png',
+  YellowPawn: 'portrait/human/yellow-pawn.png',
+  PurpleKnight: 'portrait/human/purple-knight.png',
+  PurpleLancer: 'portrait/human/purple-lancer.png',
+  PurpleArcher: 'portrait/human/purple-archer.png',
+  PurpleMonk: 'portrait/human/purple-monk.png',
+  PurplePawn: 'portrait/human/purple-pawn.png',
+  BlackKnight: 'portrait/human/black-knight.png',
+  BlackLancer: 'portrait/human/black-lancer.png',
+  BlackArcher: 'portrait/human/black-archer.png',
+  BlackMonk: 'portrait/human/black-monk.png',
+  BlackPawn: 'portrait/human/black-pawn.png',
+} as const;
+
 export const TinySwordsUIPanelFrames = {
   BigRibbons: 'ui-panels/bigribbons.png',
   RibbonBlack: 'ui-panels/ribbon-black.png',

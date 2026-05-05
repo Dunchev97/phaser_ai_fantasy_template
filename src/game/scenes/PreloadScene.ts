@@ -95,6 +95,22 @@ export class PreloadScene extends Phaser.Scene {
       });
     }
 
+    // Create animations for environment spritesheets (trees and bushes)
+    for (const env of TinySwordsEnvironmentStrips) {
+      if (env.needsVerification || env.frames == null) continue;
+      if (env.key.startsWith('env-tree') || env.key.startsWith('env-bush')) {
+        this.anims.create({
+          key: env.key,
+          frames: this.anims.generateFrameNumbers(env.key, {
+            start: 0,
+            end: env.frames - 1,
+          }),
+          frameRate: 5,
+          repeat: -1,
+        });
+      }
+    }
+
     this.scene.start('MainMenuScene');
   }
 }

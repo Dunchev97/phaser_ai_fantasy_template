@@ -231,7 +231,7 @@ The Tiny Swords pack is almost fully connected in runtime. You do not need to ma
 - **Resources** — gold, gold stones, meat, wood, tools, rocks, stumps.
 - **Gold Highlights** — animated highlight strips for gold resource and gold stones (7 spritesheets, 6 frames each).
 - **Terrain** — color1, color2, color3, color4, color5, shadow, water background.
-- **Environment** — trees, bushes, water foam, water rocks 01–04.
+- **Environment** — animated trees (4 types), bushes (4 types), water foam, water rocks 01–04.
 - **Particles** — fire-01/02/03, dust-01/02, explosion-01/02, water-splash.
 - **Sheep** — idle, grass, move.
 - **Archer arrows** — static projectile images for all 5 factions.
@@ -377,6 +377,13 @@ When building a fantasy prototype, reuse existing Tiny Swords assets before inve
 - **Tilesets** — `TinySwordsTilesets` from `src/content/tinySwordsTilesets.ts`.
   - `terrain-tilemap-color1`, `terrain-tilemap-color2`, `terrain-tilemap-color3`, `terrain-tilemap-color4`, `terrain-tilemap-color5`, `terrain-shadow`, `terrain-water-background`.
 
+- **Terrain helpers** — `TinySwordsTerrainTiles`, `TinySwordsTerrainBrushes`, `TerrainBuilder`.
+  - For terrain prototypes, use `TinySwordsTerrainTiles` for tile index calculation and candidate groups (Grass, Water, Cliff, Path, Edge, Decoration).
+  - Use `TinySwordsTerrainBrushes` for simple presets: `simpleGrassRect`, `simpleCliffBlock`, `simpleWaterPatch`.
+  - Use `TerrainBuilder.createTileLayerFromPreset()` to render a brush onto a Phaser TilemapLayer.
+  - Do not place the entire tileset image as a normal sprite.
+  - Tile size is 16×16. Tilemaps are 36 cols × 24 rows = 864 tiles per color variant.
+
 - **Pawn tool variants** — workers carrying tools for gather / build / crafting prototypes (all 5 factions).
   - `TinySwordsSpritesheets.UnitBluePawnIdleAxe` / `UnitBluePawnRunAxe`
   - `UnitBluePawnIdleHammer`, `UnitBluePawnIdlePickaxe`, `UnitBluePawnIdleKnife`
@@ -398,7 +405,15 @@ When building a fantasy prototype, reuse existing Tiny Swords assets before inve
 
 - **Environment assets** — Trees, bushes, water foam, water rocks for maps / atmosphere.
   - `TinySwordsEnvironmentStrips` from `src/content/tinySwordsEnvironment.ts`.
-  - Use `env-tree-01`, `env-bush-01`, `env-water-foam`, `env-water-rocks-01`, `env-water-rocks-02`, `env-water-rocks-03`, `env-water-rocks-04`.
+  - **Tree strips** (`env-tree-01`..`env-tree-04`) are **animated spritesheets**, not static variants.
+    - `env-tree-01`, `env-tree-02`: 6 frames of 256x256.
+    - `env-tree-03`, `env-tree-04`: 8 frames of 192x192.
+    - Animation keys are the same as sheet keys: `env-tree-01`, `env-tree-02`, `env-tree-03`, `env-tree-04`.
+    - Use `this.add.sprite(x, y, 'env-tree-01').play('env-tree-01')` for animated trees.
+  - **Bushes** (`env-bush-01`..`env-bush-04`) are **animated spritesheets** (8 frames of 128x128 each).
+    - Animation keys are the same as sheet keys: `env-bush-01`, `env-bush-02`, `env-bush-03`, `env-bush-04`.
+    - Use `this.add.sprite(x, y, 'env-bush-01').play('env-bush-01')` for animated bushes.
+  - Use `env-water-foam`, `env-water-rocks-01`..`env-water-rocks-04`.
   - Clouds (`env-cloud-*`) are source-only because exact frame layout is uncertain.
 
 - **Particles** — fire, dust, explosion, water splash.
@@ -468,9 +483,11 @@ Prefer serializable TypeScript objects.
 
 Use reusable UI helpers from `src/game/ui` where practical:
 
-- `Panel`
-- `IconButton`
-- `ResourceCounter`
+- `Panel` — simple colored rounded rectangle.
+- `IconButton` — clickable icon with label.
+- `ResourceCounter` — icon + label + value text.
+- `StretchBar` — horizontal 3-slice bar (left cap + stretch/repeat center + right cap). Use for bars with decorative edges (bigbar, smallbar). Do NOT use `setScale` on bar sprites — it distorts pixel-art edges.
+- `NineSlicePanel` — 9-slice panel via Phaser NineSlice. Use for decorative panels, paper frames, dialogue boxes. Do NOT use `setScale` on panel frames — it distorts corners and edges.
 
 Use simple, readable UI before visual polish.
 

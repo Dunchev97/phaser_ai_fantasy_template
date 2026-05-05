@@ -1,13 +1,28 @@
 import Phaser from 'phaser';
 import {
+  createStretchBar,
+} from '../ui/StretchBar';
+import {
+  createNineSlicePanel,
+} from '../ui/NineSlicePanel';
+import {
   TinySwordsAtlases,
   TinySwordsBuildingFrames,
   TinySwordsUIFrames,
   TinySwordsResourceFrames,
   TinySwordsPortraitFrames,
   TinySwordsUIPanelFrames,
+  TinySwordsFactionPortraits,
 } from '../../content/tinySwordsAssetKeys';
 import { TinySwordsPawnToolAnimations } from '../../content/tinySwordsAnimations';
+import {
+  TinySwordsTerrainBrushes,
+  type TerrainBrush,
+  simpleGrassRect,
+  simpleCliffBlock,
+  simpleWaterPatch,
+} from '../../content/tinySwordsTerrainBrushes';
+import { createTileLayerFromPreset } from '../../game/systems/TerrainBuilder';
 
 interface GalleryItem {
   type: 'image' | 'sprite';
@@ -18,9 +33,16 @@ interface GalleryItem {
   scale: number;
 }
 
+interface PresetDef {
+  brush: TerrainBrush;
+  label: string;
+  x: number;
+  y: number;
+}
+
 interface PageConfig {
   title: string;
-  mode: 'grid' | 'table';
+  mode: 'grid' | 'table' | 'preset' | 'terrain' | 'debug';
   cols?: number;
   cellW?: number;
   cellH?: number;
@@ -29,6 +51,7 @@ interface PageConfig {
   unitTypes?: { key: string; label: string; scale: number }[];
   factionAnims?: Record<string, Record<string, string>>;
   factionSheets?: Record<string, Record<string, string>>;
+  presets?: PresetDef[];
 }
 
 export class AssetGalleryScene extends Phaser.Scene {
@@ -101,6 +124,10 @@ export class AssetGalleryScene extends Phaser.Scene {
 
     if (page.mode === 'table' && page.unitTypes && page.factionColors) {
       this.renderTablePage(page);
+    } else if (page.mode === 'terrain' && page.presets) {
+      this.renderPresetPage(page);
+    } else if (page.mode === 'debug') {
+      this.renderDebugPage(page);
     } else {
       this.renderGridPage(page);
     }
@@ -148,6 +175,111 @@ export class AssetGalleryScene extends Phaser.Scene {
         this.pageObjects.push(sp);
       });
     });
+  }
+
+  private renderPresetPage(page: PageConfig): void {
+    if (!page.presets) return;
+    const startX = 80;
+    let x = startX;
+    let y = 80;
+
+    for (let i = 0; i < page.presets.length; i++) {
+      const p = page.presets[i];
+      try {
+        const layer = createTileLayerFromPreset({
+          scene: this,
+          x: p.x,
+          y: p.y,
+          tilesetKey: p.brush.tilesetKey,
+          preset: p.brush,
+          tileWidth: 16,
+          tileHeight: 16,
+        });
+        this.pageObjects.push(layer);
+        const textX = p.x + (p.brush.width * 16) / 2;
+        const textY = p.y + p.brush.height * 16 + 8;
+        const lbl = this.add.text(textX, textY, p.label, {
+          fontSize: '12px', color: '#cccccc',
+        }).setOrigin(0.5, 0);
+        this.pageObjects.push(lbl);
+      } catch {
+        const err = this.add.text(p.x + 20, p.y + 20, 'ERROR', {
+          fontSize: '12px', color: '#ff4444',
+        });
+        this.pageObjects.push(err);
+      }
+    }
+  }
+
+  private renderDebugPage(_page: PageConfig): void {
+    // Debug page: UI helper demos
+    const startY = 80;
+    const gap = 50;
+
+    // 1. StretchBar demo — bigbar
+    const bar1 = createStretchBar(this, {
+      x: this.scale.width / 2,
+      y: startY,
+      width: 400,
+      atlasKey: TinySwordsAtlases.UICore,
+      baseFrame: TinySwordsUIFrames.BigBarBase,
+      fillFrame: TinySwordsUIFrames.BigBarFill,
+      value: 60,
+      maxValue: 100,
+      leftWidth: 16,
+      rightWidth: 16,
+      height: 64,
+    });
+    this.pageObjects.push(bar1.container);
+    const lbl1 = this.add.text(this.scale.width / 2, startY - 20, 'StretchBar (bigbar 60/100)', {
+      fontSize: '14px', color: '#ffddaa',
+    }).setOrigin(0.5, 1);
+    this.pageObjects.push(lbl1);
+
+    // 2. StretchBar demo — smallbar at different widths
+    const bar2 = createStretchBar(this, {
+      x: this.scale.width / 2,
+      y: startY + gap,
+      width: 200,
+      atlasKey: TinySwordsAtlases.UICore,
+      baseFrame: TinySwordsUIFrames.SmallBarBase,
+      fillFrame: TinySwordsUIFrames.SmallBarFill,
+      value: 30,
+      maxValue: 100,
+      leftWidth: 12,
+      rightWidth: 12,
+      height: 64,
+    });
+    this.pageObjects.push(bar2.container);
+    const lbl2 = this.add.text(this.scale.width / 2, startY + gap - 20, 'StretchBar (smallbar 30/100)', {
+      fontSize: '14px', color: '#ffddaa',
+    }).setOrigin(0.5, 1);
+    this.pageObjects.push(lbl2);
+
+    // 3. NineSlicePanel demo
+    const panel1 = createNineSlicePanel(this, {
+      x: this.scale.width / 2,
+      y: startY + gap * 2.5,
+      width: 360,
+      height: 120,
+      atlasKey: TinySwordsAtlases.UICore,
+      frame: TinySwordsUIFrames.PaperRegular,
+      left: 32,
+      right: 32,
+      top: 32,
+      bottom: 32,
+    });
+    this.pageObjects.push(panel1.container);
+    const lbl3 = this.add.text(this.scale.width / 2, startY + gap * 2.5 - 70, 'NineSlicePanel (paper 360x120)', {
+      fontSize: '14px', color: '#ffddaa',
+    }).setOrigin(0.5, 1);
+    this.pageObjects.push(lbl3);
+
+    // Add a text inside the panel to show it works
+    const innerText = this.add.text(this.scale.width / 2, startY + gap * 2.5, 'Do not use setScale on decorative UI frames', {
+      fontSize: '13px', color: '#3d2b1f',
+    }).setOrigin(0.5, 0.5);
+    this.pageObjects.push(innerText);
   }
 
   private renderGridPage(page: PageConfig): void {
@@ -361,6 +493,40 @@ export class AssetGalleryScene extends Phaser.Scene {
         ],
       },
       {
+        title: 'Faction Portraits',
+        mode: 'grid',
+        cols: 5,
+        cellW: 110,
+        cellH: 120,
+        items: [
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.BlueKnight, label: 'Blue Knight', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.BlueLancer, label: 'Blue Lancer', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.BlueArcher, label: 'Blue Archer', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.BlueMonk, label: 'Blue Monk', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.BluePawn, label: 'Blue Pawn', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.RedKnight, label: 'Red Knight', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.RedLancer, label: 'Red Lancer', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.RedArcher, label: 'Red Archer', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.RedMonk, label: 'Red Monk', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.RedPawn, label: 'Red Pawn', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.YellowKnight, label: 'Yellow Knight', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.YellowLancer, label: 'Yellow Lancer', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.YellowArcher, label: 'Yellow Archer', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.YellowMonk, label: 'Yellow Monk', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.YellowPawn, label: 'Yellow Pawn', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.PurpleKnight, label: 'Purple Knight', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.PurpleLancer, label: 'Purple Lancer', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.PurpleArcher, label: 'Purple Archer', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.PurpleMonk, label: 'Purple Monk', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.PurplePawn, label: 'Purple Pawn', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.BlackKnight, label: 'Black Knight', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.BlackLancer, label: 'Black Lancer', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.BlackArcher, label: 'Black Archer', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.BlackMonk, label: 'Black Monk', scale: 0.45 },
+          { type: 'image', key: TinySwordsAtlases.Portraits, frame: TinySwordsFactionPortraits.BlackPawn, label: 'Black Pawn', scale: 0.45 },
+        ],
+      },
+      {
         title: 'UI Panels',
         mode: 'grid',
         cols: 4,
@@ -391,19 +557,36 @@ export class AssetGalleryScene extends Phaser.Scene {
         ],
       },
       {
+        title: 'Terrain Presets',
+        mode: 'terrain',
+        presets: [
+          { brush: simpleGrassRect, label: 'Grass', x: 80, y: 80 },
+          { brush: simpleCliffBlock, label: 'Cliff', x: 280, y: 80 },
+          { brush: simpleWaterPatch, label: 'Water', x: 80, y: 260 },
+        ],
+      },
+      {
         title: 'Environment',
         mode: 'grid',
         cols: 4,
         cellW: 140,
         cellH: 140,
         items: [
-          { type: 'image', key: 'env-tree-01', frame: 0, label: 'Tree 1', scale: 0.15 },
-          { type: 'image', key: 'env-tree-02', frame: 0, label: 'Tree 2', scale: 0.15 },
-          { type: 'image', key: 'env-bush-01', frame: 0, label: 'Bush 1', scale: 0.25 },
-          { type: 'image', key: 'env-bush-02', frame: 0, label: 'Bush 2', scale: 0.25 },
+          { type: 'sprite', key: 'env-tree-01', anim: 'env-tree-01', label: 'Tree 1', scale: 0.15 },
+          { type: 'sprite', key: 'env-tree-02', anim: 'env-tree-02', label: 'Tree 2', scale: 0.15 },
+          { type: 'sprite', key: 'env-tree-03', anim: 'env-tree-03', label: 'Tree 3', scale: 0.2 },
+          { type: 'sprite', key: 'env-tree-04', anim: 'env-tree-04', label: 'Tree 4', scale: 0.2 },
+          { type: 'sprite', key: 'env-bush-01', anim: 'env-bush-01', label: 'Bush 1', scale: 0.25 },
+          { type: 'sprite', key: 'env-bush-02', anim: 'env-bush-02', label: 'Bush 2', scale: 0.25 },
+          { type: 'sprite', key: 'env-bush-03', anim: 'env-bush-03', label: 'Bush 3', scale: 0.25 },
+          { type: 'sprite', key: 'env-bush-04', anim: 'env-bush-04', label: 'Bush 4', scale: 0.25 },
           { type: 'image', key: 'env-water-foam', frame: 0, label: 'Foam', scale: 0.2 },
           { type: 'image', key: 'env-water-rocks-01', frame: 0, label: 'W Rocks', scale: 1.5 },
         ],
+      },
+      {
+        title: 'Debug: UI Helpers',
+        mode: 'debug',
       },
     ];
   }

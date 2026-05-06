@@ -1,0 +1,457 @@
+{
+  "id": "soda-icons",
+  "outputImage": "public/assets/atlases/soda-icons.png",
+  "outputJson": "public/assets/atlases/soda-icons.atlas.json",
+  "padding": 2,
+  "targetWidth": 1024,
+  "frames": [
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Apple.png",
+      "name": "food/apple.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Bread.png",
+      "name": "food/bread.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Cabbage.png",
+      "name": "food/cabbage.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Carrot.png",
+      "name": "food/carrot.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Cheese.png",
+      "name": "food/cheese.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Cherries.png",
+      "name": "food/cherries.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_CupOfTea.png",
+      "name": "food/cupoftea.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Egg.png",
+      "name": "food/egg.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Fish.png",
+      "name": "food/fish.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Grapes.png",
+      "name": "food/grapes.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Grapes2.png",
+      "name": "food/grapes2.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_HerbRoot.png",
+      "name": "food/herbroot.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_HotSauce.png",
+      "name": "food/hotsauce.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_MonsterEgg.png",
+      "name": "food/monsteregg.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Mushroom.png",
+      "name": "food/mushroom.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Onion.png",
+      "name": "food/onion.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Orange.png",
+      "name": "food/orange.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_PaperBag.png",
+      "name": "food/paperbag.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Peach.png",
+      "name": "food/peach.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Peanut.png",
+      "name": "food/peanut.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_RedPepper.png",
+      "name": "food/redpepper.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Salt.png",
+      "name": "food/salt.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Sausage.png",
+      "name": "food/sausage.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Tomato.png",
+      "name": "food/tomato.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Food/SODA_Icon_Food_Turnip.png",
+      "name": "food/turnip.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Instruments/SODA_Icon_Instruments_Bell.png",
+      "name": "instruments/bell.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Instruments/SODA_Icon_Instruments_Drum.png",
+      "name": "instruments/drum.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Instruments/SODA_Icon_Instruments_Flute.png",
+      "name": "instruments/flute.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Instruments/SODA_Icon_Instruments_Harp.png",
+      "name": "instruments/harp.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Instruments/SODA_Icon_Instruments_Horn.png",
+      "name": "instruments/horn.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Instruments/SODA_Icon_Instruments_Lute.png",
+      "name": "instruments/lute.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Instruments/SODA_Icon_Instruments_MusicBox.png",
+      "name": "instruments/musicbox.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Instruments/SODA_Icon_Instruments_Ocarina.png",
+      "name": "instruments/ocarina.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Antler.png",
+      "name": "materials/antler.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Bar2.png",
+      "name": "materials/bar2.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Brick.png",
+      "name": "materials/brick.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Coins.png",
+      "name": "materials/coins.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Coral.png",
+      "name": "materials/coral.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Feather.png",
+      "name": "materials/feather.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Fur.png",
+      "name": "materials/fur.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Gem1.png",
+      "name": "materials/gem1.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Gem2.png",
+      "name": "materials/gem2.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Gem3.png",
+      "name": "materials/gem3.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Gem4.png",
+      "name": "materials/gem4.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Gem5.png",
+      "name": "materials/gem5.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Gravel.png",
+      "name": "materials/gravel.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Horn2.png",
+      "name": "materials/horn2.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_LeatherRoll.png",
+      "name": "materials/leatherroll.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Rock.png",
+      "name": "materials/rock.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Shell.png",
+      "name": "materials/shell.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Skull.png",
+      "name": "materials/skull.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_String.png",
+      "name": "materials/string.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Tooth.png",
+      "name": "materials/tooth.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Wood.png",
+      "name": "materials/wood.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Materials/SODA_Icon_Materials_Wool.png",
+      "name": "materials/wool.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Herb1.png",
+      "name": "potionherbs/herb1.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Herb2.png",
+      "name": "potionherbs/herb2.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Herb3.png",
+      "name": "potionherbs/herb3.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Herb4.png",
+      "name": "potionherbs/herb4.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Herb5.png",
+      "name": "potionherbs/herb5.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Potion_Blue.png",
+      "name": "potionherbs/potion-blue.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Potion_LightGreen.png",
+      "name": "potionherbs/potion-lightgreen.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Potion_Purple.png",
+      "name": "potionherbs/potion-purple.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Potion_Red.png",
+      "name": "potionherbs/potion-red.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Potion_Yellow.png",
+      "name": "potionherbs/potion-yellow.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Book.png",
+      "name": "system_misc/misc-book.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_BronzeStar.png",
+      "name": "system_misc/misc-bronzestar.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Cog.png",
+      "name": "system_misc/misc-cog.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Dark.png",
+      "name": "system_misc/misc-dark.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_DownArrow.png",
+      "name": "system_misc/misc-downarrow.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Electric.png",
+      "name": "system_misc/misc-electric.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Fire.png",
+      "name": "system_misc/misc-fire.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Fist.png",
+      "name": "system_misc/misc-fist.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_FullHeart.png",
+      "name": "system_misc/misc-fullheart.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_GoldStar.png",
+      "name": "system_misc/misc-goldstar.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_HalfHeartLeft.png",
+      "name": "system_misc/misc-halfheartleft.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_HalfHeartRight.png",
+      "name": "system_misc/misc-halfheartright.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_HolyIcon.png",
+      "name": "system_misc/misc-holyicon.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Ice.png",
+      "name": "system_misc/misc-ice.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Impact.png",
+      "name": "system_misc/misc-impact.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_LightIcon.png",
+      "name": "system_misc/misc-lighticon.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_MusicNote.png",
+      "name": "system_misc/misc-musicnote.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Nature.png",
+      "name": "system_misc/misc-nature.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Rock.png",
+      "name": "system_misc/misc-rock.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Run.png",
+      "name": "system_misc/misc-run.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Shield.png",
+      "name": "system_misc/misc-shield.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_SilverStar.png",
+      "name": "system_misc/misc-silverstar.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Strike.png",
+      "name": "system_misc/misc-strike.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_UpArrow.png",
+      "name": "system_misc/misc-uparrow.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Water.png",
+      "name": "system_misc/misc-water.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Axe.png",
+      "name": "weapons/axe.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_BattleAxe.png",
+      "name": "weapons/battleaxe.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Bow.png",
+      "name": "weapons/bow.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Chainsaw.png",
+      "name": "weapons/chainsaw.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_ChainWhip.png",
+      "name": "weapons/chainwhip.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Claws.png",
+      "name": "weapons/claws.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Club.png",
+      "name": "weapons/club.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Crossbow.png",
+      "name": "weapons/crossbow.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Hammer.png",
+      "name": "weapons/hammer.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Knuckles.png",
+      "name": "weapons/knuckles.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_MagicBook.png",
+      "name": "weapons/magicbook.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_MagicStaff.png",
+      "name": "weapons/magicstaff.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_MagicStrike.png",
+      "name": "weapons/magicstrike.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Musket.png",
+      "name": "weapons/musket.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Revolver.png",
+      "name": "weapons/revolver.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Rifle.png",
+      "name": "weapons/rifle.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Rope.png",
+      "name": "weapons/rope.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Slingshot.png",
+      "name": "weapons/slingshot.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Spear.png",
+      "name": "weapons/spear.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Staff.png",
+      "name": "weapons/staff.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Staff2.png",
+      "name": "weapons/staff2.png"
+    },
+    {
+      "source": "D:/phaser_ai_fantasy_template/public/assets/source/icons/Weapons/SODA_Icon_Weapons_Whip.png",
+      "name": "weapons/whip.png"
+    }
+  ]
+}

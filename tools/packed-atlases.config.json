@@ -7,46 +7,166 @@
       "padding": 4,
       "targetWidth": 2048,
       "frames": [
-        { "source": "public/assets/source/tiny-swords/buildings/black-buildings/archery.png", "name": "building/black/archery.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/black-buildings/barracks.png", "name": "building/black/barracks.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/black-buildings/castle.png", "name": "building/black/castle.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/black-buildings/house1.png", "name": "building/black/house1.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/black-buildings/house2.png", "name": "building/black/house2.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/black-buildings/house3.png", "name": "building/black/house3.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/black-buildings/monastery.png", "name": "building/black/monastery.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/black-buildings/tower.png", "name": "building/black/tower.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/blue-buildings/archery.png", "name": "building/blue/archery.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/blue-buildings/barracks.png", "name": "building/blue/barracks.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/blue-buildings/castle.png", "name": "building/blue/castle.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/blue-buildings/house1.png", "name": "building/blue/house1.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/blue-buildings/house2.png", "name": "building/blue/house2.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/blue-buildings/house3.png", "name": "building/blue/house3.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/blue-buildings/monastery.png", "name": "building/blue/monastery.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/blue-buildings/tower.png", "name": "building/blue/tower.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/purple-buildings/archery.png", "name": "building/purple/archery.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/purple-buildings/barracks.png", "name": "building/purple/barracks.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/purple-buildings/castle.png", "name": "building/purple/castle.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/purple-buildings/house1.png", "name": "building/purple/house1.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/purple-buildings/house2.png", "name": "building/purple/house2.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/purple-buildings/house3.png", "name": "building/purple/house3.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/purple-buildings/monastery.png", "name": "building/purple/monastery.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/purple-buildings/tower.png", "name": "building/purple/tower.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/red-buildings/archery.png", "name": "building/red/archery.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/red-buildings/barracks.png", "name": "building/red/barracks.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/red-buildings/castle.png", "name": "building/red/castle.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/red-buildings/house1.png", "name": "building/red/house1.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/red-buildings/house2.png", "name": "building/red/house2.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/red-buildings/house3.png", "name": "building/red/house3.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/red-buildings/monastery.png", "name": "building/red/monastery.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/red-buildings/tower.png", "name": "building/red/tower.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/archery.png", "name": "building/yellow/archery.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/barracks.png", "name": "building/yellow/barracks.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/castle.png", "name": "building/yellow/castle.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/house1.png", "name": "building/yellow/house1.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/house2.png", "name": "building/yellow/house2.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/house3.png", "name": "building/yellow/house3.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/monastery.png", "name": "building/yellow/monastery.png" },
-        { "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/tower.png", "name": "building/yellow/tower.png" }
+        {
+          "source": "public/assets/source/tiny-swords/buildings/black-buildings/archery.png",
+          "name": "building/black/archery.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/black-buildings/barracks.png",
+          "name": "building/black/barracks.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/black-buildings/castle.png",
+          "name": "building/black/castle.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/black-buildings/house1.png",
+          "name": "building/black/house1.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/black-buildings/house2.png",
+          "name": "building/black/house2.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/black-buildings/house3.png",
+          "name": "building/black/house3.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/black-buildings/monastery.png",
+          "name": "building/black/monastery.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/black-buildings/tower.png",
+          "name": "building/black/tower.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/blue-buildings/archery.png",
+          "name": "building/blue/archery.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/blue-buildings/barracks.png",
+          "name": "building/blue/barracks.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/blue-buildings/castle.png",
+          "name": "building/blue/castle.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/blue-buildings/house1.png",
+          "name": "building/blue/house1.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/blue-buildings/house2.png",
+          "name": "building/blue/house2.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/blue-buildings/house3.png",
+          "name": "building/blue/house3.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/blue-buildings/monastery.png",
+          "name": "building/blue/monastery.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/blue-buildings/tower.png",
+          "name": "building/blue/tower.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/purple-buildings/archery.png",
+          "name": "building/purple/archery.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/purple-buildings/barracks.png",
+          "name": "building/purple/barracks.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/purple-buildings/castle.png",
+          "name": "building/purple/castle.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/purple-buildings/house1.png",
+          "name": "building/purple/house1.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/purple-buildings/house2.png",
+          "name": "building/purple/house2.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/purple-buildings/house3.png",
+          "name": "building/purple/house3.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/purple-buildings/monastery.png",
+          "name": "building/purple/monastery.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/purple-buildings/tower.png",
+          "name": "building/purple/tower.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/red-buildings/archery.png",
+          "name": "building/red/archery.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/red-buildings/barracks.png",
+          "name": "building/red/barracks.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/red-buildings/castle.png",
+          "name": "building/red/castle.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/red-buildings/house1.png",
+          "name": "building/red/house1.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/red-buildings/house2.png",
+          "name": "building/red/house2.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/red-buildings/house3.png",
+          "name": "building/red/house3.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/red-buildings/monastery.png",
+          "name": "building/red/monastery.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/red-buildings/tower.png",
+          "name": "building/red/tower.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/archery.png",
+          "name": "building/yellow/archery.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/barracks.png",
+          "name": "building/yellow/barracks.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/castle.png",
+          "name": "building/yellow/castle.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/house1.png",
+          "name": "building/yellow/house1.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/house2.png",
+          "name": "building/yellow/house2.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/house3.png",
+          "name": "building/yellow/house3.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/monastery.png",
+          "name": "building/yellow/monastery.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/buildings/yellow-buildings/tower.png",
+          "name": "building/yellow/tower.png"
+        }
       ]
     },
     {
@@ -56,50 +176,182 @@
       "padding": 4,
       "targetWidth": 2048,
       "frames": [
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/banners/banner.png", "name": "ui/banner.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/banners/banner-slots.png", "name": "ui/banner-slots.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/bars/bigbar-base.png", "name": "ui/bigbar-base.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/bars/bigbar-fill.png", "name": "ui/bigbar-fill.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/bars/smallbar-base.png", "name": "ui/smallbar-base.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/bars/smallbar-fill.png", "name": "ui/smallbar-fill.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/bigbluebutton-pressed.png", "name": "ui/button-bigblue-pressed.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/bigbluebutton-regular.png", "name": "ui/button-bigblue-regular.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/bigredbutton-pressed.png", "name": "ui/button-bigred-pressed.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/bigredbutton-regular.png", "name": "ui/button-bigred-regular.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallblueroundbutton-pressed.png", "name": "ui/button-smallblueround-pressed.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallblueroundbutton-regular.png", "name": "ui/button-smallblueround-regular.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallbluesquarebutton-pressed.png", "name": "ui/button-smallbluesquare-pressed.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallbluesquarebutton-regular.png", "name": "ui/button-smallbluesquare-regular.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallredroundbutton-pressed.png", "name": "ui/button-smallredround-pressed.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallredroundbutton-regular.png", "name": "ui/button-smallredround-regular.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallredsquarebutton-pressed.png", "name": "ui/button-smallredsquare-pressed.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallredsquarebutton-regular.png", "name": "ui/button-smallredsquare-regular.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/tinyroundbluebutton.png", "name": "ui/button-tinyround-blue.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/tinyroundredbutton.png", "name": "ui/button-tinyround-red.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/tinysquarebluebutton.png", "name": "ui/button-tinysquare-blue.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/tinysquareredbutton.png", "name": "ui/button-tinysquare-red.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/cursors/cursor-01.png", "name": "ui/cursor-01.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/cursors/cursor-02.png", "name": "ui/cursor-02.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/cursors/cursor-03.png", "name": "ui/cursor-03.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/cursors/cursor-04.png", "name": "ui/cursor-04.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-01.png", "name": "ui/icon-01.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-02.png", "name": "ui/icon-02.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-03.png", "name": "ui/icon-03.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-04.png", "name": "ui/icon-04.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-05.png", "name": "ui/icon-05.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-06.png", "name": "ui/icon-06.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-07.png", "name": "ui/icon-07.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-08.png", "name": "ui/icon-08.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-09.png", "name": "ui/icon-09.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-10.png", "name": "ui/icon-10.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-11.png", "name": "ui/icon-11.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-12.png", "name": "ui/icon-12.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/papers/regularpaper.png", "name": "ui/paper-regular.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/papers/specialpaper.png", "name": "ui/paper-special.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/ribbons/smallribbons.png", "name": "ui/ribbons-small.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/swords/swords.png", "name": "ui/swords.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/wood-table/woodtable.png", "name": "ui/table-wood.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/wood-table/woodtable-slots.png", "name": "ui/table-wood-slots.png" }
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/banners/banner.png",
+          "name": "ui/banner.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/banners/banner-slots.png",
+          "name": "ui/banner-slots.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/bars/bigbar-base.png",
+          "name": "ui/bigbar-base.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/bars/bigbar-fill.png",
+          "name": "ui/bigbar-fill.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/bars/smallbar-base.png",
+          "name": "ui/smallbar-base.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/bars/smallbar-fill.png",
+          "name": "ui/smallbar-fill.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/bigbluebutton-pressed.png",
+          "name": "ui/button-bigblue-pressed.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/bigbluebutton-regular.png",
+          "name": "ui/button-bigblue-regular.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/bigredbutton-pressed.png",
+          "name": "ui/button-bigred-pressed.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/bigredbutton-regular.png",
+          "name": "ui/button-bigred-regular.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallblueroundbutton-pressed.png",
+          "name": "ui/button-smallblueround-pressed.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallblueroundbutton-regular.png",
+          "name": "ui/button-smallblueround-regular.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallbluesquarebutton-pressed.png",
+          "name": "ui/button-smallbluesquare-pressed.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallbluesquarebutton-regular.png",
+          "name": "ui/button-smallbluesquare-regular.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallredroundbutton-pressed.png",
+          "name": "ui/button-smallredround-pressed.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallredroundbutton-regular.png",
+          "name": "ui/button-smallredround-regular.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallredsquarebutton-pressed.png",
+          "name": "ui/button-smallredsquare-pressed.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/smallredsquarebutton-regular.png",
+          "name": "ui/button-smallredsquare-regular.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/tinyroundbluebutton.png",
+          "name": "ui/button-tinyround-blue.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/tinyroundredbutton.png",
+          "name": "ui/button-tinyround-red.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/tinysquarebluebutton.png",
+          "name": "ui/button-tinysquare-blue.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/buttons/tinysquareredbutton.png",
+          "name": "ui/button-tinysquare-red.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/cursors/cursor-01.png",
+          "name": "ui/cursor-01.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/cursors/cursor-02.png",
+          "name": "ui/cursor-02.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/cursors/cursor-03.png",
+          "name": "ui/cursor-03.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/cursors/cursor-04.png",
+          "name": "ui/cursor-04.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-01.png",
+          "name": "ui/icon-01.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-02.png",
+          "name": "ui/icon-02.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-03.png",
+          "name": "ui/icon-03.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-04.png",
+          "name": "ui/icon-04.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-05.png",
+          "name": "ui/icon-05.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-06.png",
+          "name": "ui/icon-06.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-07.png",
+          "name": "ui/icon-07.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-08.png",
+          "name": "ui/icon-08.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-09.png",
+          "name": "ui/icon-09.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-10.png",
+          "name": "ui/icon-10.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-11.png",
+          "name": "ui/icon-11.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/icons/icon-12.png",
+          "name": "ui/icon-12.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/papers/regularpaper.png",
+          "name": "ui/paper-regular.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/papers/specialpaper.png",
+          "name": "ui/paper-special.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/ribbons/smallribbons.png",
+          "name": "ui/ribbons-small.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/swords/swords.png",
+          "name": "ui/swords.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/wood-table/woodtable.png",
+          "name": "ui/table-wood.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/wood-table/woodtable-slots.png",
+          "name": "ui/table-wood-slots.png"
+        }
       ]
     },
     {
@@ -109,27 +361,90 @@
       "padding": 4,
       "targetWidth": 1024,
       "frames": [
-        { "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-resource/gold-resource.png", "name": "resource/gold.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-1.png", "name": "resource/gold-stone-1.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-2.png", "name": "resource/gold-stone-2.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-3.png", "name": "resource/gold-stone-3.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-4.png", "name": "resource/gold-stone-4.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-5.png", "name": "resource/gold-stone-5.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-6.png", "name": "resource/gold-stone-6.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/meat/meat-resource/meat-resource.png", "name": "resource/meat.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/wood/wood-resource/wood-resource.png", "name": "resource/wood.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/tools/tool-01.png", "name": "resource/tool-01.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/tools/tool-02.png", "name": "resource/tool-02.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/tools/tool-03.png", "name": "resource/tool-03.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/tools/tool-04.png", "name": "resource/tool-04.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/decorations/rocks/rock1.png", "name": "resource/rock-1.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/decorations/rocks/rock2.png", "name": "resource/rock-2.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/decorations/rocks/rock3.png", "name": "resource/rock-3.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/decorations/rocks/rock4.png", "name": "resource/rock-4.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/wood/trees/stump-1.png", "name": "resource/stump-1.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/wood/trees/stump-2.png", "name": "resource/stump-2.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/wood/trees/stump-3.png", "name": "resource/stump-3.png" },
-        { "source": "public/assets/source/tiny-swords/terrain/resources/wood/trees/stump-4.png", "name": "resource/stump-4.png" }
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-resource/gold-resource.png",
+          "name": "resource/gold.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-1.png",
+          "name": "resource/gold-stone-1.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-2.png",
+          "name": "resource/gold-stone-2.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-3.png",
+          "name": "resource/gold-stone-3.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-4.png",
+          "name": "resource/gold-stone-4.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-5.png",
+          "name": "resource/gold-stone-5.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-6.png",
+          "name": "resource/gold-stone-6.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/meat/meat-resource/meat-resource.png",
+          "name": "resource/meat.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/wood/wood-resource/wood-resource.png",
+          "name": "resource/wood.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/tools/tool-01.png",
+          "name": "resource/tool-01.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/tools/tool-02.png",
+          "name": "resource/tool-02.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/tools/tool-03.png",
+          "name": "resource/tool-03.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/tools/tool-04.png",
+          "name": "resource/tool-04.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/decorations/rocks/rock1.png",
+          "name": "resource/rock-1.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/decorations/rocks/rock2.png",
+          "name": "resource/rock-2.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/decorations/rocks/rock3.png",
+          "name": "resource/rock-3.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/decorations/rocks/rock4.png",
+          "name": "resource/rock-4.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/wood/trees/stump-1.png",
+          "name": "resource/stump-1.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/wood/trees/stump-2.png",
+          "name": "resource/stump-2.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/wood/trees/stump-3.png",
+          "name": "resource/stump-3.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/terrain/resources/wood/trees/stump-4.png",
+          "name": "resource/stump-4.png"
+        }
       ]
     },
     {
@@ -139,31 +454,106 @@
       "padding": 4,
       "targetWidth": 2048,
       "frames": [
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/blue-knight.png", "name": "portrait/human/blue-knight.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/blue-lancer.png", "name": "portrait/human/blue-lancer.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/blue-archer.png", "name": "portrait/human/blue-archer.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/blue-monk.png", "name": "portrait/human/blue-monk.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/blue-pawn.png", "name": "portrait/human/blue-pawn.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/red-knight.png", "name": "portrait/human/red-knight.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/red-lancer.png", "name": "portrait/human/red-lancer.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/red-archer.png", "name": "portrait/human/red-archer.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/red-monk.png", "name": "portrait/human/red-monk.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/red-pawn.png", "name": "portrait/human/red-pawn.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/yellow-knight.png", "name": "portrait/human/yellow-knight.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/yellow-lancer.png", "name": "portrait/human/yellow-lancer.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/yellow-archer.png", "name": "portrait/human/yellow-archer.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/yellow-monk.png", "name": "portrait/human/yellow-monk.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/yellow-pawn.png", "name": "portrait/human/yellow-pawn.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/purple-knight.png", "name": "portrait/human/purple-knight.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/purple-lancer.png", "name": "portrait/human/purple-lancer.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/purple-archer.png", "name": "portrait/human/purple-archer.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/purple-monk.png", "name": "portrait/human/purple-monk.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/purple-pawn.png", "name": "portrait/human/purple-pawn.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/black-knight.png", "name": "portrait/human/black-knight.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/black-lancer.png", "name": "portrait/human/black-lancer.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/black-archer.png", "name": "portrait/human/black-archer.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/black-monk.png", "name": "portrait/human/black-monk.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/black-pawn.png", "name": "portrait/human/black-pawn.png" }
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/blue-knight.png",
+          "name": "portrait/human/blue-knight.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/blue-lancer.png",
+          "name": "portrait/human/blue-lancer.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/blue-archer.png",
+          "name": "portrait/human/blue-archer.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/blue-monk.png",
+          "name": "portrait/human/blue-monk.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/blue-pawn.png",
+          "name": "portrait/human/blue-pawn.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/red-knight.png",
+          "name": "portrait/human/red-knight.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/red-lancer.png",
+          "name": "portrait/human/red-lancer.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/red-archer.png",
+          "name": "portrait/human/red-archer.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/red-monk.png",
+          "name": "portrait/human/red-monk.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/red-pawn.png",
+          "name": "portrait/human/red-pawn.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/yellow-knight.png",
+          "name": "portrait/human/yellow-knight.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/yellow-lancer.png",
+          "name": "portrait/human/yellow-lancer.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/yellow-archer.png",
+          "name": "portrait/human/yellow-archer.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/yellow-monk.png",
+          "name": "portrait/human/yellow-monk.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/yellow-pawn.png",
+          "name": "portrait/human/yellow-pawn.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/purple-knight.png",
+          "name": "portrait/human/purple-knight.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/purple-lancer.png",
+          "name": "portrait/human/purple-lancer.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/purple-archer.png",
+          "name": "portrait/human/purple-archer.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/purple-monk.png",
+          "name": "portrait/human/purple-monk.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/purple-pawn.png",
+          "name": "portrait/human/purple-pawn.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/black-knight.png",
+          "name": "portrait/human/black-knight.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/black-lancer.png",
+          "name": "portrait/human/black-lancer.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/black-archer.png",
+          "name": "portrait/human/black-archer.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/black-monk.png",
+          "name": "portrait/human/black-monk.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/human-avatars/black-pawn.png",
+          "name": "portrait/human/black-pawn.png"
+        }
       ]
     },
     {
@@ -173,14 +563,495 @@
       "padding": 4,
       "targetWidth": 2048,
       "frames": [
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/ribbons/bigribbons.png", "name": "ui-panels/bigribbons.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-black.png", "name": "ui-panels/ribbon-black.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-blue.png", "name": "ui-panels/ribbon-blue.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-purple.png", "name": "ui-panels/ribbon-purple.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-red.png", "name": "ui-panels/ribbon-red.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-yellow.png", "name": "ui-panels/ribbon-yellow.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/banner/banner.png", "name": "ui-panels/store-banner.png" },
-        { "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/banner/slots.png", "name": "ui-panels/store-slots.png" }
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-elements/ribbons/bigribbons.png",
+          "name": "ui-panels/bigribbons.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-black.png",
+          "name": "ui-panels/ribbon-black.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-blue.png",
+          "name": "ui-panels/ribbon-blue.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-purple.png",
+          "name": "ui-panels/ribbon-purple.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-red.png",
+          "name": "ui-panels/ribbon-red.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/ribbons/ribbon-yellow.png",
+          "name": "ui-panels/ribbon-yellow.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/banner/banner.png",
+          "name": "ui-panels/store-banner.png"
+        },
+        {
+          "source": "public/assets/source/tiny-swords/ui-elements/ui-banners-from-the-store-page/banner/slots.png",
+          "name": "ui-panels/store-slots.png"
+        }
+      ]
+    },
+    {
+      "id": "soda-icons",
+      "outputImage": "public/assets/atlases/soda-icons.png",
+      "outputJson": "public/assets/atlases/soda-icons.atlas.json",
+      "padding": 2,
+      "targetWidth": 512,
+      "frames": [
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Apple.png",
+          "name": "food/apple.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Bread.png",
+          "name": "food/bread.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Cabbage.png",
+          "name": "food/cabbage.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Carrot.png",
+          "name": "food/carrot.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Cheese.png",
+          "name": "food/cheese.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Cherries.png",
+          "name": "food/cherries.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_CupOfTea.png",
+          "name": "food/cupoftea.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Egg.png",
+          "name": "food/egg.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Fish.png",
+          "name": "food/fish.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Grapes.png",
+          "name": "food/grapes.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Grapes2.png",
+          "name": "food/grapes2.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_HerbRoot.png",
+          "name": "food/herbroot.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_HotSauce.png",
+          "name": "food/hotsauce.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_MonsterEgg.png",
+          "name": "food/monsteregg.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Mushroom.png",
+          "name": "food/mushroom.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Onion.png",
+          "name": "food/onion.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Orange.png",
+          "name": "food/orange.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_PaperBag.png",
+          "name": "food/paperbag.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Peach.png",
+          "name": "food/peach.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Peanut.png",
+          "name": "food/peanut.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_RedPepper.png",
+          "name": "food/redpepper.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Salt.png",
+          "name": "food/salt.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Sausage.png",
+          "name": "food/sausage.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Tomato.png",
+          "name": "food/tomato.png"
+        },
+        {
+          "source": "public/assets/source/icons/Food/SODA_Icon_Food_Turnip.png",
+          "name": "food/turnip.png"
+        },
+        {
+          "source": "public/assets/source/icons/Instruments/SODA_Icon_Instruments_Bell.png",
+          "name": "instruments/bell.png"
+        },
+        {
+          "source": "public/assets/source/icons/Instruments/SODA_Icon_Instruments_Drum.png",
+          "name": "instruments/drum.png"
+        },
+        {
+          "source": "public/assets/source/icons/Instruments/SODA_Icon_Instruments_Flute.png",
+          "name": "instruments/flute.png"
+        },
+        {
+          "source": "public/assets/source/icons/Instruments/SODA_Icon_Instruments_Harp.png",
+          "name": "instruments/harp.png"
+        },
+        {
+          "source": "public/assets/source/icons/Instruments/SODA_Icon_Instruments_Horn.png",
+          "name": "instruments/horn.png"
+        },
+        {
+          "source": "public/assets/source/icons/Instruments/SODA_Icon_Instruments_Lute.png",
+          "name": "instruments/lute.png"
+        },
+        {
+          "source": "public/assets/source/icons/Instruments/SODA_Icon_Instruments_MusicBox.png",
+          "name": "instruments/musicbox.png"
+        },
+        {
+          "source": "public/assets/source/icons/Instruments/SODA_Icon_Instruments_Ocarina.png",
+          "name": "instruments/ocarina.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Antler.png",
+          "name": "materials/antler.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Bar2.png",
+          "name": "materials/bar2.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Brick.png",
+          "name": "materials/brick.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Coins.png",
+          "name": "materials/coins.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Coral.png",
+          "name": "materials/coral.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Feather.png",
+          "name": "materials/feather.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Fur.png",
+          "name": "materials/fur.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Gem1.png",
+          "name": "materials/gem1.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Gem2.png",
+          "name": "materials/gem2.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Gem3.png",
+          "name": "materials/gem3.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Gem4.png",
+          "name": "materials/gem4.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Gem5.png",
+          "name": "materials/gem5.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Gravel.png",
+          "name": "materials/gravel.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Horn2.png",
+          "name": "materials/horn2.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_LeatherRoll.png",
+          "name": "materials/leatherroll.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Rock.png",
+          "name": "materials/rock.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Shell.png",
+          "name": "materials/shell.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Skull.png",
+          "name": "materials/skull.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_String.png",
+          "name": "materials/string.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Tooth.png",
+          "name": "materials/tooth.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Wood.png",
+          "name": "materials/wood.png"
+        },
+        {
+          "source": "public/assets/source/icons/Materials/SODA_Icon_Materials_Wool.png",
+          "name": "materials/wool.png"
+        },
+        {
+          "source": "public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Herb1.png",
+          "name": "potionherbs/herb1.png"
+        },
+        {
+          "source": "public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Herb2.png",
+          "name": "potionherbs/herb2.png"
+        },
+        {
+          "source": "public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Herb3.png",
+          "name": "potionherbs/herb3.png"
+        },
+        {
+          "source": "public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Herb4.png",
+          "name": "potionherbs/herb4.png"
+        },
+        {
+          "source": "public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Herb5.png",
+          "name": "potionherbs/herb5.png"
+        },
+        {
+          "source": "public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Potion_Blue.png",
+          "name": "potionherbs/potion-blue.png"
+        },
+        {
+          "source": "public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Potion_LightGreen.png",
+          "name": "potionherbs/potion-lightgreen.png"
+        },
+        {
+          "source": "public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Potion_Purple.png",
+          "name": "potionherbs/potion-purple.png"
+        },
+        {
+          "source": "public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Potion_Red.png",
+          "name": "potionherbs/potion-red.png"
+        },
+        {
+          "source": "public/assets/source/icons/Potions_Herbs/SODA_Icon_PortionsHerbs_Potion_Yellow.png",
+          "name": "potionherbs/potion-yellow.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Book.png",
+          "name": "system_misc/misc-book.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_BronzeStar.png",
+          "name": "system_misc/misc-bronzestar.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Cog.png",
+          "name": "system_misc/misc-cog.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Dark.png",
+          "name": "system_misc/misc-dark.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_DownArrow.png",
+          "name": "system_misc/misc-downarrow.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Electric.png",
+          "name": "system_misc/misc-electric.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Fire.png",
+          "name": "system_misc/misc-fire.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Fist.png",
+          "name": "system_misc/misc-fist.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_FullHeart.png",
+          "name": "system_misc/misc-fullheart.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_GoldStar.png",
+          "name": "system_misc/misc-goldstar.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_HalfHeartLeft.png",
+          "name": "system_misc/misc-halfheartleft.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_HalfHeartRight.png",
+          "name": "system_misc/misc-halfheartright.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_HolyIcon.png",
+          "name": "system_misc/misc-holyicon.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Ice.png",
+          "name": "system_misc/misc-ice.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Impact.png",
+          "name": "system_misc/misc-impact.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_LightIcon.png",
+          "name": "system_misc/misc-lighticon.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_MusicNote.png",
+          "name": "system_misc/misc-musicnote.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Nature.png",
+          "name": "system_misc/misc-nature.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Rock.png",
+          "name": "system_misc/misc-rock.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Run.png",
+          "name": "system_misc/misc-run.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Shield.png",
+          "name": "system_misc/misc-shield.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_SilverStar.png",
+          "name": "system_misc/misc-silverstar.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Strike.png",
+          "name": "system_misc/misc-strike.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_UpArrow.png",
+          "name": "system_misc/misc-uparrow.png"
+        },
+        {
+          "source": "public/assets/source/icons/System_Misc/SODA_Icon_System_Misc_Water.png",
+          "name": "system_misc/misc-water.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Axe.png",
+          "name": "weapons/axe.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_BattleAxe.png",
+          "name": "weapons/battleaxe.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Bow.png",
+          "name": "weapons/bow.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Chainsaw.png",
+          "name": "weapons/chainsaw.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_ChainWhip.png",
+          "name": "weapons/chainwhip.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Claws.png",
+          "name": "weapons/claws.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Club.png",
+          "name": "weapons/club.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Crossbow.png",
+          "name": "weapons/crossbow.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Hammer.png",
+          "name": "weapons/hammer.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Knuckles.png",
+          "name": "weapons/knuckles.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_MagicBook.png",
+          "name": "weapons/magicbook.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_MagicStaff.png",
+          "name": "weapons/magicstaff.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_MagicStrike.png",
+          "name": "weapons/magicstrike.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Musket.png",
+          "name": "weapons/musket.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Revolver.png",
+          "name": "weapons/revolver.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Rifle.png",
+          "name": "weapons/rifle.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Rope.png",
+          "name": "weapons/rope.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Slingshot.png",
+          "name": "weapons/slingshot.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Spear.png",
+          "name": "weapons/spear.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Staff.png",
+          "name": "weapons/staff.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Staff2.png",
+          "name": "weapons/staff2.png"
+        },
+        {
+          "source": "public/assets/source/icons/Weapons/SODA_Icon_Weapons_Whip.png",
+          "name": "weapons/whip.png"
+        }
       ]
     }
   ]

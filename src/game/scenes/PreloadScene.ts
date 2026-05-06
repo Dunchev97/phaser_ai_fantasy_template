@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { GeneratedAssetPacks } from '../../content/generatedAssetKeys';
 import { TinySwordsAssetPacks } from '../../content/tinySwordsAssetKeys';
+import { SodaIconAssetPacks } from '../../content/sodaIconAssetKeys';
 import { TinySwordsAnimations, TinySwordsPawnToolAnimations } from '../../content/tinySwordsAnimations';
 import { TinySwordsTilesets } from '../../content/tinySwordsTilesets';
 import { TinySwordsEnvironmentStrips } from '../../content/tinySwordsEnvironment';
@@ -26,6 +27,10 @@ export class PreloadScene extends Phaser.Scene {
     }
 
     for (const pack of TinySwordsAssetPacks) {
+      this.load.atlas(pack.key, pack.imagePath, pack.atlasPath);
+    }
+
+    for (const pack of SodaIconAssetPacks) {
       this.load.atlas(pack.key, pack.imagePath, pack.atlasPath);
     }
 

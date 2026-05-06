@@ -91,6 +91,7 @@ If a command fails because dependencies are not installed, ask the user to run `
     content/
       assetKeys.ts
       generatedAssetKeys.ts
+      sodaIconAssetKeys.ts
       tinySwordsAssetKeys.ts
       tinySwordsAnimations.ts
       tinySwordsTilesets.ts
@@ -111,7 +112,6 @@ If a command fails because dependencies are not installed, ask the user to run `
   public/
     assets/
       source/
-        spritesheets/
         icons/
         tiny-swords/
       atlases/
@@ -142,7 +142,7 @@ Minimal startup scene. It should normally transition directly to `PreloadScene`.
 
 ### PreloadScene
 
-Load generated asset packs from `src/content/generatedAssetKeys.ts`.
+Load generated asset packs from `src/content/sodaIconAssetKeys.ts`, `src/content/tinySwordsAssetKeys.ts` and `src/content/generatedAssetKeys.ts`.
 
 Do not hardcode atlas paths in gameplay scenes.
 
@@ -157,12 +157,6 @@ Main playable prototype scene.
 For early MVPs, it is acceptable to keep most gameplay in `GameScene`. If the scene grows too large, extract systems into `src/game/systems`.
 
 ## Asset rules
-
-Raw downloaded sprite sheets go here:
-
-```text
-public/assets/source/spritesheets/
-```
 
 Separate raw PNG icons go here:
 
@@ -193,26 +187,50 @@ public/assets/catalog/
 
 Those folders are for generated, game-ready atlas files and manifests.
 
+### Soda Icons (new icon packs)
+
+- Place new icon PNGs under `public/assets/source/icons/{category}/`.
+- Run `npm run build:packed` to regenerate `soda-icons` atlas.
+- Frame names are automatically produced as `{category}/{clean-name}.png`. Inspect `src/content/sodaIconAssetKeys.ts` for exact constant names.
+- Use `SodaIconAtlases.SodaIcons` and `SodaIconFrames.*` in code.
+- If the icon is not found after rebuild, check `public/assets/atlases/soda-icons.atlas.json` for the correct frame name.
+
+**Current soda-icons categories:**
+
+- **food** — edibles: apple, bread, cheese, egg, fish, grapes, mushroom, sausage, tomato, turnip, etc.
+- **materials** — crafting stuff: coins, gem1-5, wood, rock, skull, leatherroll, feather, fur, coral, shell, tooth, string, wool, brick, gravel, antler, horn2, bar2.
+- **potionherbs** — alchemy: herb1-5, potion-blue, potion-red, potion-purple, potion-yellow, potion-lightgreen.
+- **system_misc** — game icons: fullheart, halfheartleft/right, goldstar, silverstar, bronzestar, shield, book, cog, fire, ice, water, electric, dark, holyicon, lighticon, nature, impact, strike, fist, run, uparrow, downarrow, musicnote, rock.
+- **instruments** — bard gear: bell, drum, flute, harp, horn, lute, musicbox, ocarina.
+- **weapons** — armory: axe, battleaxe, bow, crossbow, hammer, knuckles, spear, staff, staff2, whip, rope, slingshot, claws, club, chainsaw, chainwhip, magicbook, magicstaff, magicstrike, musket, revolver, rifle.
+
+### Tiny Swords
+
+- Raw Tiny Sords assets go under `public/assets/source/tiny-swords/`.
+- Runtime assets are already wired. Use `TinySordsAtlases`, `TinySordsBuildingFrames`, `TinySordsResourceFrames`, `TinySordsUIFrames`, etc. from `src/content/tinySwordsAssetKeys.ts`.
+- To add new Tiny Swords sub-packs, update `tools/packed-atlases.config.json` and run `npm run build:packed`.
+
 ## Using generated atlases
 
 Generated atlases are described in:
 
 ```text
-src/content/generatedAssetKeys.ts
+src/content/sodaIconAssetKeys.ts
+src/content/tinySwordsAssetKeys.ts
 ```
 
-`PreloadScene` automatically loads asset packs listed in `GeneratedAssetPacks`.
+`PreloadScene` automatically loads asset packs listed in `TinySwordsAssetPacks`, `SodaIconAssetPacks` and `GeneratedAssetPacks`.
 
 When using an icon, prefer constants:
 
 ```ts
-this.add.image(x, y, GeneratedAtlases.FantasyIcons, GeneratedIconFrames.WeaponSword);
+this.add.image(x, y, SodaIconAtlases.SodaIcons, SodaIconFrames.MaterialsCoins);
 ```
 
 Avoid raw strings unless constants are missing:
 
 ```ts
-this.add.image(x, y, 'fantasy_icons', 'weapon/sword.png');
+this.add.image(x, y, 'soda-icons', 'materials/coins.png');
 ```
 
 If the required icon does not exist, choose the closest existing icon and mention the substitution.

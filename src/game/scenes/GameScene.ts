@@ -5,15 +5,15 @@ import { createNineSlicePanel } from '../ui/NineSlicePanel';
 import { createStretchBar, type StretchBarResult } from '../ui/StretchBar';
 import { createInitialPrototypeState } from '../../content/prototypeState';
 import {
-  GeneratedAtlases,
-  GeneratedIconFrames,
-} from '../../content/generatedAssetKeys';
-import {
   TinySwordsAtlases,
   TinySwordsBuildingFrames,
   TinySwordsResourceFrames,
   TinySwordsUIFrames,
 } from '../../content/tinySwordsAssetKeys';
+import {
+  SodaIconAtlases,
+  SodaIconFrames,
+} from '../../content/sodaIconAssetKeys';
 import { TinySwordsWorldScale } from '../../content/tinySwordsScale';
 import {
   createIslandMap,
@@ -162,24 +162,24 @@ export class GameScene extends Phaser.Scene {
     this.goldCounter = new ResourceCounter(this, {
       x: 70,
       y: 84,
-      atlas: GeneratedAtlases.FantasyIcons,
-      frame: GeneratedIconFrames.CurrencyGoldCrownCoin,
       label: 'Gold',
       value: this.state.resources.gold,
       labelColor: '#4e3828',
       valueColor: '#2f2118',
+      atlas: SodaIconAtlases.SodaIcons,
+      frame: SodaIconFrames.MaterialsCoins,
     });
     this.goldCounter.setDepth(41);
 
     this.essenceCounter = new ResourceCounter(this, {
       x: 70,
       y: 126,
-      atlas: GeneratedAtlases.FantasyIcons,
-      frame: GeneratedIconFrames.ResourcePurpleCrystalCluster,
       label: 'Essence',
       value: this.state.resources.essence,
       labelColor: '#4e3828',
       valueColor: '#2f2118',
+      atlas: SodaIconAtlases.SodaIcons,
+      frame: SodaIconFrames.MaterialsGem3,
     });
     this.essenceCounter.setDepth(41);
 

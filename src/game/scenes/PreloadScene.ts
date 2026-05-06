@@ -95,17 +95,17 @@ export class PreloadScene extends Phaser.Scene {
       });
     }
 
-    // Create animations for environment spritesheets (trees and bushes)
+    // Create animations for environment spritesheets (trees, bushes, shoreline foam)
     for (const env of TinySwordsEnvironmentStrips) {
       if (env.needsVerification || env.frames == null) continue;
-      if (env.key.startsWith('env-tree') || env.key.startsWith('env-bush')) {
+      if (env.key.startsWith('env-tree') || env.key.startsWith('env-bush') || env.key === 'env-water-foam') {
         this.anims.create({
           key: env.key,
           frames: this.anims.generateFrameNumbers(env.key, {
             start: 0,
             end: env.frames - 1,
           }),
-          frameRate: 5,
+          frameRate: env.key === 'env-water-foam' ? 8 : 5,
           repeat: -1,
         });
       }

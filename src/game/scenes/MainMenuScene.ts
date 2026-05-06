@@ -41,32 +41,39 @@ export class MainMenuScene extends Phaser.Scene {
     start.on('pointerout', () => start.setStyle({ backgroundColor: '#6b2fbf' }));
     start.on('pointerdown', () => this.scene.start('GameScene'));
 
-    const gallery = this.add
-      .text(GAME_WIDTH / 2, GAME_HEIGHT / 2 + 70, 'Asset Gallery', {
-        fontSize: '24px',
-        color: '#ffffff',
-        backgroundColor: '#2f5fbf',
-        padding: { x: 24, y: 12 },
-      })
-      .setOrigin(0.5)
-      .setInteractive({ useHandCursor: true });
-
-    gallery.on('pointerover', () => gallery.setStyle({ backgroundColor: '#3f7fe0' }));
-    gallery.on('pointerout', () => gallery.setStyle({ backgroundColor: '#2f5fbf' }));
-    gallery.on('pointerdown', () => this.scene.start('AssetGalleryScene'));
-
     this.add
       .text(
         GAME_WIDTH / 2,
-        GAME_HEIGHT - 90,
-        'Tiny Swords pack imported. Add sprite sheets, run npm run build:atlas, or open Asset Gallery.',
+        GAME_HEIGHT - 118,
+        'Подключенные Ассеты',
         {
-          fontSize: '18px',
-          color: '#9b86b8',
+          fontSize: '22px',
+          color: '#f4e9ff',
+          fontStyle: 'bold',
           align: 'center',
           wordWrap: { width: 900 },
         },
       )
       .setOrigin(0.5);
+
+    const assetsLink = this.add
+      .text(
+        GAME_WIDTH / 2,
+        GAME_HEIGHT - 82,
+        'Tiny Swords by Pixel Frog',
+        {
+          fontSize: '18px',
+          color: '#8fc7ff',
+          align: 'center',
+        },
+      )
+      .setOrigin(0.5)
+      .setInteractive({ useHandCursor: true });
+
+    assetsLink.on('pointerover', () => assetsLink.setStyle({ color: '#b9dcff' }));
+    assetsLink.on('pointerout', () => assetsLink.setStyle({ color: '#8fc7ff' }));
+    assetsLink.on('pointerdown', () => {
+      window.open('https://pixelfrog-assets.itch.io/tiny-swords', '_blank', 'noopener');
+    });
   }
 }

@@ -105,7 +105,6 @@ If a command fails because dependencies are not installed, ask the user to run `
         PreloadScene.ts
         MainMenuScene.ts
         GameScene.ts
-        AssetGalleryScene.ts
       systems/
       ui/
 
@@ -315,7 +314,7 @@ Good loops:
 Use:
 - Terrain color1–color5.
 - Trees and bushes.
-- Water foam and water rocks.
+- Water background and optional water rocks.
 - Buildings.
 - Units.
 
@@ -380,9 +379,17 @@ When building a fantasy prototype, reuse existing Tiny Swords assets before inve
 - **Terrain helpers** — `TinySwordsTerrainTiles`, `TinySwordsTerrainBrushes`, `TerrainBuilder`.
   - For terrain prototypes, use `TinySwordsTerrainTiles` for verified tile categories (`GrassCenter`, `GrassEdges`, `GrassCorners`, `GrassDecor`, `CliffCenter`, `Water`, etc.).
   - Use `TinySwordsTerrainBrushes.createGrassPatch(width, height, options)` or the presets `simpleGrassRect`, `simpleCliffBlock`, `simpleWaterPatch`, `simplePathPatch`.
+  - For complete prototype maps, prefer `createIslandMap()` and `placeIslandMapDecorations()` from `src/game/systems/IslandMapBuilder.ts`. The default map shape should be one large, flat grass island that fills most of the playable viewport, with water only around the outside and enough open land for gameplay.
+  - Do not make multi-level terrain, cliffs, ramps, bridges, or stair/sloped transitions by default. Use `elevation`, `createCliffBlock()`, and `createRampPatch()` only when the human explicitly asks for height differences or cliff gameplay.
+  - `createIslandMap()` starts with a full water background, builds a shared land/cliff/ramp mask, auto-tiles grass edges from that shared mask, exposes masks, and places trees/bushes/rocks only on valid cells.
+  - Reserve occupied cells with `reserveIslandMapArea()` before random decoration. Use it for buildings, units, resource nodes, paths, and scripted landmarks so random trees/bushes/rocks cannot overlap important objects.
   - Use `TerrainBuilder.createTileLayerFromPreset()` to render a brush onto a Phaser TilemapLayer, or `createGrassPatchLayer()`, `createWaterPatchLayer()`, `createCliffBlockLayer()` for direct auto-tiled patches.
   - Do not fill terrain with `tileIndex(0, 0)` or other corner/edge indexes. In `tilemap-color*.png`, `row 0, col 0` is the top-left grass corner; center grass lives inside the verified grass blob (`rows 1–10`, `cols 1–10`).
-  - Corners and edges belong on the perimeter only. Interiors should use `GrassCenter` with sparse `GrassDecor` variation.
+  - Corners and edges belong on the perimeter of the final combined land mask only. Interiors should use `GrassCenter` with sparse `GrassDecor` variation. Do not put grass-water edge tiles in the middle of a field unless there is actual water outside that border.
+  - Avoid black voids around terrain. If a grass patch ends at map edge or forms an island, put water under/around it rather than leaving the camera background visible.
+  - Avoid cliffs and ramps in baseline prototypes. When a prototype truly needs elevation, ramps/slopes are deliberate connectors between levels; do not sprinkle them as random decoration.
+  - Place environment decorations through land masks and footprint checks when possible. Trees are large sprites; checking only their anchor cell is not enough. A tree needs a safe land footprint around its trunk, roughly 5×5 terrain cells at the default scale, so it does not spawn on shore/water while still appearing on normal islands. Trees, bushes, rocks, buildings, and units should not spawn on water, cliffs, ramps, one-tile shore borders, or reserved building zones unless the prototype intentionally allows it.
+  - Do not use `env-water-foam` in generated prototype maps by default; it reads too noisy in this template. Use `env-water-rocks-01`..`04` sparingly as water-only decoration.
   - The runtime Tiny Swords terrain has a separate `terrain-water-background` tileset for water fill. Do not fake water by guessing bottom rows of `tilemap-color*.png`.
   - Do not place the entire tileset image as a normal sprite.
   - Tile size is 16×16. Tilemaps are 36 cols × 24 rows = 864 tiles per color variant.
@@ -449,30 +456,21 @@ If an asset you need does not exist in the runtime layer, check `public/assets/c
 1. Update `tools/packed-atlases.config.json` or the relevant builder config.
 2. Run `npm run build:packed`.
 3. Update `src/content/tinySwordsAssetKeys.ts` with new frame names.
-4. Update `src/game/scenes/AssetGalleryScene.ts` if the new assets should be visible.
-5. Run `npm run validate:assets` and `npm run build`.
+4. Run `npm run validate:assets` and `npm run build`.
 
-### Asset gallery scene
+### Connected assets reference
 
-`AssetGalleryScene` is a debugging and asset preview scene. It may show:
+Do not maintain an in-project asset gallery scene. It costs context and distracts from playable prototypes.
 
-- Buildings
-- Units and factions
-- Worker variants
-- Resources
-- UI Core
-- Portraits
-- UI Panels
-- Terrain
-- Environment
-- Particles
-- Projectiles
-- Sheep
-- Gold highlights
+For connected asset inspection, use generated key files and manifests:
 
-Do not spend excessive time polishing `AssetGalleryScene` unless the user asks. Gameplay prototypes are more important than gallery polish.
+- `src/content/generatedAssetKeys.ts`
+- `src/content/tinySwordsAssetKeys.ts`
+- `public/assets/catalog/`
 
-When you change or extend the asset layer, keep the gallery in sync so the new assets are visible.
+For the Tiny Swords visual reference, use the author's page:
+
+https://pixelfrog-assets.itch.io/tiny-swords
 
 ## Data rules
 
@@ -513,7 +511,7 @@ Use simple, readable UI before visual polish.
 - Do not rename asset files.
 - Do not change manifests unless the task is explicitly about assets.
 - Use existing runtime constants and animation keys.
-- Use `AssetGalleryScene` for debugging and inspection, not gameplay.
+- Do not recreate or maintain `AssetGalleryScene`; inspect assets through manifests, generated keys, and the Pixel Frog Tiny Swords page instead.
 
 ## Prototype rules
 
@@ -605,7 +603,7 @@ A task is done when:
 4. Asset frame names are valid.
 5. The game has a clear playable loop.
 6. No unrelated files were changed.
-7. **If assets changed**: `AssetGalleryScene` still works or was updated, `validate:assets` passes, and `build` passes.
+7. **If assets changed**: `validate:assets` passes and `build` passes.
 
 ## Optional MCP usage
 

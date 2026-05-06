@@ -113,6 +113,43 @@ export const TinySwordsTerrainTiles = {
     bottomRight: tileIndex(23, 35),
     bottomLeft: tileIndex(23, 24),
   },
+  CliffFaceWithWater: {
+    top: rowRange(15, 24, 34),
+    center: rectRange(16, 22, 24, 34),
+    bottom: rowRange(23, 24, 34),
+  },
+  CliffWaterCorners: {
+    topLeft: tileIndex(15, 24),
+    topRight: tileIndex(15, 35),
+    bottomRight: tileIndex(23, 35),
+    bottomLeft: tileIndex(23, 24),
+  },
+
+  /**
+   * Verified visible ramps/slopes in the lower-left section of tilemap-color.
+   * These are not generic edge tiles; use them only as deliberate connectors
+   * between elevation levels.
+   */
+  Ramps: {
+    leftWide: [
+      [tileIndex(17, 2), tileIndex(17, 3)],
+      [tileIndex(18, 2), tileIndex(18, 3)],
+      [tileIndex(19, 1), tileIndex(19, 2)],
+      [tileIndex(20, 0), tileIndex(20, 1)],
+      [tileIndex(21, 0), tileIndex(21, 1)],
+      [tileIndex(22, 0), tileIndex(22, 1)],
+      [tileIndex(23, 0), tileIndex(23, 1)],
+    ],
+    rightWide: [
+      [tileIndex(17, 12), tileIndex(17, 13)],
+      [tileIndex(18, 12), tileIndex(18, 13)],
+      [tileIndex(19, 13), tileIndex(19, 14)],
+      [tileIndex(20, 14), tileIndex(20, 15)],
+      [tileIndex(21, 14), tileIndex(21, 15)],
+      [tileIndex(22, 14), tileIndex(22, 15)],
+      [tileIndex(23, 14), tileIndex(23, 15)],
+    ],
+  },
 
   Water: [
     waterTileIndex(0, 0), waterTileIndex(0, 1), waterTileIndex(0, 2), waterTileIndex(0, 3),

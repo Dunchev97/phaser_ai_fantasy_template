@@ -6,12 +6,13 @@ export interface TerrainBrush {
   tilesetKey: string;
   width: number;
   height: number;
-  tiles: number[][]; // 2D array of tile indexes
+  tiles: Array<Array<number | null>>; // 2D array of tile indexes; null leaves a transparent cell
 }
 
 type PatchOptions = {
   tilesetKey?: string;
   seed?: number;
+  edgeMode?: 'none' | 'shore' | 'cliffTop';
   bordered?: boolean;
   decorationChance?: number;
 };
@@ -34,8 +35,19 @@ function makeBrush(
   name: string,
   description: string,
   tilesetKey: string,
-  tiles: number[][],
+  tiles: Array<Array<number | null>>,
 ): TerrainBrush {
+  return {
+    name,
+    description,
+    tilesetKey,
+    width: tiles[0]?.length ?? 0,
+    height: tiles.length,
+    tiles,
+  };
+}
+
+function makeTransparentBrush(name: string, description: string, tilesetKey: string, tiles: Array<Array<number | null>>): TerrainBrush {
   return {
     name,
     description,
@@ -51,7 +63,7 @@ function grassTileFor(row: number, col: number, width: number, height: number, o
   const lastCol = width - 1;
   const { GrassCorners, GrassEdges, GrassCenter, GrassDecor } = TinySwordsTerrainTiles;
 
-  if (options.bordered && width >= 3 && height >= 3) {
+  if (options.edgeMode !== 'none' && width >= 3 && height >= 3) {
     if (row === 0 && col === 0) return GrassCorners.topLeft;
     if (row === 0 && col === lastCol) return GrassCorners.topRight;
     if (row === lastRow && col === lastCol) return GrassCorners.bottomRight;
@@ -92,6 +104,7 @@ export function createGrassPatch(width: number, height: number, options: PatchOp
   const resolved: Required<PatchOptions> = {
     tilesetKey: options.tilesetKey ?? DEFAULT_TERRAIN_TILESET,
     seed: options.seed ?? 1,
+    edgeMode: options.edgeMode ?? (options.bordered === false ? 'none' : 'shore'),
     bordered: options.bordered ?? true,
     decorationChance: options.decorationChance ?? 0.08,
   };
@@ -101,10 +114,34 @@ export function createGrassPatch(width: number, height: number, options: PatchOp
 
   return makeBrush(
     'grassPatch',
-    'Auto-tiled grass patch: corners and edges on the perimeter, varied center grass inside.',
+    `Auto-tiled grass patch (${resolved.edgeMode} edges): varied center grass with perimeter edges only when requested.`,
     resolved.tilesetKey,
     tiles,
   );
+}
+
+export function createRampPatch(direction: 'left' | 'right', options: PatchOptions = {}): TerrainBrush {
+  const tilesetKey = options.tilesetKey ?? DEFAULT_TERRAIN_TILESET;
+  const rampTiles = direction === 'left'
+    ? TinySwordsTerrainTiles.Ramps.leftWide
+    : TinySwordsTerrainTiles.Ramps.rightWide;
+  const tiles = rampTiles.map((row) => [...row]);
+
+  return makeBrush(
+    direction === 'left' ? 'leftRamp' : 'rightRamp',
+    'Verified Tiny Swords grassy cliff ramp used as a deliberate connector between elevation levels.',
+    tilesetKey,
+    tiles,
+  );
+}
+
+export function createTransparentBrush(
+  name: string,
+  description: string,
+  tilesetKey: string,
+  tiles: Array<Array<number | null>>,
+): TerrainBrush {
+  return makeTransparentBrush(name, description, tilesetKey, tiles);
 }
 
 export function createWaterPatch(width: number, height: number, seed = 1): TerrainBrush {
@@ -152,7 +189,7 @@ export function createGrassPath(width: number, height: number, options: PatchOpt
 
 export const simpleGrassRect = createGrassPatch(12, 8, {
   seed: 12,
-  bordered: true,
+  edgeMode: 'shore',
   decorationChance: 0.06,
 });
 
@@ -166,9 +203,12 @@ export const simplePathPatch = createGrassPath(10, 3, {
   seed: 78,
 });
 
+export const simpleRampPatch = createRampPatch('right');
+
 export const TinySwordsTerrainBrushes: TerrainBrush[] = [
   simpleGrassRect,
   simpleWaterPatch,
   simpleCliffBlock,
   simplePathPatch,
+  simpleRampPatch,
 ];

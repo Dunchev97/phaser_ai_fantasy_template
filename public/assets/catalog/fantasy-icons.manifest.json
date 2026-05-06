@@ -1,0 +1,720 @@
+{
+  "atlasKey": "fantasy-icons",
+  "source": "public/assets/source/icons/fantasy-icons-8x8.png",
+  "image": "public/assets/atlases/fantasy-icons.png",
+  "json": "public/assets/atlases/fantasy-icons.atlas.json",
+  "columns": 8,
+  "rows": 8,
+  "width": 2048,
+  "height": 2048,
+  "cell": {
+    "approximateWidth": 256,
+    "approximateHeight": 256
+  },
+  "icons": {
+    "currency/gold-crown-coin": {
+      "atlas": "fantasy-icons",
+      "frame": "currency/gold-crown-coin",
+      "category": "currency",
+      "description": "",
+      "grid": {
+        "row": 0,
+        "column": 0,
+        "index": 0
+      }
+    },
+    "currency/silver-fleur-coin": {
+      "atlas": "fantasy-icons",
+      "frame": "currency/silver-fleur-coin",
+      "category": "currency",
+      "description": "",
+      "grid": {
+        "row": 0,
+        "column": 1,
+        "index": 1
+      }
+    },
+    "currency/bronze-star-coin": {
+      "atlas": "fantasy-icons",
+      "frame": "currency/bronze-star-coin",
+      "category": "currency",
+      "description": "",
+      "grid": {
+        "row": 0,
+        "column": 2,
+        "index": 2
+      }
+    },
+    "gem/blue-diamond": {
+      "atlas": "fantasy-icons",
+      "frame": "gem/blue-diamond",
+      "category": "gem",
+      "description": "",
+      "grid": {
+        "row": 0,
+        "column": 3,
+        "index": 3
+      }
+    },
+    "gem/red-ruby": {
+      "atlas": "fantasy-icons",
+      "frame": "gem/red-ruby",
+      "category": "gem",
+      "description": "",
+      "grid": {
+        "row": 0,
+        "column": 4,
+        "index": 4
+      }
+    },
+    "gem/green-emerald": {
+      "atlas": "fantasy-icons",
+      "frame": "gem/green-emerald",
+      "category": "gem",
+      "description": "",
+      "grid": {
+        "row": 0,
+        "column": 5,
+        "index": 5
+      }
+    },
+    "gem/purple-amethyst": {
+      "atlas": "fantasy-icons",
+      "frame": "gem/purple-amethyst",
+      "category": "gem",
+      "description": "",
+      "grid": {
+        "row": 0,
+        "column": 6,
+        "index": 6
+      }
+    },
+    "equipment/gold-crown": {
+      "atlas": "fantasy-icons",
+      "frame": "equipment/gold-crown",
+      "category": "equipment",
+      "description": "",
+      "grid": {
+        "row": 0,
+        "column": 7,
+        "index": 7
+      }
+    },
+    "resource/wood-log": {
+      "atlas": "fantasy-icons",
+      "frame": "resource/wood-log",
+      "category": "resource",
+      "description": "",
+      "grid": {
+        "row": 1,
+        "column": 0,
+        "index": 8
+      }
+    },
+    "resource/stone": {
+      "atlas": "fantasy-icons",
+      "frame": "resource/stone",
+      "category": "resource",
+      "description": "",
+      "grid": {
+        "row": 1,
+        "column": 1,
+        "index": 9
+      }
+    },
+    "resource/iron-ore": {
+      "atlas": "fantasy-icons",
+      "frame": "resource/iron-ore",
+      "category": "resource",
+      "description": "",
+      "grid": {
+        "row": 1,
+        "column": 2,
+        "index": 10
+      }
+    },
+    "resource/coal": {
+      "atlas": "fantasy-icons",
+      "frame": "resource/coal",
+      "category": "resource",
+      "description": "",
+      "grid": {
+        "row": 1,
+        "column": 3,
+        "index": 11
+      }
+    },
+    "resource/wheat": {
+      "atlas": "fantasy-icons",
+      "frame": "resource/wheat",
+      "category": "resource",
+      "description": "",
+      "grid": {
+        "row": 1,
+        "column": 4,
+        "index": 12
+      }
+    },
+    "resource/leather-hide": {
+      "atlas": "fantasy-icons",
+      "frame": "resource/leather-hide",
+      "category": "resource",
+      "description": "",
+      "grid": {
+        "row": 1,
+        "column": 5,
+        "index": 13
+      }
+    },
+    "resource/cloth-roll": {
+      "atlas": "fantasy-icons",
+      "frame": "resource/cloth-roll",
+      "category": "resource",
+      "description": "",
+      "grid": {
+        "row": 1,
+        "column": 6,
+        "index": 14
+      }
+    },
+    "resource/herb-lavender": {
+      "atlas": "fantasy-icons",
+      "frame": "resource/herb-lavender",
+      "category": "resource",
+      "description": "",
+      "grid": {
+        "row": 1,
+        "column": 7,
+        "index": 15
+      }
+    },
+    "resource/purple-crystal-cluster": {
+      "atlas": "fantasy-icons",
+      "frame": "resource/purple-crystal-cluster",
+      "category": "resource",
+      "description": "",
+      "grid": {
+        "row": 2,
+        "column": 0,
+        "index": 16
+      }
+    },
+    "magic/blue-flame": {
+      "atlas": "fantasy-icons",
+      "frame": "magic/blue-flame",
+      "category": "magic",
+      "description": "",
+      "grid": {
+        "row": 2,
+        "column": 1,
+        "index": 17
+      }
+    },
+    "potion/red-health": {
+      "atlas": "fantasy-icons",
+      "frame": "potion/red-health",
+      "category": "potion",
+      "description": "",
+      "grid": {
+        "row": 2,
+        "column": 2,
+        "index": 18
+      }
+    },
+    "potion/blue-mana": {
+      "atlas": "fantasy-icons",
+      "frame": "potion/blue-mana",
+      "category": "potion",
+      "description": "",
+      "grid": {
+        "row": 2,
+        "column": 3,
+        "index": 19
+      }
+    },
+    "potion/green-poison": {
+      "atlas": "fantasy-icons",
+      "frame": "potion/green-poison",
+      "category": "potion",
+      "description": "",
+      "grid": {
+        "row": 2,
+        "column": 4,
+        "index": 20
+      }
+    },
+    "potion/yellow-stamina": {
+      "atlas": "fantasy-icons",
+      "frame": "potion/yellow-stamina",
+      "category": "potion",
+      "description": "",
+      "grid": {
+        "row": 2,
+        "column": 5,
+        "index": 21
+      }
+    },
+    "potion/purple-magic": {
+      "atlas": "fantasy-icons",
+      "frame": "potion/purple-magic",
+      "category": "potion",
+      "description": "",
+      "grid": {
+        "row": 2,
+        "column": 6,
+        "index": 22
+      }
+    },
+    "food/bread": {
+      "atlas": "fantasy-icons",
+      "frame": "food/bread",
+      "category": "food",
+      "description": "",
+      "grid": {
+        "row": 2,
+        "column": 7,
+        "index": 23
+      }
+    },
+    "weapon/dagger": {
+      "atlas": "fantasy-icons",
+      "frame": "weapon/dagger",
+      "category": "weapon",
+      "description": "",
+      "grid": {
+        "row": 3,
+        "column": 0,
+        "index": 24
+      }
+    },
+    "weapon/sword": {
+      "atlas": "fantasy-icons",
+      "frame": "weapon/sword",
+      "category": "weapon",
+      "description": "",
+      "grid": {
+        "row": 3,
+        "column": 1,
+        "index": 25
+      }
+    },
+    "weapon/battle-axe": {
+      "atlas": "fantasy-icons",
+      "frame": "weapon/battle-axe",
+      "category": "weapon",
+      "description": "",
+      "grid": {
+        "row": 3,
+        "column": 2,
+        "index": 26
+      }
+    },
+    "weapon/spiked-mace": {
+      "atlas": "fantasy-icons",
+      "frame": "weapon/spiked-mace",
+      "category": "weapon",
+      "description": "",
+      "grid": {
+        "row": 3,
+        "column": 3,
+        "index": 27
+      }
+    },
+    "weapon/spear": {
+      "atlas": "fantasy-icons",
+      "frame": "weapon/spear",
+      "category": "weapon",
+      "description": "",
+      "grid": {
+        "row": 3,
+        "column": 4,
+        "index": 28
+      }
+    },
+    "weapon/bow": {
+      "atlas": "fantasy-icons",
+      "frame": "weapon/bow",
+      "category": "weapon",
+      "description": "",
+      "grid": {
+        "row": 3,
+        "column": 5,
+        "index": 29
+      }
+    },
+    "weapon/crossbow": {
+      "atlas": "fantasy-icons",
+      "frame": "weapon/crossbow",
+      "category": "weapon",
+      "description": "",
+      "grid": {
+        "row": 3,
+        "column": 6,
+        "index": 30
+      }
+    },
+    "armor/shield-fleur": {
+      "atlas": "fantasy-icons",
+      "frame": "armor/shield-fleur",
+      "category": "armor",
+      "description": "",
+      "grid": {
+        "row": 3,
+        "column": 7,
+        "index": 31
+      }
+    },
+    "armor/helmet-plume": {
+      "atlas": "fantasy-icons",
+      "frame": "armor/helmet-plume",
+      "category": "armor",
+      "description": "",
+      "grid": {
+        "row": 4,
+        "column": 0,
+        "index": 32
+      }
+    },
+    "armor/chestplate": {
+      "atlas": "fantasy-icons",
+      "frame": "armor/chestplate",
+      "category": "armor",
+      "description": "",
+      "grid": {
+        "row": 4,
+        "column": 1,
+        "index": 33
+      }
+    },
+    "armor/boots": {
+      "atlas": "fantasy-icons",
+      "frame": "armor/boots",
+      "category": "armor",
+      "description": "",
+      "grid": {
+        "row": 4,
+        "column": 2,
+        "index": 34
+      }
+    },
+    "armor/gauntlets": {
+      "atlas": "fantasy-icons",
+      "frame": "armor/gauntlets",
+      "category": "armor",
+      "description": "",
+      "grid": {
+        "row": 4,
+        "column": 3,
+        "index": 35
+      }
+    },
+    "accessory/ring-purple-gem": {
+      "atlas": "fantasy-icons",
+      "frame": "accessory/ring-purple-gem",
+      "category": "accessory",
+      "description": "",
+      "grid": {
+        "row": 4,
+        "column": 4,
+        "index": 36
+      }
+    },
+    "accessory/amulet-purple-gem": {
+      "atlas": "fantasy-icons",
+      "frame": "accessory/amulet-purple-gem",
+      "category": "accessory",
+      "description": "",
+      "grid": {
+        "row": 4,
+        "column": 5,
+        "index": 37
+      }
+    },
+    "weapon/magic-staff-orb": {
+      "atlas": "fantasy-icons",
+      "frame": "weapon/magic-staff-orb",
+      "category": "weapon",
+      "description": "",
+      "grid": {
+        "row": 4,
+        "column": 6,
+        "index": 38
+      }
+    },
+    "weapon/magic-wand-spear": {
+      "atlas": "fantasy-icons",
+      "frame": "weapon/magic-wand-spear",
+      "category": "weapon",
+      "description": "",
+      "grid": {
+        "row": 4,
+        "column": 7,
+        "index": 39
+      }
+    },
+    "key/gold-purple-key": {
+      "atlas": "fantasy-icons",
+      "frame": "key/gold-purple-key",
+      "category": "key",
+      "description": "",
+      "grid": {
+        "row": 5,
+        "column": 0,
+        "index": 40
+      }
+    },
+    "container/treasure-chest": {
+      "atlas": "fantasy-icons",
+      "frame": "container/treasure-chest",
+      "category": "container",
+      "description": "",
+      "grid": {
+        "row": 5,
+        "column": 1,
+        "index": 41
+      }
+    },
+    "scroll/sealed-scroll": {
+      "atlas": "fantasy-icons",
+      "frame": "scroll/sealed-scroll",
+      "category": "scroll",
+      "description": "",
+      "grid": {
+        "row": 5,
+        "column": 2,
+        "index": 42
+      }
+    },
+    "book/spellbook": {
+      "atlas": "fantasy-icons",
+      "frame": "book/spellbook",
+      "category": "book",
+      "description": "",
+      "grid": {
+        "row": 5,
+        "column": 3,
+        "index": 43
+      }
+    },
+    "tool/torch": {
+      "atlas": "fantasy-icons",
+      "frame": "tool/torch",
+      "category": "tool",
+      "description": "",
+      "grid": {
+        "row": 5,
+        "column": 4,
+        "index": 44
+      }
+    },
+    "tool/rope": {
+      "atlas": "fantasy-icons",
+      "frame": "tool/rope",
+      "category": "tool",
+      "description": "",
+      "grid": {
+        "row": 5,
+        "column": 5,
+        "index": 45
+      }
+    },
+    "weapon/bomb-skull": {
+      "atlas": "fantasy-icons",
+      "frame": "weapon/bomb-skull",
+      "category": "weapon",
+      "description": "",
+      "grid": {
+        "row": 5,
+        "column": 6,
+        "index": 46
+      }
+    },
+    "container/backpack": {
+      "atlas": "fantasy-icons",
+      "frame": "container/backpack",
+      "category": "container",
+      "description": "",
+      "grid": {
+        "row": 5,
+        "column": 7,
+        "index": 47
+      }
+    },
+    "material/wood-planks": {
+      "atlas": "fantasy-icons",
+      "frame": "material/wood-planks",
+      "category": "material",
+      "description": "",
+      "grid": {
+        "row": 6,
+        "column": 0,
+        "index": 48
+      }
+    },
+    "material/brick-block": {
+      "atlas": "fantasy-icons",
+      "frame": "material/brick-block",
+      "category": "material",
+      "description": "",
+      "grid": {
+        "row": 6,
+        "column": 1,
+        "index": 49
+      }
+    },
+    "material/metal-ingot": {
+      "atlas": "fantasy-icons",
+      "frame": "material/metal-ingot",
+      "category": "material",
+      "description": "",
+      "grid": {
+        "row": 6,
+        "column": 2,
+        "index": 50
+      }
+    },
+    "material/gear": {
+      "atlas": "fantasy-icons",
+      "frame": "material/gear",
+      "category": "material",
+      "description": "",
+      "grid": {
+        "row": 6,
+        "column": 3,
+        "index": 51
+      }
+    },
+    "tool/pickaxe": {
+      "atlas": "fantasy-icons",
+      "frame": "tool/pickaxe",
+      "category": "tool",
+      "description": "",
+      "grid": {
+        "row": 6,
+        "column": 4,
+        "index": 52
+      }
+    },
+    "tool/hammer": {
+      "atlas": "fantasy-icons",
+      "frame": "tool/hammer",
+      "category": "tool",
+      "description": "",
+      "grid": {
+        "row": 6,
+        "column": 5,
+        "index": 53
+      }
+    },
+    "tool/anvil": {
+      "atlas": "fantasy-icons",
+      "frame": "tool/anvil",
+      "category": "tool",
+      "description": "",
+      "grid": {
+        "row": 6,
+        "column": 6,
+        "index": 54
+      }
+    },
+    "map/treasure-map": {
+      "atlas": "fantasy-icons",
+      "frame": "map/treasure-map",
+      "category": "map",
+      "description": "",
+      "grid": {
+        "row": 6,
+        "column": 7,
+        "index": 55
+      }
+    },
+    "material/skull": {
+      "atlas": "fantasy-icons",
+      "frame": "material/skull",
+      "category": "material",
+      "description": "",
+      "grid": {
+        "row": 7,
+        "column": 0,
+        "index": 56
+      }
+    },
+    "magic/purple-star-medallion": {
+      "atlas": "fantasy-icons",
+      "frame": "magic/purple-star-medallion",
+      "category": "magic",
+      "description": "",
+      "grid": {
+        "row": 7,
+        "column": 1,
+        "index": 57
+      }
+    },
+    "food/fish": {
+      "atlas": "fantasy-icons",
+      "frame": "food/fish",
+      "category": "food",
+      "description": "",
+      "grid": {
+        "row": 7,
+        "column": 2,
+        "index": 58
+      }
+    },
+    "food/meat": {
+      "atlas": "fantasy-icons",
+      "frame": "food/meat",
+      "category": "food",
+      "description": "",
+      "grid": {
+        "row": 7,
+        "column": 3,
+        "index": 59
+      }
+    },
+    "element/water-drop": {
+      "atlas": "fantasy-icons",
+      "frame": "element/water-drop",
+      "category": "element",
+      "description": "",
+      "grid": {
+        "row": 7,
+        "column": 4,
+        "index": 60
+      }
+    },
+    "element/fire": {
+      "atlas": "fantasy-icons",
+      "frame": "element/fire",
+      "category": "element",
+      "description": "",
+      "grid": {
+        "row": 7,
+        "column": 5,
+        "index": 61
+      }
+    },
+    "resource/leaf": {
+      "atlas": "fantasy-icons",
+      "frame": "resource/leaf",
+      "category": "resource",
+      "description": "",
+      "grid": {
+        "row": 7,
+        "column": 6,
+        "index": 62
+      }
+    },
+    "tool/hourglass": {
+      "atlas": "fantasy-icons",
+      "frame": "tool/hourglass",
+      "category": "tool",
+      "description": "",
+      "grid": {
+        "row": 7,
+        "column": 7,
+        "index": 63
+      }
+    }
+  }
+}

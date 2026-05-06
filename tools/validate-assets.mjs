@@ -451,7 +451,6 @@ async function main() {
     'src/content/tinySwordsTilesets.ts',
     'src/content/tinySwordsEnvironment.ts',
     'src/game/scenes/PreloadScene.ts',
-    'src/game/scenes/AssetGalleryScene.ts',
   ];
   console.log('\n[Key files] Checking source references...');
   for (const keyFile of keyFiles) {

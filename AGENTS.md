@@ -378,9 +378,12 @@ When building a fantasy prototype, reuse existing Tiny Swords assets before inve
   - `terrain-tilemap-color1`, `terrain-tilemap-color2`, `terrain-tilemap-color3`, `terrain-tilemap-color4`, `terrain-tilemap-color5`, `terrain-shadow`, `terrain-water-background`.
 
 - **Terrain helpers** — `TinySwordsTerrainTiles`, `TinySwordsTerrainBrushes`, `TerrainBuilder`.
-  - For terrain prototypes, use `TinySwordsTerrainTiles` for tile index calculation and candidate groups (Grass, Water, Cliff, Path, Edge, Decoration).
-  - Use `TinySwordsTerrainBrushes` for simple presets: `simpleGrassRect`, `simpleCliffBlock`, `simpleWaterPatch`.
-  - Use `TerrainBuilder.createTileLayerFromPreset()` to render a brush onto a Phaser TilemapLayer.
+  - For terrain prototypes, use `TinySwordsTerrainTiles` for verified tile categories (`GrassCenter`, `GrassEdges`, `GrassCorners`, `GrassDecor`, `CliffCenter`, `Water`, etc.).
+  - Use `TinySwordsTerrainBrushes.createGrassPatch(width, height, options)` or the presets `simpleGrassRect`, `simpleCliffBlock`, `simpleWaterPatch`, `simplePathPatch`.
+  - Use `TerrainBuilder.createTileLayerFromPreset()` to render a brush onto a Phaser TilemapLayer, or `createGrassPatchLayer()`, `createWaterPatchLayer()`, `createCliffBlockLayer()` for direct auto-tiled patches.
+  - Do not fill terrain with `tileIndex(0, 0)` or other corner/edge indexes. In `tilemap-color*.png`, `row 0, col 0` is the top-left grass corner; center grass lives inside the verified grass blob (`rows 1–10`, `cols 1–10`).
+  - Corners and edges belong on the perimeter only. Interiors should use `GrassCenter` with sparse `GrassDecor` variation.
+  - The runtime Tiny Swords terrain has a separate `terrain-water-background` tileset for water fill. Do not fake water by guessing bottom rows of `tilemap-color*.png`.
   - Do not place the entire tileset image as a normal sprite.
   - Tile size is 16×16. Tilemaps are 36 cols × 24 rows = 864 tiles per color variant.
 
@@ -406,7 +409,7 @@ When building a fantasy prototype, reuse existing Tiny Swords assets before inve
 - **Environment assets** — Trees, bushes, water foam, water rocks for maps / atmosphere.
   - `TinySwordsEnvironmentStrips` from `src/content/tinySwordsEnvironment.ts`.
   - **Tree strips** (`env-tree-01`..`env-tree-04`) are **animated spritesheets**, not static variants.
-    - `env-tree-01`, `env-tree-02`: 6 frames of 256x256.
+    - `env-tree-01`, `env-tree-02`: 8 frames of 192x256. Do not cut them as 256x256; that includes neighboring frames and makes trees slide sideways during animation.
     - `env-tree-03`, `env-tree-04`: 8 frames of 192x192.
     - Animation keys are the same as sheet keys: `env-tree-01`, `env-tree-02`, `env-tree-03`, `env-tree-04`.
     - Use `this.add.sprite(x, y, 'env-tree-01').play('env-tree-01')` for animated trees.
@@ -415,6 +418,14 @@ When building a fantasy prototype, reuse existing Tiny Swords assets before inve
     - Use `this.add.sprite(x, y, 'env-bush-01').play('env-bush-01')` for animated bushes.
   - Use `env-water-foam`, `env-water-rocks-01`..`env-water-rocks-04`.
   - Clouds (`env-cloud-*`) are source-only because exact frame layout is uncertain.
+
+- **World scale** — `TinySwordsWorldScale` from `src/content/tinySwordsScale.ts`.
+  - Tiny Swords source sheets already include padding and relative sizing. Use scale `1` for world sprites/images by default.
+  - Default terrain scale is `2` (16px tiles display as 32px tiles) for readable 1280×720 prototypes.
+  - Use `SmallBuilding` / `TallBuilding` / `LargeBuilding` for building atlas frames; these currently default to `1`.
+  - Use `Unit` for 192×192 humanoid units, `LargeUnit` for 320×320 lancers, `Animal` for sheep, `TreeLarge` / `TreeSmall` for trees, and `Bush` for bushes; these currently default to `1`.
+  - Do not normalize units by frame size. For example, lancers use larger 320×320 sheets but should still start from scale `1`, not a smaller compensating scale.
+  - Change scale only for explicit camera zoom, far-background staging, UI thumbnails, or a specific gameplay/mechanical reason.
 
 - **Particles** — fire, dust, explosion, water splash.
   - `TinySwordsSpritesheets.ParticleFire01`, `ParticleFire02`, `ParticleFire03`
@@ -486,8 +497,10 @@ Use reusable UI helpers from `src/game/ui` where practical:
 - `Panel` — simple colored rounded rectangle.
 - `IconButton` — clickable icon with label.
 - `ResourceCounter` — icon + label + value text.
-- `StretchBar` — horizontal 3-slice bar (left cap + stretch/repeat center + right cap). Use for bars with decorative edges (bigbar, smallbar). Do NOT use `setScale` on bar sprites — it distorts pixel-art edges.
-- `NineSlicePanel` — 9-slice panel via Phaser NineSlice. Use for decorative panels, paper frames, dialogue boxes. Do NOT use `setScale` on panel frames — it distorts corners and edges.
+- `StretchBar` — seam-safe horizontal 3-slice bar helper for Tiny Swords bars (left cap + center + right cap, plus left-aligned fill). Use it for decorative bars such as `bigbar` and `smallbar`. Do NOT use Phaser `NineSlice`, raw `setScale`, or ad hoc sprites for Tiny Swords bars.
+- `NineSlicePanel` — seam-safe 9-piece helper for Tiny Swords paper/table frames. These assets already contain a separated 3x3 layout inside one atlas frame, so do NOT use Phaser `NineSlice` directly on `ui/paper-*`, `ui/table-*`, or similar Tiny Swords UI frames.
+
+Tiny Swords UI helpers intentionally crop source pieces, overlap seams, and avoid edge pixels to prevent visible lines between assembled pieces. When building prototypes, reuse these helpers and adjust their destination margins/cap widths instead of covering artifacts with dark rectangles or rebuilding the UI manually.
 
 Use simple, readable UI before visual polish.
 

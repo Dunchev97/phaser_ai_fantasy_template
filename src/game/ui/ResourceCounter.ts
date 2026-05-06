@@ -7,6 +7,8 @@ type ResourceCounterOptions = {
   value: number;
   atlas?: string;
   frame?: string;
+  labelColor?: string;
+  valueColor?: string;
 };
 
 export class ResourceCounter extends Phaser.GameObjects.Container {
@@ -27,13 +29,13 @@ export class ResourceCounter extends Phaser.GameObjects.Container {
 
     const labelText = scene.add.text(48, -13, `${options.label}:`, {
       fontSize: '20px',
-      color: '#cdb5ec',
+      color: options.labelColor ?? '#cdb5ec',
     });
     this.add(labelText);
 
     this.valueText = scene.add.text(150, -13, String(options.value), {
       fontSize: '20px',
-      color: '#ffffff',
+      color: options.valueColor ?? '#ffffff',
       fontStyle: 'bold',
     });
     this.add(this.valueText);

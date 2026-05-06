@@ -1,90 +1,138 @@
-export const TINY_SWOWRDS_TILE_WIDTH = 16;
-export const TINY_SWOWRDS_TILE_HEIGHT = 16;
+export const TINY_SWORDS_TILE_WIDTH = 16;
+export const TINY_SWORDS_TILE_HEIGHT = 16;
+
+// Backwards-compatible aliases for the previous misspelled exports.
+export const TINY_SWOWRDS_TILE_WIDTH = TINY_SWORDS_TILE_WIDTH;
+export const TINY_SWOWRDS_TILE_HEIGHT = TINY_SWORDS_TILE_HEIGHT;
 
 export const TINY_SWORDS_TILEMAP_COLUMNS = 36;
 export const TINY_SWORDS_TILEMAP_ROWS = 24;
 export const TINY_SWORDS_TILEMAP_TILE_COUNT = TINY_SWORDS_TILEMAP_COLUMNS * TINY_SWORDS_TILEMAP_ROWS; // 864
+
+export const TINY_SWORDS_WATER_COLUMNS = 4;
+export const TINY_SWORDS_WATER_ROWS = 4;
 
 export const TINY_SWORDS_SHADOW_COLUMNS = 12;
 export const TINY_SWORDS_SHADOW_ROWS = 12;
 export const TINY_SWORDS_SHADOW_TILE_COUNT = TINY_SWORDS_SHADOW_COLUMNS * TINY_SWORDS_SHADOW_ROWS; // 144
 
 /**
- * Compute the 0-based tile index for a tilemap-color image.
- * row and col are 0-based.
+ * Compute the 0-based tile index for tilemap-color images.
+ * row and col are 0-based in the 36x24 Tiny Swords terrain sheet.
  */
 export function tileIndex(row: number, col: number): number {
   return row * TINY_SWORDS_TILEMAP_COLUMNS + col;
 }
 
-// --- Safe candidate groups (do not assume exact semantic meaning) ---
+export function waterTileIndex(row: number, col: number): number {
+  return row * TINY_SWORDS_WATER_COLUMNS + col;
+}
+
+export function shadowTileIndex(row: number, col: number): number {
+  return row * TINY_SWORDS_SHADOW_COLUMNS + col;
+}
+
+function rowRange(row: number, startCol: number, endCol: number): number[] {
+  const tiles: number[] = [];
+  for (let col = startCol; col <= endCol; col += 1) {
+    tiles.push(tileIndex(row, col));
+  }
+  return tiles;
+}
+
+function colRange(col: number, startRow: number, endRow: number): number[] {
+  const tiles: number[] = [];
+  for (let row = startRow; row <= endRow; row += 1) {
+    tiles.push(tileIndex(row, col));
+  }
+  return tiles;
+}
+
+function rectRange(startRow: number, endRow: number, startCol: number, endCol: number): number[] {
+  const tiles: number[] = [];
+  for (let row = startRow; row <= endRow; row += 1) {
+    tiles.push(...rowRange(row, startCol, endCol));
+  }
+  return tiles;
+}
+
+function shadowRectRange(startRow: number, endRow: number, startCol: number, endCol: number): number[] {
+  const tiles: number[] = [];
+  for (let row = startRow; row <= endRow; row += 1) {
+    for (let col = startCol; col <= endCol; col += 1) {
+      tiles.push(shadowTileIndex(row, col));
+    }
+  }
+  return tiles;
+}
 
 /**
- * Grass candidates — generally the first rows of a tilemap-color.
- * The top-left area (rows 0–3, cols 0–5) usually contains plain grass / ground variants.
+ * Verified against public/assets/source/tiny-swords/terrain/tileset/tilemap-color1.png.
+ * The color variants share the same 36x24 layout.
  */
-export const GrassCandidates = [
-  tileIndex(0, 0), tileIndex(0, 1), tileIndex(0, 2), tileIndex(0, 3), tileIndex(0, 4), tileIndex(0, 5),
-  tileIndex(1, 0), tileIndex(1, 1), tileIndex(1, 2), tileIndex(1, 3), tileIndex(1, 4), tileIndex(1, 5),
-  tileIndex(2, 0), tileIndex(2, 1), tileIndex(2, 2), tileIndex(2, 3), tileIndex(2, 4), tileIndex(2, 5),
-  tileIndex(3, 0), tileIndex(3, 1), tileIndex(3, 2), tileIndex(3, 3), tileIndex(3, 4), tileIndex(3, 5),
-];
+export const TinySwordsTerrainTiles = {
+  GrassCenter: rectRange(1, 10, 1, 10),
+  GrassDecor: [
+    tileIndex(1, 2), tileIndex(1, 6), tileIndex(2, 3), tileIndex(2, 8),
+    tileIndex(3, 1), tileIndex(3, 5), tileIndex(4, 7), tileIndex(5, 2),
+    tileIndex(6, 9), tileIndex(7, 4), tileIndex(8, 6), tileIndex(9, 3),
+  ],
+  GrassEdges: {
+    top: rowRange(0, 1, 10),
+    right: colRange(11, 1, 10),
+    bottom: rowRange(11, 1, 10),
+    left: colRange(0, 1, 10),
+  },
+  GrassCorners: {
+    topLeft: tileIndex(0, 0),
+    topRight: tileIndex(0, 11),
+    bottomRight: tileIndex(11, 11),
+    bottomLeft: tileIndex(11, 0),
+  },
 
-/**
- * Water candidates — usually bottom rows of a tilemap-color (rows 15–23, cols 0–11 and similar).
- * These are blue/water-looking tiles.
- */
-export const WaterCandidates = [
-  tileIndex(15, 0), tileIndex(15, 1), tileIndex(15, 2), tileIndex(15, 3),
-  tileIndex(16, 0), tileIndex(16, 1), tileIndex(16, 2), tileIndex(16, 3),
-  tileIndex(17, 0), tileIndex(17, 1), tileIndex(17, 2), tileIndex(17, 3),
-  tileIndex(18, 0), tileIndex(18, 1), tileIndex(18, 2), tileIndex(18, 3),
-  tileIndex(19, 0), tileIndex(19, 1), tileIndex(19, 2), tileIndex(19, 3),
-  tileIndex(20, 0), tileIndex(20, 1), tileIndex(20, 2), tileIndex(20, 3),
-  tileIndex(21, 0), tileIndex(21, 1), tileIndex(21, 2), tileIndex(21, 3),
-  tileIndex(22, 0), tileIndex(22, 1), tileIndex(22, 2), tileIndex(22, 3),
-  tileIndex(23, 0), tileIndex(23, 1), tileIndex(23, 2), tileIndex(23, 3),
-];
+  /**
+   * The runtime tileset has no separate dirt road sheet. Use these low-noise
+   * grass center tiles for quick readable trails until a dedicated path asset
+   * is connected.
+   */
+  Path: [
+    tileIndex(4, 4), tileIndex(4, 5), tileIndex(5, 4), tileIndex(5, 5),
+    tileIndex(6, 4), tileIndex(6, 5), tileIndex(7, 4), tileIndex(7, 5),
+  ],
 
-/**
- * Cliff candidates — darker rocky tiles, usually in the middle rows (cols 12–23, rows 4–14).
- */
-export const CliffCandidates = [
-  tileIndex(4, 12), tileIndex(4, 13), tileIndex(4, 14), tileIndex(4, 15),
-  tileIndex(5, 12), tileIndex(5, 13), tileIndex(5, 14), tileIndex(5, 15),
-  tileIndex(6, 12), tileIndex(6, 13), tileIndex(6, 14), tileIndex(6, 15),
-  tileIndex(7, 12), tileIndex(7, 13), tileIndex(7, 14), tileIndex(7, 15),
-  tileIndex(8, 12), tileIndex(8, 13), tileIndex(8, 14), tileIndex(8, 15),
-];
+  CliffCenter: rectRange(13, 22, 25, 34),
+  CliffEdges: {
+    top: rowRange(12, 25, 34),
+    right: colRange(35, 13, 22),
+    bottom: rowRange(23, 25, 34),
+    left: colRange(24, 13, 22),
+  },
+  CliffCorners: {
+    topLeft: tileIndex(12, 24),
+    topRight: tileIndex(12, 35),
+    bottomRight: tileIndex(23, 35),
+    bottomLeft: tileIndex(23, 24),
+  },
 
-/**
- * Path candidates — dirt/road-like tiles, often near the top-middle (cols 6–11, rows 0–3).
- */
-export const PathCandidates = [
-  tileIndex(0, 6), tileIndex(0, 7), tileIndex(0, 8), tileIndex(0, 9),
-  tileIndex(1, 6), tileIndex(1, 7), tileIndex(1, 8), tileIndex(1, 9),
-  tileIndex(2, 6), tileIndex(2, 7), tileIndex(2, 8), tileIndex(2, 9),
-];
+  Water: [
+    waterTileIndex(0, 0), waterTileIndex(0, 1), waterTileIndex(0, 2), waterTileIndex(0, 3),
+    waterTileIndex(1, 0), waterTileIndex(1, 1), waterTileIndex(1, 2), waterTileIndex(1, 3),
+    waterTileIndex(2, 0), waterTileIndex(2, 1), waterTileIndex(2, 2), waterTileIndex(2, 3),
+    waterTileIndex(3, 0), waterTileIndex(3, 1), waterTileIndex(3, 2), waterTileIndex(3, 3),
+  ],
 
-/**
- * Edge candidates — transition tiles between grass/water or grass/cliff.
- * Usually appear around rows 10–14, cols 0–11.
- */
+  Shadow: shadowRectRange(0, 11, 0, 11),
+} as const;
+
+// Compatibility exports. Prefer TinySwordsTerrainTiles.* in new code.
+export const GrassCandidates = TinySwordsTerrainTiles.GrassCenter;
+export const WaterCandidates = TinySwordsTerrainTiles.Water;
+export const CliffCandidates = TinySwordsTerrainTiles.CliffCenter;
+export const PathCandidates = TinySwordsTerrainTiles.Path;
 export const EdgeCandidates = [
-  tileIndex(10, 0), tileIndex(10, 1), tileIndex(10, 2), tileIndex(10, 3), tileIndex(10, 4), tileIndex(10, 5),
-  tileIndex(11, 0), tileIndex(11, 1), tileIndex(11, 2), tileIndex(11, 3), tileIndex(11, 4), tileIndex(11, 5),
-  tileIndex(12, 0), tileIndex(12, 1), tileIndex(12, 2), tileIndex(12, 3), tileIndex(12, 4), tileIndex(12, 5),
-  tileIndex(13, 0), tileIndex(13, 1), tileIndex(13, 2), tileIndex(13, 3), tileIndex(13, 4), tileIndex(13, 5),
-  tileIndex(14, 0), tileIndex(14, 1), tileIndex(14, 2), tileIndex(14, 3), tileIndex(14, 4), tileIndex(14, 5),
+  ...TinySwordsTerrainTiles.GrassEdges.top,
+  ...TinySwordsTerrainTiles.GrassEdges.right,
+  ...TinySwordsTerrainTiles.GrassEdges.bottom,
+  ...TinySwordsTerrainTiles.GrassEdges.left,
 ];
-
-/**
- * Decoration candidates — small flowers, rocks, patches.
- * Usually scattered in rows 4–9, cols 18–35.
- */
-export const DecorationCandidates = [
-  tileIndex(4, 18), tileIndex(4, 19), tileIndex(4, 20), tileIndex(4, 21),
-  tileIndex(5, 18), tileIndex(5, 19), tileIndex(5, 20), tileIndex(5, 21),
-  tileIndex(6, 18), tileIndex(6, 19), tileIndex(6, 20), tileIndex(6, 21),
-  tileIndex(7, 18), tileIndex(7, 19), tileIndex(7, 20), tileIndex(7, 21),
-];
+export const DecorationCandidates = TinySwordsTerrainTiles.GrassDecor;

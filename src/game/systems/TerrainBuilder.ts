@@ -1,5 +1,10 @@
 import Phaser from 'phaser';
-import type { TerrainBrush } from '../../content/tinySwordsTerrainBrushes';
+import {
+  createCliffBlock,
+  createGrassPatch,
+  createWaterPatch,
+  type TerrainBrush,
+} from '../../content/tinySwordsTerrainBrushes';
 
 export interface TileLayerConfig {
   scene: Phaser.Scene;
@@ -7,6 +12,18 @@ export interface TileLayerConfig {
   y: number;
   tilesetKey: string;
   preset: TerrainBrush;
+  tileWidth?: number;
+  tileHeight?: number;
+}
+
+export interface AutoPatchLayerConfig {
+  scene: Phaser.Scene;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  tilesetKey?: string;
+  seed?: number;
   tileWidth?: number;
   tileHeight?: number;
 }
@@ -59,6 +76,55 @@ export function createTileLayerFromPreset(config: TileLayerConfig): Phaser.Tilem
   }
 
   return layer;
+}
+
+export function createGrassPatchLayer(config: AutoPatchLayerConfig): Phaser.Tilemaps.TilemapLayer {
+  const brush = createGrassPatch(config.width, config.height, {
+    tilesetKey: config.tilesetKey,
+    seed: config.seed,
+    bordered: true,
+  });
+
+  return createTileLayerFromPreset({
+    scene: config.scene,
+    x: config.x,
+    y: config.y,
+    tilesetKey: brush.tilesetKey,
+    preset: brush,
+    tileWidth: config.tileWidth,
+    tileHeight: config.tileHeight,
+  });
+}
+
+export function createWaterPatchLayer(config: AutoPatchLayerConfig): Phaser.Tilemaps.TilemapLayer {
+  const brush = createWaterPatch(config.width, config.height, config.seed);
+
+  return createTileLayerFromPreset({
+    scene: config.scene,
+    x: config.x,
+    y: config.y,
+    tilesetKey: brush.tilesetKey,
+    preset: brush,
+    tileWidth: config.tileWidth,
+    tileHeight: config.tileHeight,
+  });
+}
+
+export function createCliffBlockLayer(config: AutoPatchLayerConfig): Phaser.Tilemaps.TilemapLayer {
+  const brush = createCliffBlock(config.width, config.height, {
+    tilesetKey: config.tilesetKey,
+    seed: config.seed,
+  });
+
+  return createTileLayerFromPreset({
+    scene: config.scene,
+    x: config.x,
+    y: config.y,
+    tilesetKey: brush.tilesetKey,
+    preset: brush,
+    tileWidth: config.tileWidth,
+    tileHeight: config.tileHeight,
+  });
 }
 
 /**

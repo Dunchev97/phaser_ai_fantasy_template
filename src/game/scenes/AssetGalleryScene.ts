@@ -16,11 +16,11 @@ import {
 } from '../../content/tinySwordsAssetKeys';
 import { TinySwordsPawnToolAnimations } from '../../content/tinySwordsAnimations';
 import {
-  TinySwordsTerrainBrushes,
   type TerrainBrush,
   simpleGrassRect,
   simpleCliffBlock,
   simpleWaterPatch,
+  simplePathPatch,
 } from '../../content/tinySwordsTerrainBrushes';
 import { createTileLayerFromPreset } from '../../game/systems/TerrainBuilder';
 
@@ -226,8 +226,8 @@ export class AssetGalleryScene extends Phaser.Scene {
       fillFrame: TinySwordsUIFrames.BigBarFill,
       value: 60,
       maxValue: 100,
-      leftWidth: 16,
-      rightWidth: 16,
+      leftWidth: 24,
+      rightWidth: 24,
       height: 64,
     });
     this.pageObjects.push(bar1.container);
@@ -246,8 +246,8 @@ export class AssetGalleryScene extends Phaser.Scene {
       fillFrame: TinySwordsUIFrames.SmallBarFill,
       value: 30,
       maxValue: 100,
-      leftWidth: 12,
-      rightWidth: 12,
+      leftWidth: 15,
+      rightWidth: 15,
       height: 64,
     });
     this.pageObjects.push(bar2.container);
@@ -264,10 +264,10 @@ export class AssetGalleryScene extends Phaser.Scene {
       height: 120,
       atlasKey: TinySwordsAtlases.UICore,
       frame: TinySwordsUIFrames.PaperRegular,
-      left: 32,
-      right: 32,
-      top: 32,
-      bottom: 32,
+      left: 52,
+      right: 52,
+      top: 44,
+      bottom: 45,
     });
     this.pageObjects.push(panel1.container);
     const lbl3 = this.add.text(this.scale.width / 2, startY + gap * 2.5 - 70, 'NineSlicePanel (paper 360x120)', {
@@ -561,8 +561,9 @@ export class AssetGalleryScene extends Phaser.Scene {
         mode: 'terrain',
         presets: [
           { brush: simpleGrassRect, label: 'Grass', x: 80, y: 80 },
-          { brush: simpleCliffBlock, label: 'Cliff', x: 280, y: 80 },
-          { brush: simpleWaterPatch, label: 'Water', x: 80, y: 260 },
+          { brush: simpleWaterPatch, label: 'Water', x: 320, y: 80 },
+          { brush: simpleCliffBlock, label: 'Cliff', x: 80, y: 260 },
+          { brush: simplePathPatch, label: 'Grass path', x: 320, y: 280 },
         ],
       },
       {

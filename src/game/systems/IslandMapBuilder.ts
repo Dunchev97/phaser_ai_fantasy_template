@@ -20,6 +20,7 @@ import { createTileLayerFromPreset } from './TerrainBuilder';
 
 type BoolGrid = boolean[][];
 type TileGrid = Array<Array<number | null>>;
+type GrassDetailPatch = ReadonlyArray<ReadonlyArray<number | null>>;
 
 export type IslandRect = {
   x: number;
@@ -70,6 +71,7 @@ export type IslandMapResult = {
   layers: {
     water: Phaser.Tilemaps.TilemapLayer;
     land: Phaser.Tilemaps.TilemapLayer;
+    grassDetails: Phaser.Tilemaps.TilemapLayer;
     raisedEdges: Phaser.Tilemaps.TilemapLayer;
     cliffs: Phaser.Tilemaps.TilemapLayer;
     ramps: Phaser.Tilemaps.TilemapLayer;
@@ -89,6 +91,9 @@ type DecorationOptions = {
 const TERRAIN_TILESET = 'terrain-tilemap-color1';
 const NEIGHBORS_4 = [[1, 0], [-1, 0], [0, 1], [0, -1]] as const;
 const DECOR_SAFE_RADIUS = 2;
+const GRASS_DETAIL_SAFE_RADIUS = 2;
+const GRASS_DETAIL_CELL_RATIO = 42;
+const GRASS_DETAIL_PADDING = 2;
 const QUIET_GRASS_CENTER_TILE = tileIndex(5, 5);
 const SMALL_DECOR_DEPTH = 8;
 
@@ -399,6 +404,102 @@ function createGrassTilesFromMask(land: BoolGrid, cliff: BoolGrid): TileGrid {
   return tiles;
 }
 
+function isSafeGrassDetailCell(land: BoolGrid, cliff: BoolGrid, ramp: BoolGrid, col: number, row: number): boolean {
+  const height = land.length;
+  const width = land[0]?.length ?? 0;
+  for (let dy = -GRASS_DETAIL_SAFE_RADIUS; dy <= GRASS_DETAIL_SAFE_RADIUS; dy += 1) {
+    for (let dx = -GRASS_DETAIL_SAFE_RADIUS; dx <= GRASS_DETAIL_SAFE_RADIUS; dx += 1) {
+      const x = col + dx;
+      const y = row + dy;
+      if (!inBounds(width, height, x, y)) return false;
+      if (!land[y][x] || cliff[y][x] || ramp[y][x]) return false;
+    }
+  }
+  return true;
+}
+
+function grassDetailPatchSize(patch: GrassDetailPatch): { width: number; height: number } {
+  return {
+    width: Math.max(...patch.map((row) => row.length)),
+    height: patch.length,
+  };
+}
+
+function canPlaceGrassDetailPatch(
+  land: BoolGrid,
+  cliff: BoolGrid,
+  ramp: BoolGrid,
+  occupied: BoolGrid,
+  patch: GrassDetailPatch,
+  col: number,
+  row: number,
+): boolean {
+  for (let dy = 0; dy < patch.length; dy += 1) {
+    for (let dx = 0; dx < (patch[dy]?.length ?? 0); dx += 1) {
+      if (patch[dy]?.[dx] == null) continue;
+      const x = col + dx;
+      const y = row + dy;
+      if (!inBounds(land[0]?.length ?? 0, land.length, x, y)) return false;
+      if (occupied[y][x] || !isSafeGrassDetailCell(land, cliff, ramp, x, y)) return false;
+    }
+  }
+  return true;
+}
+
+function occupyGrassDetailPatch(occupied: BoolGrid, patch: GrassDetailPatch, col: number, row: number): void {
+  const { width, height } = grassDetailPatchSize(patch);
+  for (let dy = -GRASS_DETAIL_PADDING; dy < height + GRASS_DETAIL_PADDING; dy += 1) {
+    for (let dx = -GRASS_DETAIL_PADDING; dx < width + GRASS_DETAIL_PADDING; dx += 1) {
+      const x = col + dx;
+      const y = row + dy;
+      if (inBounds(occupied[0]?.length ?? 0, occupied.length, x, y)) occupied[y][x] = true;
+    }
+  }
+}
+
+function pasteGrassDetailPatch(tiles: TileGrid, patch: GrassDetailPatch, col: number, row: number): void {
+  for (let dy = 0; dy < patch.length; dy += 1) {
+    for (let dx = 0; dx < (patch[dy]?.length ?? 0); dx += 1) {
+      const tile = patch[dy]?.[dx];
+      if (tile == null) continue;
+      const x = col + dx;
+      const y = row + dy;
+      if (inBounds(tiles[0]?.length ?? 0, tiles.length, x, y)) tiles[y][x] = tile;
+    }
+  }
+}
+
+function createGrassDetailTiles(land: BoolGrid, cliff: BoolGrid, ramp: BoolGrid, seed: number): TileGrid {
+  const height = land.length;
+  const width = land[0]?.length ?? 0;
+  const tiles = emptyTiles(width, height);
+  const safeInterior = boolGrid(width, height, false);
+  const detailOccupied = boolGrid(width, height, false);
+  const patches = TinySwordsTerrainTiles.GrassDetailPatches;
+  let safeCells = 0;
+
+  for (let row = 0; row < height; row += 1) {
+    for (let col = 0; col < width; col += 1) {
+      safeInterior[row][col] = isSafeGrassDetailCell(land, cliff, ramp, col, row);
+      if (safeInterior[row][col]) safeCells += 1;
+    }
+  }
+
+  const maxPatches = Math.floor(safeCells / GRASS_DETAIL_CELL_RATIO);
+  let placed = 0;
+
+  for (const cell of sortedCells(safeInterior, seed)) {
+    if (placed >= maxPatches) break;
+    const patch = sequencePick(patches, Math.floor(hash2d(cell.row, cell.col, seed + 91) * patches.length));
+    if (!canPlaceGrassDetailPatch(land, cliff, ramp, detailOccupied, patch, cell.col, cell.row)) continue;
+    pasteGrassDetailPatch(tiles, patch, cell.col, cell.row);
+    occupyGrassDetailPatch(detailOccupied, patch, cell.col, cell.row);
+    placed += 1;
+  }
+
+  return tiles;
+}
+
 function canPlaceFootprint(mask: BoolGrid, occupied: BoolGrid, col: number, row: number, footprint: Footprint): boolean {
   for (let dy = 0; dy < footprint.height; dy += 1) {
     for (let dx = 0; dx < footprint.width; dx += 1) {
@@ -474,6 +575,7 @@ export function createIslandMap(config: IslandMapConfig): IslandMapResult {
   const terrainTilesetKey = config.terrainTilesetKey ?? TERRAIN_TILESET;
   const waterBrush = createWaterPatch(config.width, config.height, 90);
   const landTiles = emptyTiles(config.width, config.height);
+  const grassDetailTiles = emptyTiles(config.width, config.height);
   const raisedEdgeTiles = emptyTiles(config.width, config.height);
   const cliffTiles = emptyTiles(config.width, config.height);
   const rampTiles = emptyTiles(config.width, config.height);
@@ -533,6 +635,12 @@ export function createIslandMap(config: IslandMapConfig): IslandMapResult {
       landTiles[row][col] = autoLandTiles[row][col];
     }
   }
+  const autoGrassDetailTiles = createGrassDetailTiles(land, cliff, ramp, 140);
+  for (let row = 0; row < config.height; row += 1) {
+    for (let col = 0; col < config.width; col += 1) {
+      grassDetailTiles[row][col] = autoGrassDetailTiles[row][col];
+    }
+  }
   for (const island of config.islands) applyRaisedLandBorder(raisedEdgeTiles, island);
 
   const shorelineWater = computeShorelineWater(water, land, cliff, ramp);
@@ -540,6 +648,7 @@ export function createIslandMap(config: IslandMapConfig): IslandMapResult {
   const layers = {
     water: createLayer(config.scene, config.x, config.y, waterBrush.tilesetKey, 'waterBase', 'Full water base prevents black voids around islands.', waterBrush.tiles, 0, tileScale),
     land: createLayer(config.scene, config.x, config.y, terrainTilesetKey, 'land', 'Grass island layer.', landTiles, 4, tileScale),
+    grassDetails: createLayer(config.scene, config.x, config.y, terrainTilesetKey, 'grassDetails', 'Sparse interior grass motifs over the quiet base tile.', grassDetailTiles, 4.25, tileScale),
     raisedEdges: createLayer(config.scene, config.x, config.y, terrainTilesetKey, 'raisedEdges', 'Dry raised land boundary overlay. It preserves lower grass under transparent pixels.', raisedEdgeTiles, 4.5, tileScale),
     cliffs: createLayer(config.scene, config.x, config.y, terrainTilesetKey, 'cliffs', 'Cliff and elevation layer.', cliffTiles, 5, tileScale),
     ramps: createLayer(config.scene, config.x, config.y, terrainTilesetKey, 'ramps', 'Deliberate elevation connectors.', rampTiles, 6, tileScale),

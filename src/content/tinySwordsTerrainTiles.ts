@@ -85,6 +85,36 @@ export const TinySwordsTerrainTiles = {
     tileIndex(3, 1), tileIndex(3, 5), tileIndex(4, 7), tileIndex(5, 2),
     tileIndex(6, 9), tileIndex(7, 4), tileIndex(8, 6), tileIndex(9, 3),
   ],
+  /**
+   * Small interior grass motifs cut from the verified center area of the
+   * 12x12 grass blob. Use them as sparse overlays on top of a quiet grass
+   * base; do not tile the full source blob across the map.
+   */
+  GrassDetailPatches: [
+    [
+      [tileIndex(1, 1), tileIndex(1, 2), tileIndex(1, 3)],
+      [tileIndex(2, 1), tileIndex(2, 2), tileIndex(2, 3)],
+    ],
+    [
+      [tileIndex(2, 6), tileIndex(2, 7), tileIndex(2, 8)],
+      [tileIndex(3, 6), tileIndex(3, 7), tileIndex(3, 8)],
+      [tileIndex(4, 6), tileIndex(4, 7), tileIndex(4, 8)],
+    ],
+    [
+      [tileIndex(5, 1), tileIndex(5, 2)],
+      [tileIndex(6, 1), tileIndex(6, 2)],
+      [tileIndex(7, 1), tileIndex(7, 2)],
+    ],
+    [
+      [tileIndex(7, 5), tileIndex(7, 6), tileIndex(7, 7), tileIndex(7, 8)],
+      [tileIndex(8, 5), tileIndex(8, 6), tileIndex(8, 7), tileIndex(8, 8)],
+    ],
+    [
+      [tileIndex(8, 3), tileIndex(8, 4), tileIndex(8, 5)],
+      [tileIndex(9, 3), tileIndex(9, 4), tileIndex(9, 5)],
+      [tileIndex(10, 3), tileIndex(10, 4), tileIndex(10, 5)],
+    ],
+  ],
   GrassEdges: {
     top: rowRange(0, 1, 10),
     right: colRange(11, 1, 10),

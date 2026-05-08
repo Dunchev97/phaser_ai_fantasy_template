@@ -70,9 +70,18 @@ Use this for baseline prototypes:
 1. Fill the whole tilemap with `terrain-water-background`.
 2. Create one large land mask.
 3. Auto-tile grass edges from the combined land mask.
-4. Use a quiet grass-center base inside the mask. Do not repeat the whole 10x10 source grass blob across large fields; it reads as visible chunks. Add variety mostly with props, not random grass noise.
+4. Use a quiet grass-center base inside the mask, then add sparse connected `GrassDetailPatches` on a separate overlay layer. Do not repeat the whole 10x10 source grass blob across large fields; it reads as visible chunks. Do not random-pick every center tile either; it reads as noise.
 5. Reserve cells for buildings, units, resources, paths, and scripted objects.
 6. Place decorations only on safe interior land.
+
+Interior grass detail rules:
+
+- Build the field in two passes: quiet base first, detail motifs second.
+- Detail motifs must be small connected chunks cut from verified grass-center tiles, such as 2x2, 3x2, or 3x3 patches.
+- Place motifs with spacing/blue-noise style selection, not on a visible grid.
+- Keep motifs away from shore edges, cliff faces, ramps, water, map borders, and reserved gameplay cells.
+- Never use grass edge/corner tiles as interior decoration. Edges and corners still belong only to the final land perimeter.
+- If a detail patch looks too repetitive, reduce density before adding more random tile choices.
 
 Forbidden in flat maps:
 
@@ -240,8 +249,9 @@ Use for most first prototypes:
 1. Full water base.
 2. One large flat grass mask.
 3. Shore edges from the combined mask.
-4. Decorations only on safe interior cells.
-5. Player/camera bounded to land area or full island area.
+4. Quiet center grass base with sparse interior `GrassDetailPatches`.
+5. Decorations only on safe interior cells.
+6. Player/camera bounded to land area or full island area.
 
 ### Raised Village Plateau
 
@@ -290,6 +300,7 @@ Do not:
 - Place ramps without lower and upper walkable endpoints.
 - Mix grass edge tiles into field interiors.
 - Repeat a whole source grass patch over a large area when a quiet base tile would read cleaner.
+- Randomize every interior grass cell instead of placing spaced connected detail motifs.
 - Use the color terrain sheet as water.
 - Depend on visual depth to enforce collisions.
 - Spawn the player, enemies, or resources on blocked cells.

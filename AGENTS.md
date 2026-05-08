@@ -283,7 +283,7 @@ Important constraints:
 - After cutting a ramp or opening through a cliff, recalculate exposed cliff left/right edges. A newly exposed cliff edge must use edge columns, not center rock tiles.
 - Use water cliff faces only when the cliff actually drops into water.
 - Do not fill terrain with `tileIndex(0, 0)`; that is a corner tile, not grass center.
-- Interior land should use a quiet verified `GrassCenter` base tile. Do not repeat the whole 10x10 source grass blob across large fields; it reads as visible chunks. Add variety with props or sparse overlay details.
+- Interior land should use a quiet verified `GrassCenter` base tile plus sparse `GrassDetailPatches` on a separate overlay layer. Do not repeat the whole 10x10 source grass blob across large fields, and do not random-pick every interior tile; both read as visible chunks/noise. Place small connected grass motifs with spacing, only in safe interior cells away from shore, cliffs, ramps, and reserved gameplay areas.
 - Raised/elevated land must show its own grass boundary even when it sits above lower grass. Use the dry raised grass boundary from the right-side terrain block (`RaisedGrassEdges` / `RaisedGrassCorners` / `RaisedGrassBoundary`), not the white shore/water boundary. Draw raised edges on a separate overlay layer above normal land so transparent pixels reveal lower grass, not water or the camera background. Long raised borders must use a fixed sequence: corner, cap, repeatable center tiles, cap, corner. Do not repeat cap/corner-adjacent tiles through the middle of a horizontal or vertical border.
 - Edges and corners belong only on the perimeter of the final land mask.
 - Use the separate `terrain-water-background` tileset for water fill.

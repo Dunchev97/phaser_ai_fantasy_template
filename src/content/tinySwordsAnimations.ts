@@ -156,6 +156,11 @@ export const TinySwordsAnimations: UnitAnimationConfig[] = [
   { key: 'gold-stone-4-highlight', sheetKey: 'gold-stone-4-highlight', startFrame: 0, endFrame: 5, frameRate: 10, repeat: -1 },
   { key: 'gold-stone-5-highlight', sheetKey: 'gold-stone-5-highlight', startFrame: 0, endFrame: 5, frameRate: 10, repeat: -1 },
   { key: 'gold-stone-6-highlight', sheetKey: 'gold-stone-6-highlight', startFrame: 0, endFrame: 5, frameRate: 10, repeat: -1 },
+
+  // === Sheep ===
+  { key: 'sheep-idle', sheetKey: 'sheep-idle', startFrame: 0, endFrame: 5, frameRate: 10, repeat: -1 },
+  { key: 'sheep-grass', sheetKey: 'sheep-grass', startFrame: 0, endFrame: 11, frameRate: 10, repeat: -1 },
+  { key: 'sheep-move', sheetKey: 'sheep-move', startFrame: 0, endFrame: 3, frameRate: 10, repeat: -1 },
 ];
 
 export const TinySwordsPawnToolAnimations: UnitAnimationConfig[] = [

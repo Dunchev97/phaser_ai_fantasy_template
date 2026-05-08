@@ -359,6 +359,10 @@ function getSpritesheetMeta(key: string) {
     'gold-stone-4-highlight': { key: 'gold-stone-4-highlight', path: 'assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-4-highlight.png', frameWidth: 128, frameHeight: 128, frames: 6 },
     'gold-stone-5-highlight': { key: 'gold-stone-5-highlight', path: 'assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-5-highlight.png', frameWidth: 128, frameHeight: 128, frames: 6 },
     'gold-stone-6-highlight': { key: 'gold-stone-6-highlight', path: 'assets/source/tiny-swords/terrain/resources/gold/gold-stones/gold-stone-6-highlight.png', frameWidth: 128, frameHeight: 128, frames: 6 },
+    // Sheep
+    'sheep-idle': { key: 'sheep-idle', path: 'assets/source/tiny-swords/terrain/resources/meat/sheep/sheep-idle.png', frameWidth: 128, frameHeight: 128, frames: 6 },
+    'sheep-grass': { key: 'sheep-grass', path: 'assets/source/tiny-swords/terrain/resources/meat/sheep/sheep-grass.png', frameWidth: 128, frameHeight: 128, frames: 12 },
+    'sheep-move': { key: 'sheep-move', path: 'assets/source/tiny-swords/terrain/resources/meat/sheep/sheep-move.png', frameWidth: 128, frameHeight: 128, frames: 4 },
   };
   return map[key] || null;
 }

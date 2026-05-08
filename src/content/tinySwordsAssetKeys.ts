@@ -430,6 +430,10 @@ export const TinySwordsSpritesheets = {
   GoldStone4Highlight: 'gold-stone-4-highlight',
   GoldStone5Highlight: 'gold-stone-5-highlight',
   GoldStone6Highlight: 'gold-stone-6-highlight',
+  // Sheep
+  SheepIdle: 'sheep-idle',
+  SheepGrass: 'sheep-grass',
+  SheepMove: 'sheep-move',
 } as const;
 
 export const TinySwordsTilesets = {

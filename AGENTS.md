@@ -259,6 +259,8 @@ Use `this.add.sprite(...).play(animationKey)` for animated spritesheets. Use `th
 
 ## Terrain Rules
 
+For multi-level terrain, cliffs, ramps, invisible walls, or camera/pathing work, read `docs/TERRAIN_GRAMMAR.md` before editing terrain code.
+
 Use terrain helpers instead of hand-placing raw tile indexes:
 
 - `TinySwordsTerrainTiles`
@@ -268,13 +270,21 @@ Use terrain helpers instead of hand-placing raw tile indexes:
 - `placeIslandMapDecorations()`
 - `reserveIslandMapArea()`
 
-Default map shape should be one large, flat grass island filling most of the playable viewport, with water around the outside and enough open land for gameplay.
+Default map shape should be one large, flat grass island filling most of the playable viewport, with water around the outside and enough open land for gameplay. Build multi-level locations only when the user explicitly asks for height differences, cliffs, ramps, stairs, upper/lower levels, or a terrain test focused on those features.
 
 Important constraints:
 
-- Do not create multi-level terrain, cliffs, ramps, bridges, or sloped transitions unless explicitly requested.
+- Do not create multi-level terrain, cliffs, ramps, bridges, stairs, or sloped transitions unless explicitly requested. Do not "upgrade" a normal map into a multi-level location for visual interest.
+- When multi-level terrain is explicitly requested, design visual tiles and gameplay masks together: walkable cells, blocked cells, elevation values, ramp transitions, and camera bounds.
+- Cliffs, water, buildings, deliberate blockers, tree trunks, and map edges must block movement through masks or invisible collision bodies.
+- Ramps are the only default transition between elevations; do not let actors cross cliff faces as if the map were flat.
+- Do not random-pick Tiny Swords cliff tiles. Cliff faces are sliced artwork; use sequential cliff helpers so source rows and columns stay aligned.
+- Draw dry cliff faces as an overlay above ordinary lower grass/ground. Do not erase the lower land mask under dry cliffs; otherwise transparent pixels show water.
+- After cutting a ramp or opening through a cliff, recalculate exposed cliff left/right edges. A newly exposed cliff edge must use edge columns, not center rock tiles.
+- Use water cliff faces only when the cliff actually drops into water.
 - Do not fill terrain with `tileIndex(0, 0)`; that is a corner tile, not grass center.
-- Interior land should use verified `GrassCenter` with sparse `GrassDecor`.
+- Interior land should use a quiet verified `GrassCenter` base tile. Do not repeat the whole 10x10 source grass blob across large fields; it reads as visible chunks. Add variety with props or sparse overlay details.
+- Raised/elevated land must show its own grass boundary even when it sits above lower grass. Use the dry raised grass boundary from the right-side terrain block (`RaisedGrassEdges` / `RaisedGrassCorners` / `RaisedGrassBoundary`), not the white shore/water boundary. Draw raised edges on a separate overlay layer above normal land so transparent pixels reveal lower grass, not water or the camera background. Long raised borders must use a fixed sequence: corner, cap, repeatable center tiles, cap, corner. Do not repeat cap/corner-adjacent tiles through the middle of a horizontal or vertical border.
 - Edges and corners belong only on the perimeter of the final land mask.
 - Use the separate `terrain-water-background` tileset for water fill.
 - Avoid black voids around terrain; put water under/around islands.
@@ -283,7 +293,13 @@ Important constraints:
 - Avoid `env-water-foam` in generated maps by default because it reads noisy.
 - Use `env-water-rocks-01` through `env-water-rocks-04` sparingly and only on water.
 
-Reserve important cells before random decoration. Trees need a safe land footprint around the trunk, roughly 5x5 terrain cells at default scale. Trees, bushes, rocks, buildings, resources, and units should not spawn on water, cliffs, ramps, shore borders, or reserved zones unless the prototype intentionally allows it.
+Reserve important cells before random decoration. Trees need a safe land footprint around the trunk, roughly 5x5 terrain cells at default scale. Bushes, rocks, and other small visual decor should not block movement by default; use a separate visual-overlap footprint for placement and reserve `occupied` only for actual blockers. Trees, bushes, rocks, buildings, resources, and units should not spawn on water, cliffs, ramps, shore borders, or reserved zones unless the prototype intentionally allows it.
+
+Ramp placement must include a reachable lower entry and an upper exit. A side ramp should be horizontally oriented toward the side the player approaches from; for example, a left-shoulder entrance should use the mirrored left ramp and extend down into level 0 cells, not sit entirely inside level 1. Use the full Tiny Swords side-ramp pattern, not a cropped 2-tile slice. Build ramp masks from the non-empty ramp tiles so transparent cells do not become fake walkable steps. Reserve ramp approach areas for decoration only; do not mark them as `occupied` blockers unless you intentionally want a wall.
+
+Small ground decor such as rocks and bushes should draw below actors by default. Use y-depth sorting for trees, buildings, units, and tall overlap objects.
+
+Blocking footprints should describe where an actor's feet cannot stand, not the full sprite rectangle. For buildings, reserve a visual footprint for decoration spacing, then block only the lower/base half so actors can visually pass behind roofs. For trees, block the trunk/base cells near the ground origin, not the crown. Keep a larger visual footprint only for decoration placement. Debug collision masks must draw only actual blocking footprints; do not draw visual reservations as red collision areas.
 
 ## Environment and Scale
 

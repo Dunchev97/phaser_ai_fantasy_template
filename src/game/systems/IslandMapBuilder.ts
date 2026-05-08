@@ -1,12 +1,16 @@
 import Phaser from 'phaser';
 import {
-  createCliffBlock,
+  createCliffFace,
   createRampPatch,
   createTransparentBrush,
   createWaterPatch,
   type TerrainBrush,
 } from '../../content/tinySwordsTerrainBrushes';
-import { TinySwordsTerrainTiles } from '../../content/tinySwordsTerrainTiles';
+import {
+  tileIndex,
+  TINY_SWORDS_TILEMAP_COLUMNS,
+  TinySwordsTerrainTiles,
+} from '../../content/tinySwordsTerrainTiles';
 import {
   TinySwordsAtlases,
   TinySwordsResourceFrames,
@@ -26,6 +30,7 @@ export type IslandRect = {
   seed?: number;
   edgeMode?: 'shore' | 'none' | 'cliffTop';
   cliffHeight?: number;
+  cliffType?: 'dry' | 'water';
 };
 
 export type IslandRamp = {
@@ -64,8 +69,9 @@ export type IslandMapResult = {
   tileSize: number;
   layers: {
     water: Phaser.Tilemaps.TilemapLayer;
-    cliffs: Phaser.Tilemaps.TilemapLayer;
     land: Phaser.Tilemaps.TilemapLayer;
+    raisedEdges: Phaser.Tilemaps.TilemapLayer;
+    cliffs: Phaser.Tilemaps.TilemapLayer;
     ramps: Phaser.Tilemaps.TilemapLayer;
   };
   masks: IslandMapMasks;
@@ -82,6 +88,9 @@ type DecorationOptions = {
 
 const TERRAIN_TILESET = 'terrain-tilemap-color1';
 const NEIGHBORS_4 = [[1, 0], [-1, 0], [0, 1], [0, -1]] as const;
+const DECOR_SAFE_RADIUS = 2;
+const QUIET_GRASS_CENTER_TILE = tileIndex(5, 5);
+const SMALL_DECOR_DEPTH = 8;
 
 function emptyTiles(width: number, height: number): TileGrid {
   return Array.from({ length: height }, () => Array.from({ length: width }, () => null));
@@ -89,6 +98,10 @@ function emptyTiles(width: number, height: number): TileGrid {
 
 function boolGrid(width: number, height: number, value: boolean): BoolGrid {
   return Array.from({ length: height }, () => Array.from({ length: width }, () => value));
+}
+
+function cloneBoolGrid(grid: BoolGrid): BoolGrid {
+  return grid.map((row) => [...row]);
 }
 
 function hash2d(row: number, col: number, seed: number): number {
@@ -113,6 +126,17 @@ function paste(target: TileGrid, brush: TerrainBrush, x: number, y: number): voi
   }
 }
 
+function clearTilesFromBrush(target: TileGrid, brush: TerrainBrush, x: number, y: number): void {
+  for (let row = 0; row < brush.height; row += 1) {
+    for (let col = 0; col < brush.width; col += 1) {
+      if (brush.tiles[row]?.[col] == null) continue;
+      const targetY = y + row;
+      const targetX = x + col;
+      if (inBounds(target[0]?.length ?? 0, target.length, targetX, targetY)) target[targetY][targetX] = null;
+    }
+  }
+}
+
 function pasteMask(mask: BoolGrid, x: number, y: number, width: number, height: number, value: boolean): void {
   for (let row = 0; row < height; row += 1) {
     for (let col = 0; col < width; col += 1) {
@@ -123,9 +147,15 @@ function pasteMask(mask: BoolGrid, x: number, y: number, width: number, height: 
   }
 }
 
-function markRamp(mask: BoolGrid, ramp: IslandRamp, value: boolean): void {
-  const brush = createRampPatch(ramp.direction);
-  pasteMask(mask, ramp.x, ramp.y, brush.width, brush.height, value);
+function pasteBrushMask(mask: BoolGrid, brush: TerrainBrush, x: number, y: number, value: boolean): void {
+  for (let row = 0; row < brush.height; row += 1) {
+    for (let col = 0; col < brush.width; col += 1) {
+      if (brush.tiles[row]?.[col] == null) continue;
+      const targetY = y + row;
+      const targetX = x + col;
+      if (inBounds(mask[0]?.length ?? 0, mask.length, targetX, targetY)) mask[targetY][targetX] = value;
+    }
+  }
 }
 
 function createLayer(
@@ -171,6 +201,20 @@ function computeShorelineWater(water: BoolGrid, land: BoolGrid, cliff: BoolGrid,
   return result;
 }
 
+function isSafeDecorCell(land: BoolGrid, cliff: BoolGrid, ramp: BoolGrid, col: number, row: number): boolean {
+  const height = land.length;
+  const width = land[0]?.length ?? 0;
+  for (let dy = -DECOR_SAFE_RADIUS; dy <= DECOR_SAFE_RADIUS; dy += 1) {
+    for (let dx = -DECOR_SAFE_RADIUS; dx <= DECOR_SAFE_RADIUS; dx += 1) {
+      const x = col + dx;
+      const y = row + dy;
+      if (!inBounds(width, height, x, y)) return false;
+      if (!land[y][x] || cliff[y][x] || ramp[y][x]) return false;
+    }
+  }
+  return true;
+}
+
 function computeDecorAllowed(land: BoolGrid, cliff: BoolGrid, ramp: BoolGrid): BoolGrid {
   const height = land.length;
   const width = land[0]?.length ?? 0;
@@ -179,12 +223,7 @@ function computeDecorAllowed(land: BoolGrid, cliff: BoolGrid, ramp: BoolGrid): B
   for (let row = 0; row < height; row += 1) {
     for (let col = 0; col < width; col += 1) {
       if (!land[row][col] || cliff[row][col] || ramp[row][col]) continue;
-      const nearUnsafe = NEIGHBORS_4.some(([dx, dy]) => {
-        const x = col + dx;
-        const y = row + dy;
-        return !inBounds(width, height, x, y) || !land[y][x] || cliff[y][x] || ramp[y][x];
-      });
-      result[row][col] = !nearUnsafe;
+      result[row][col] = isSafeDecorCell(land, cliff, ramp, col, row);
     }
   }
 
@@ -218,8 +257,8 @@ function pickCells(mask: BoolGrid, count: number, seed: number, minDistance: num
   return picked;
 }
 
-function pick<T>(items: readonly T[], row: number, col: number, seed: number): T {
-  const index = Math.floor(hash2d(row, col, seed) * items.length) % items.length;
+function sequencePick<T>(items: readonly T[], offset: number): T {
+  const index = ((offset % items.length) + items.length) % items.length;
   return items[index];
 }
 
@@ -227,34 +266,133 @@ function isMaskCell(mask: BoolGrid, col: number, row: number): boolean {
   return inBounds(mask[0]?.length ?? 0, mask.length, col, row) && mask[row][col];
 }
 
-function grassTileFromMask(land: BoolGrid, col: number, row: number, seed: number): number {
+function grassCenterTile(): number {
+  return QUIET_GRASS_CENTER_TILE;
+}
+
+function grassTileFromMask(land: BoolGrid, cliff: BoolGrid, col: number, row: number): number {
   const up = isMaskCell(land, col, row - 1);
   const right = isMaskCell(land, col + 1, row);
   const down = isMaskCell(land, col, row + 1);
   const left = isMaskCell(land, col - 1, row);
-  const { GrassCenter, GrassCorners, GrassDecor, GrassEdges } = TinySwordsTerrainTiles;
+  const downIsCliff = isMaskCell(cliff, col, row + 1);
+  const { GrassCorners, GrassEdges } = TinySwordsTerrainTiles;
+
+  if (isMaskCell(cliff, col, row)) return grassCenterTile();
+
+  if (downIsCliff) return grassCenterTile();
 
   if (!up && !left) return GrassCorners.topLeft;
   if (!up && !right) return GrassCorners.topRight;
   if (!down && !right) return GrassCorners.bottomRight;
   if (!down && !left) return GrassCorners.bottomLeft;
-  if (!up) return pick(GrassEdges.top, row, col, seed);
-  if (!right) return pick(GrassEdges.right, row, col, seed);
-  if (!down) return pick(GrassEdges.bottom, row, col, seed);
-  if (!left) return pick(GrassEdges.left, row, col, seed);
+  if (!up) return sequencePick(GrassEdges.top, col - 1);
+  if (!right) return sequencePick(GrassEdges.right, row - 1);
+  if (!down) return sequencePick(GrassEdges.bottom, col - 1);
+  if (!left) return sequencePick(GrassEdges.left, row - 1);
 
-  if (hash2d(row, col, seed + 31) < 0.07) return pick(GrassDecor, row, col, seed + 101);
-  return pick(GrassCenter, row, col, seed);
+  return grassCenterTile();
 }
 
-function createGrassTilesFromMask(land: BoolGrid, seed = 1): TileGrid {
+function raisedEdgeTile(localCol: number, localRow: number, width: number, height: number): number {
+  const lastCol = width - 1;
+  const lastRow = height - 1;
+  const { RaisedGrassBoundary, RaisedGrassCorners } = TinySwordsTerrainTiles;
+
+  if (localRow === 0 && localCol === 0) return RaisedGrassCorners.topLeft;
+  if (localRow === 0 && localCol === lastCol) return RaisedGrassCorners.topRight;
+  if (localRow === lastRow && localCol === 0) return RaisedGrassCorners.bottomLeft;
+  if (localRow === lastRow && localCol === lastCol) return RaisedGrassCorners.bottomRight;
+
+  if (localRow === 0) {
+    if (localCol === 1) return tileIndex(RaisedGrassBoundary.topRow, RaisedGrassBoundary.horizontalStartCol);
+    if (localCol === lastCol - 1) return tileIndex(RaisedGrassBoundary.topRow, RaisedGrassBoundary.horizontalEndCol);
+    return tileIndex(
+      RaisedGrassBoundary.topRow,
+      sequencePick(RaisedGrassBoundary.horizontalCenterCols, localCol - 2),
+    );
+  }
+
+  if (localRow === lastRow) {
+    if (localCol === 1) return tileIndex(RaisedGrassBoundary.bottomRow, RaisedGrassBoundary.horizontalStartCol);
+    if (localCol === lastCol - 1) return tileIndex(RaisedGrassBoundary.bottomRow, RaisedGrassBoundary.horizontalEndCol);
+    return tileIndex(
+      RaisedGrassBoundary.bottomRow,
+      sequencePick(RaisedGrassBoundary.horizontalCenterCols, localCol - 2),
+    );
+  }
+
+  if (localCol === 0) {
+    if (localRow === 1) return tileIndex(RaisedGrassBoundary.verticalStartRow, RaisedGrassBoundary.leftCol);
+    if (localRow === lastRow - 1) return tileIndex(RaisedGrassBoundary.verticalEndRow, RaisedGrassBoundary.leftCol);
+    return tileIndex(
+      sequencePick(RaisedGrassBoundary.verticalCenterRows, localRow - 2),
+      RaisedGrassBoundary.leftCol,
+    );
+  }
+
+  if (localCol === lastCol) {
+    if (localRow === 1) return tileIndex(RaisedGrassBoundary.verticalStartRow, RaisedGrassBoundary.rightCol);
+    if (localRow === lastRow - 1) return tileIndex(RaisedGrassBoundary.verticalEndRow, RaisedGrassBoundary.rightCol);
+    return tileIndex(
+      sequencePick(RaisedGrassBoundary.verticalCenterRows, localRow - 2),
+      RaisedGrassBoundary.rightCol,
+    );
+  }
+
+  return grassCenterTile();
+}
+
+function applyRaisedLandBorder(tiles: TileGrid, island: IslandRect): void {
+  if ((island.elevation ?? 0) <= 0) return;
+  for (let row = 0; row < island.height; row += 1) {
+    for (let col = 0; col < island.width; col += 1) {
+      const isBorder = row === 0 || col === 0 || col === island.width - 1 || row === island.height - 1;
+      if (!isBorder) continue;
+      const targetX = island.x + col;
+      const targetY = island.y + row;
+      if (!inBounds(tiles[0]?.length ?? 0, tiles.length, targetX, targetY)) continue;
+      tiles[targetY][targetX] = raisedEdgeTile(col, row, island.width, island.height);
+    }
+  }
+}
+
+function normalizeCliffEdges(tiles: TileGrid, cliff: BoolGrid): void {
+  const { dry, water } = TinySwordsTerrainTiles.CliffFaces;
+  const cliffRows = new Set<number>([
+    dry.topRow,
+    dry.bottomRow,
+    ...dry.middleRows,
+    water.topRow,
+    water.bottomRow,
+    ...water.middleRows,
+  ]);
+
+  for (let row = 0; row < tiles.length; row += 1) {
+    for (let col = 0; col < (tiles[row]?.length ?? 0); col += 1) {
+      const tile = tiles[row][col];
+      if (tile == null || !cliff[row][col]) continue;
+      const sourceRow = Math.floor(tile / TINY_SWORDS_TILEMAP_COLUMNS);
+      if (!cliffRows.has(sourceRow)) continue;
+      const leftConnected = isMaskCell(cliff, col - 1, row);
+      const rightConnected = isMaskCell(cliff, col + 1, row);
+      const face = sourceRow >= water.topRow ? water : dry;
+      let sourceCol = face.centerCols[col % face.centerCols.length];
+      if (!leftConnected) sourceCol = face.leftCol;
+      else if (!rightConnected) sourceCol = face.rightCol;
+      tiles[row][col] = tileIndex(sourceRow, sourceCol);
+    }
+  }
+}
+
+function createGrassTilesFromMask(land: BoolGrid, cliff: BoolGrid): TileGrid {
   const height = land.length;
   const width = land[0]?.length ?? 0;
   const tiles = emptyTiles(width, height);
 
   for (let row = 0; row < height; row += 1) {
     for (let col = 0; col < width; col += 1) {
-      if (land[row][col]) tiles[row][col] = grassTileFromMask(land, col, row, seed);
+      if (land[row][col]) tiles[row][col] = grassTileFromMask(land, cliff, col, row);
     }
   }
 
@@ -327,11 +465,16 @@ export type IslandMapReservation = {
   height: number;
 };
 
+type IslandMapReservationOptions = {
+  block?: boolean;
+};
+
 export function createIslandMap(config: IslandMapConfig): IslandMapResult {
   const tileScale = config.tileScale ?? TinySwordsWorldScale.Terrain;
   const terrainTilesetKey = config.terrainTilesetKey ?? TERRAIN_TILESET;
   const waterBrush = createWaterPatch(config.width, config.height, 90);
   const landTiles = emptyTiles(config.width, config.height);
+  const raisedEdgeTiles = emptyTiles(config.width, config.height);
   const cliffTiles = emptyTiles(config.width, config.height);
   const rampTiles = emptyTiles(config.width, config.height);
   const water = boolGrid(config.width, config.height, true);
@@ -347,38 +490,57 @@ export function createIslandMap(config: IslandMapConfig): IslandMapResult {
 
     if (elevation > 0 || island.cliffHeight) {
       const cliffHeight = island.cliffHeight ?? Math.max(3, elevation * 3);
-      const cliffBrush = createCliffBlock(island.width, cliffHeight, {
+      const cliffY = island.y + island.height;
+      let waterCells = 0;
+      for (let row = cliffY; row < cliffY + cliffHeight; row += 1) {
+        for (let col = island.x; col < island.x + island.width; col += 1) {
+          if (inBounds(config.width, config.height, col, row) && water[row][col]) waterCells += 1;
+        }
+      }
+      const sampledCells = island.width * cliffHeight;
+      const cliffType = island.cliffType ?? (waterCells > sampledCells / 2 ? 'water' : 'dry');
+      const cliffBrush = createCliffFace(island.width, cliffHeight, {
         tilesetKey: terrainTilesetKey,
+        variant: cliffType,
         seed: (island.seed ?? 1) + 300,
       });
-      const cliffY = island.y + island.height;
       paste(cliffTiles, cliffBrush, island.x, cliffY);
       pasteMask(cliff, island.x, cliffY, island.width, cliffHeight, true);
-      pasteMask(land, island.x, cliffY, island.width, cliffHeight, false);
-      pasteMask(water, island.x, cliffY, island.width, cliffHeight, false);
+      if (cliffType === 'water') {
+        pasteMask(land, island.x, cliffY, island.width, cliffHeight, false);
+        pasteMask(water, island.x, cliffY, island.width, cliffHeight, true);
+      } else {
+        pasteMask(land, island.x, cliffY, island.width, cliffHeight, true);
+        pasteMask(water, island.x, cliffY, island.width, cliffHeight, false);
+      }
     }
   }
 
   for (const r of config.ramps ?? []) {
     const rampBrush = createRampPatch(r.direction, { tilesetKey: terrainTilesetKey });
+    clearTilesFromBrush(cliffTiles, rampBrush, r.x, r.y);
+    pasteBrushMask(cliff, rampBrush, r.x, r.y, false);
     paste(rampTiles, rampBrush, r.x, r.y);
-    markRamp(ramp, r, true);
-    pasteMask(land, r.x, r.y, rampBrush.width, rampBrush.height, true);
-    pasteMask(water, r.x, r.y, rampBrush.width, rampBrush.height, false);
+    pasteBrushMask(ramp, rampBrush, r.x, r.y, true);
+    pasteBrushMask(land, rampBrush, r.x, r.y, true);
+    pasteBrushMask(water, rampBrush, r.x, r.y, false);
   }
+  normalizeCliffEdges(cliffTiles, cliff);
 
-  const autoLandTiles = createGrassTilesFromMask(land, 17);
+  const autoLandTiles = createGrassTilesFromMask(land, cliff);
   for (let row = 0; row < config.height; row += 1) {
     for (let col = 0; col < config.width; col += 1) {
       landTiles[row][col] = autoLandTiles[row][col];
     }
   }
+  for (const island of config.islands) applyRaisedLandBorder(raisedEdgeTiles, island);
 
   const shorelineWater = computeShorelineWater(water, land, cliff, ramp);
   const decorAllowed = computeDecorAllowed(land, cliff, ramp);
   const layers = {
     water: createLayer(config.scene, config.x, config.y, waterBrush.tilesetKey, 'waterBase', 'Full water base prevents black voids around islands.', waterBrush.tiles, 0, tileScale),
     land: createLayer(config.scene, config.x, config.y, terrainTilesetKey, 'land', 'Grass island layer.', landTiles, 4, tileScale),
+    raisedEdges: createLayer(config.scene, config.x, config.y, terrainTilesetKey, 'raisedEdges', 'Dry raised land boundary overlay. It preserves lower grass under transparent pixels.', raisedEdgeTiles, 4.5, tileScale),
     cliffs: createLayer(config.scene, config.x, config.y, terrainTilesetKey, 'cliffs', 'Cliff and elevation layer.', cliffTiles, 5, tileScale),
     ramps: createLayer(config.scene, config.x, config.y, terrainTilesetKey, 'ramps', 'Deliberate elevation connectors.', rampTiles, 6, tileScale),
   };
@@ -401,8 +563,14 @@ export function islandCellToWorld(map: IslandMapResult, col: number, row: number
   };
 }
 
-export function reserveIslandMapArea(map: IslandMapResult, reservation: IslandMapReservation): void {
-  pasteMask(map.masks.occupied, reservation.col, reservation.row, reservation.width, reservation.height, true);
+export function reserveIslandMapArea(
+  map: IslandMapResult,
+  reservation: IslandMapReservation,
+  options: IslandMapReservationOptions = {},
+): void {
+  if (options.block ?? true) {
+    pasteMask(map.masks.occupied, reservation.col, reservation.row, reservation.width, reservation.height, true);
+  }
   pasteMask(map.masks.decorAllowed, reservation.col, reservation.row, reservation.width, reservation.height, false);
 }
 
@@ -410,21 +578,27 @@ export function placeIslandMapDecorations(map: IslandMapResult, options: Decorat
   const scene = map.layers.land.scene;
   const seed = options.seed ?? 1;
   const toWorld = (cell: { col: number; row: number }) => islandCellToWorld(map, cell.col, cell.row);
-  const treeFootprint: Footprint = { width: 5, height: 5, offsetX: -2, offsetY: -3 };
-  const bushFootprint: Footprint = { width: 2, height: 2, offsetX: -1, offsetY: -1 };
-  const rockFootprint: Footprint = { width: 2, height: 2, offsetX: -1, offsetY: -1 };
+  const treeFootprint: Footprint = { width: 7, height: 8, offsetX: -3, offsetY: -7 };
+  const treeBlockingFootprint: Footprint = { width: 2, height: 2, offsetX: -1, offsetY: -1 };
+  const bushFootprint: Footprint = { width: 3, height: 3, offsetX: -1, offsetY: -1 };
+  const rockFootprint: Footprint = { width: 3, height: 3, offsetX: -1, offsetY: -1 };
+  const visualOccupied = cloneBoolGrid(map.masks.occupied);
 
-  for (const [index, cell] of pickFootprintCells(map.masks.decorAllowed, map.masks.occupied, options.trees ?? 5, seed + 10, 5, treeFootprint).entries()) {
+  for (const [index, cell] of pickFootprintCells(map.masks.decorAllowed, visualOccupied, options.trees ?? 5, seed + 10, 5, treeFootprint).entries()) {
     const { x, y } = toWorld(cell);
     const key = ['env-tree-01', 'env-tree-02', 'env-tree-03', 'env-tree-04'][index % 4];
-    const tree = scene.add.sprite(x, y, key).setDepth(20);
+    const tree = scene.add.sprite(x, y, key)
+      .setOrigin(0.5, 0.88)
+      .setScale(TinySwordsWorldScale.TreeLarge)
+      .setDepth(y);
     if (scene.anims.exists(key)) tree.play(key);
+    occupyFootprint(map.masks.occupied, cell.col, cell.row, treeBlockingFootprint);
   }
 
-  for (const [index, cell] of pickFootprintCells(map.masks.decorAllowed, map.masks.occupied, options.bushes ?? 5, seed + 20, 4, bushFootprint).entries()) {
+  for (const [index, cell] of pickFootprintCells(map.masks.decorAllowed, visualOccupied, options.bushes ?? 5, seed + 20, 4, bushFootprint).entries()) {
     const { x, y } = toWorld(cell);
     const key = ['env-bush-01', 'env-bush-02', 'env-bush-03', 'env-bush-04'][index % 4];
-    const bush = scene.add.sprite(x, y, key).setDepth(18);
+    const bush = scene.add.sprite(x, y, key).setScale(TinySwordsWorldScale.Bush).setDepth(SMALL_DECOR_DEPTH);
     if (scene.anims.exists(key)) bush.play(key);
   }
 
@@ -434,9 +608,9 @@ export function placeIslandMapDecorations(map: IslandMapResult, options: Decorat
     TinySwordsResourceFrames.Rock3,
     TinySwordsResourceFrames.Rock4,
   ];
-  for (const [index, cell] of pickFootprintCells(map.masks.decorAllowed, map.masks.occupied, options.rocks ?? 5, seed + 30, 3, rockFootprint).entries()) {
+  for (const [index, cell] of pickFootprintCells(map.masks.decorAllowed, visualOccupied, options.rocks ?? 5, seed + 30, 3, rockFootprint).entries()) {
     const { x, y } = toWorld(cell);
-    scene.add.image(x, y, TinySwordsAtlases.Resources, rockFrames[index % rockFrames.length]).setDepth(19);
+    scene.add.image(x, y, TinySwordsAtlases.Resources, rockFrames[index % rockFrames.length]).setDepth(SMALL_DECOR_DEPTH);
   }
 
   for (const [index, cell] of pickCells(map.masks.shorelineWater, options.waterFoam ?? 0, seed + 40, 5).entries()) {

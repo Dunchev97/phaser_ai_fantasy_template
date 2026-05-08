@@ -1,4 +1,4 @@
-import { TinySwordsTerrainTiles } from './tinySwordsTerrainTiles';
+import { tileIndex, TinySwordsTerrainTiles } from './tinySwordsTerrainTiles';
 
 export interface TerrainBrush {
   name: string;
@@ -17,8 +17,13 @@ type PatchOptions = {
   decorationChance?: number;
 };
 
+type CliffFaceOptions = PatchOptions & {
+  variant?: 'dry' | 'water';
+};
+
 const DEFAULT_TERRAIN_TILESET = 'terrain-tilemap-color1';
 const WATER_TILESET = 'terrain-water-background';
+const QUIET_GRASS_CENTER_TILE = tileIndex(5, 5);
 
 function hash2d(row: number, col: number, seed: number): number {
   let value = (row + 1) * 374761393 + (col + 1) * 668265263 + seed * 1442695041;
@@ -29,6 +34,15 @@ function hash2d(row: number, col: number, seed: number): number {
 function pick<T>(items: readonly T[], row: number, col: number, seed: number): T {
   const index = Math.floor(hash2d(row, col, seed) * items.length) % items.length;
   return items[index];
+}
+
+function sequencePick<T>(items: readonly T[], offset: number): T {
+  const index = ((offset % items.length) + items.length) % items.length;
+  return items[index];
+}
+
+function grassCenterTile(): number {
+  return QUIET_GRASS_CENTER_TILE;
 }
 
 function makeBrush(
@@ -61,43 +75,40 @@ function makeTransparentBrush(name: string, description: string, tilesetKey: str
 function grassTileFor(row: number, col: number, width: number, height: number, options: Required<PatchOptions>): number {
   const lastRow = height - 1;
   const lastCol = width - 1;
-  const { GrassCorners, GrassEdges, GrassCenter, GrassDecor } = TinySwordsTerrainTiles;
+  const { GrassCorners, GrassEdges, GrassDecor } = TinySwordsTerrainTiles;
 
   if (options.edgeMode !== 'none' && width >= 3 && height >= 3) {
     if (row === 0 && col === 0) return GrassCorners.topLeft;
     if (row === 0 && col === lastCol) return GrassCorners.topRight;
     if (row === lastRow && col === lastCol) return GrassCorners.bottomRight;
     if (row === lastRow && col === 0) return GrassCorners.bottomLeft;
-    if (row === 0) return pick(GrassEdges.top, row, col, options.seed);
-    if (col === lastCol) return pick(GrassEdges.right, row, col, options.seed);
-    if (row === lastRow) return pick(GrassEdges.bottom, row, col, options.seed);
-    if (col === 0) return pick(GrassEdges.left, row, col, options.seed);
+    if (row === 0) return sequencePick(GrassEdges.top, col - 1);
+    if (col === lastCol) return sequencePick(GrassEdges.right, row - 1);
+    if (row === lastRow) return sequencePick(GrassEdges.bottom, col - 1);
+    if (col === 0) return sequencePick(GrassEdges.left, row - 1);
   }
 
   if (hash2d(row, col, options.seed + 31) < options.decorationChance) {
     return pick(GrassDecor, row, col, options.seed + 101);
   }
 
-  return pick(GrassCenter, row, col, options.seed);
+  return grassCenterTile();
 }
 
-function cliffTileFor(row: number, col: number, width: number, height: number, seed: number): number {
-  const lastRow = height - 1;
-  const lastCol = width - 1;
-  const { CliffCorners, CliffEdges, CliffCenter } = TinySwordsTerrainTiles;
+function cliffFaceSourceRow(row: number, height: number, variant: 'dry' | 'water'): number {
+  const source = TinySwordsTerrainTiles.CliffFaces[variant];
+  if (height <= 1) return source.bottomRow;
+  if (row === 0) return source.topRow;
+  if (row === height - 1) return source.bottomRow;
+  return source.middleRows[(row - 1) % source.middleRows.length];
+}
 
-  if (width >= 3 && height >= 3) {
-    if (row === 0 && col === 0) return CliffCorners.topLeft;
-    if (row === 0 && col === lastCol) return CliffCorners.topRight;
-    if (row === lastRow && col === lastCol) return CliffCorners.bottomRight;
-    if (row === lastRow && col === 0) return CliffCorners.bottomLeft;
-    if (row === 0) return pick(CliffEdges.top, row, col, seed);
-    if (col === lastCol) return pick(CliffEdges.right, row, col, seed);
-    if (row === lastRow) return pick(CliffEdges.bottom, row, col, seed);
-    if (col === 0) return pick(CliffEdges.left, row, col, seed);
-  }
-
-  return pick(CliffCenter, row, col, seed);
+function cliffFaceSourceCol(col: number, width: number, variant: 'dry' | 'water'): number {
+  const source = TinySwordsTerrainTiles.CliffFaces[variant];
+  if (width <= 1) return source.leftCol;
+  if (col === 0) return source.leftCol;
+  if (col === width - 1) return source.rightCol;
+  return source.centerCols[(col - 1) % source.centerCols.length];
 }
 
 export function createGrassPatch(width: number, height: number, options: PatchOptions = {}): TerrainBrush {
@@ -106,7 +117,7 @@ export function createGrassPatch(width: number, height: number, options: PatchOp
     seed: options.seed ?? 1,
     edgeMode: options.edgeMode ?? (options.bordered === false ? 'none' : 'shore'),
     bordered: options.bordered ?? true,
-    decorationChance: options.decorationChance ?? 0.08,
+    decorationChance: options.decorationChance ?? 0,
   };
   const tiles = Array.from({ length: height }, (_, row) =>
     Array.from({ length: width }, (_, col) => grassTileFor(row, col, width, height, resolved)),
@@ -114,7 +125,7 @@ export function createGrassPatch(width: number, height: number, options: PatchOp
 
   return makeBrush(
     'grassPatch',
-    `Auto-tiled grass patch (${resolved.edgeMode} edges): varied center grass with perimeter edges only when requested.`,
+    `Auto-tiled grass patch (${resolved.edgeMode} edges): stable center sequence with perimeter edges only when requested.`,
     resolved.tilesetKey,
     tiles,
   );
@@ -157,19 +168,25 @@ export function createWaterPatch(width: number, height: number, seed = 1): Terra
   );
 }
 
-export function createCliffBlock(width: number, height: number, options: PatchOptions = {}): TerrainBrush {
+export function createCliffFace(width: number, height: number, options: CliffFaceOptions = {}): TerrainBrush {
   const tilesetKey = options.tilesetKey ?? DEFAULT_TERRAIN_TILESET;
-  const seed = options.seed ?? 1;
+  const variant = options.variant ?? 'dry';
   const tiles = Array.from({ length: height }, (_, row) =>
-    Array.from({ length: width }, (_, col) => cliffTileFor(row, col, width, height, seed)),
+    Array.from({ length: width }, (_, col) =>
+      tileIndex(cliffFaceSourceRow(row, height, variant), cliffFaceSourceCol(col, width, variant)),
+    ),
   );
 
   return makeBrush(
-    'cliffBlock',
-    'Auto-tiled cliff block: cliff corners/edges on the perimeter and varied rock faces inside.',
+    variant === 'water' ? 'waterCliffFace' : 'dryCliffFace',
+    'Sequential Tiny Swords cliff face. Columns and rows are preserved so rock fragments align.',
     tilesetKey,
     tiles,
   );
+}
+
+export function createCliffBlock(width: number, height: number, options: PatchOptions = {}): TerrainBrush {
+  return createCliffFace(width, height, { ...options, variant: 'dry' });
 }
 
 export function createGrassPath(width: number, height: number, options: PatchOptions = {}): TerrainBrush {

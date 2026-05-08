@@ -40,6 +40,14 @@ function rowRange(row: number, startCol: number, endCol: number): number[] {
   return tiles;
 }
 
+function numberRange(start: number, end: number): number[] {
+  const values: number[] = [];
+  for (let value = start; value <= end; value += 1) {
+    values.push(value);
+  }
+  return values;
+}
+
 function colRange(col: number, startRow: number, endRow: number): number[] {
   const tiles: number[] = [];
   for (let row = startRow; row <= endRow; row += 1) {
@@ -89,6 +97,31 @@ export const TinySwordsTerrainTiles = {
     bottomRight: tileIndex(11, 11),
     bottomLeft: tileIndex(11, 0),
   },
+  RaisedGrassCenter: rectRange(1, 10, 21, 30),
+  RaisedGrassEdges: {
+    top: rowRange(0, 21, 30),
+    right: colRange(31, 1, 10),
+    bottom: rowRange(11, 21, 30),
+    left: colRange(20, 1, 10),
+  },
+  RaisedGrassCorners: {
+    topLeft: tileIndex(0, 20),
+    topRight: tileIndex(0, 31),
+    bottomRight: tileIndex(11, 31),
+    bottomLeft: tileIndex(11, 20),
+  },
+  RaisedGrassBoundary: {
+    topRow: 0,
+    bottomRow: 11,
+    leftCol: 20,
+    rightCol: 31,
+    horizontalStartCol: 21,
+    horizontalCenterCols: numberRange(22, 29),
+    horizontalEndCol: 30,
+    verticalStartRow: 1,
+    verticalCenterRows: numberRange(2, 9),
+    verticalEndRow: 10,
+  },
 
   /**
    * The runtime tileset has no separate dirt road sheet. Use these low-noise
@@ -124,6 +157,38 @@ export const TinySwordsTerrainTiles = {
     bottomRight: tileIndex(23, 35),
     bottomLeft: tileIndex(23, 24),
   },
+  CliffTopGrass: {
+    bottomRow: 15,
+    leftCol: 24,
+    centerCols: numberRange(25, 28),
+    rightCol: 35,
+  },
+
+  /**
+   * Cliff faces are sliced pieces of a larger drawing. Do not random-pick these
+   * tiles. Keep columns and rows in sequence so the rock face reassembles.
+   *
+   * Dry cliffs (rows 16-19) end on stone/ground. Water cliffs (rows 20-23)
+   * include the bright water outline on the bottom row.
+   */
+  CliffFaces: {
+    dry: {
+      leftCol: 24,
+      centerCols: numberRange(25, 28),
+      rightCol: 35,
+      topRow: 16,
+      middleRows: [17, 18],
+      bottomRow: 19,
+    },
+    water: {
+      leftCol: 24,
+      centerCols: numberRange(25, 28),
+      rightCol: 35,
+      topRow: 20,
+      middleRows: [21, 22],
+      bottomRow: 23,
+    },
+  },
 
   /**
    * Verified visible ramps/slopes in the lower-left section of tilemap-color.
@@ -132,22 +197,24 @@ export const TinySwordsTerrainTiles = {
    */
   Ramps: {
     leftWide: [
-      [tileIndex(17, 2), tileIndex(17, 3)],
-      [tileIndex(18, 2), tileIndex(18, 3)],
-      [tileIndex(19, 1), tileIndex(19, 2)],
-      [tileIndex(20, 0), tileIndex(20, 1)],
-      [tileIndex(21, 0), tileIndex(21, 1)],
-      [tileIndex(22, 0), tileIndex(22, 1)],
-      [tileIndex(23, 0), tileIndex(23, 1)],
+      [null, null, null, tileIndex(16, 3)],
+      [null, null, tileIndex(17, 2), tileIndex(17, 3)],
+      [null, tileIndex(18, 1), tileIndex(18, 2), tileIndex(18, 3)],
+      [tileIndex(19, 0), tileIndex(19, 1), tileIndex(19, 2), tileIndex(19, 3)],
+      [tileIndex(20, 0), tileIndex(20, 1), tileIndex(20, 2), tileIndex(20, 3)],
+      [tileIndex(21, 0), tileIndex(21, 1), tileIndex(21, 2), tileIndex(21, 3)],
+      [tileIndex(22, 0), tileIndex(22, 1), tileIndex(22, 2), tileIndex(22, 3)],
+      [tileIndex(23, 0), tileIndex(23, 1), tileIndex(23, 2), tileIndex(23, 3)],
     ],
     rightWide: [
-      [tileIndex(17, 12), tileIndex(17, 13)],
-      [tileIndex(18, 12), tileIndex(18, 13)],
-      [tileIndex(19, 13), tileIndex(19, 14)],
-      [tileIndex(20, 14), tileIndex(20, 15)],
-      [tileIndex(21, 14), tileIndex(21, 15)],
-      [tileIndex(22, 14), tileIndex(22, 15)],
-      [tileIndex(23, 14), tileIndex(23, 15)],
+      [tileIndex(16, 12), null, null, null],
+      [tileIndex(17, 12), tileIndex(17, 13), null, null],
+      [tileIndex(18, 12), tileIndex(18, 13), tileIndex(18, 14), null],
+      [tileIndex(19, 12), tileIndex(19, 13), tileIndex(19, 14), tileIndex(19, 15)],
+      [tileIndex(20, 12), tileIndex(20, 13), tileIndex(20, 14), tileIndex(20, 15)],
+      [tileIndex(21, 12), tileIndex(21, 13), tileIndex(21, 14), tileIndex(21, 15)],
+      [tileIndex(22, 12), tileIndex(22, 13), tileIndex(22, 14), tileIndex(22, 15)],
+      [tileIndex(23, 12), tileIndex(23, 13), tileIndex(23, 14), tileIndex(23, 15)],
     ],
   },
 
